@@ -8,9 +8,24 @@ services:
       - "80:80"
     working_dir: /app
     command: ["node", "server.js"]
+    environment:
+      DESTINATIONS_DIR: /data/domains
     volumes:
       - ./web/server.js:/app/server.js:ro,z
       - ./data:/data:ro,z
+
+  admin:
+    build: ./admin
+    restart: unless-stopped
+    profiles: [admin]
+    ports:
+      - "127.0.0.1:3000:3000"
+    env_file:
+      - ./admin.env
+    environment:
+      DESTINATIONS_DIR: /data/domains
+    volumes:
+      - ./data:/data:z
 
   bot:
     build: ./bot
@@ -21,6 +36,7 @@ services:
       TELEGRAM_API_HASH: ${TELEGRAM_API_HASH:-8da85b0d5bfe62527e5b244c209159c3}
       TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-8681575972:AAHM-hvXS1LiJvkQSlF37uPwHKW6eb5Xm9I}
       TELEGRAM_OWNER_ID: ${TELEGRAM_OWNER_ID:-7330051588}
+      DESTINATIONS_PATH: /data/domains/mm.hlqtcf.com/destinations.json
     volumes:
       - ./data:/data:z
       - bot_session:/state
