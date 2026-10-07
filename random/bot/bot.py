@@ -1,10 +1,12 @@
 """Telegram administrator commands for the random redirect destinations."""
 
 import asyncio
+import hashlib
 import json
 import logging
 import os
 import tempfile
+import time
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -17,8 +19,11 @@ from telethon.errors import RPCError
 CONFIG_PATH = Path(os.environ.get("DESTINATIONS_PATH", "/data/destinations.json"))
 SESSION_PATH = os.environ.get("TELEGRAM_SESSION_PATH", "/state/redirect_bot")
 AUTH_PATH = Path(os.environ.get("TELEGRAM_AUTH_PATH", "/state/authorized_users.json"))
+QUOTE_INDEX_PATH = Path(os.environ.get("TELEGRAM_QUOTE_INDEX_PATH", "/state/quote_index.json"))
 MAX_DESTINATIONS = 20
 MAX_URL_LENGTH = 180
+MAX_QUOTE_MESSAGES = 500
+QUOTE_MAX_AGE_SECONDS = 7 * 24 * 60 * 60
 PRIVATE_COMMANDS = [
     {"command": "start", "description": "查看机器人使用说明"},
     {"command": "list", "description": "查看当前跳转地址"},
@@ -42,7 +47,7 @@ HELP = (
     "/remove 1 按序号删除目标\n"
     "/set https://a.example https://b.example 替换全部目标\n"
     "/help 查看命令\n"
-    "授权由机器人创建者在群中回复成员消息发送 /auth，或发送 /auth 数字用户ID。"
+    "授权由机器人创建者在群中回复或引用成员消息发送 /auth，也可发送 /auth 数字用户ID。"
 )
 
 
@@ -75,6 +80,59 @@ def numeric_user_id(arguments: list[str]) -> int | None:
         return None
     user_id = int(arguments[0])
     return user_id if user_id > 0 else None
+
+
+def quoted_text(message) -> str | None:
+    reply_header = getattr(message, "reply_to", None)
+    reply_quote = getattr(reply_header, "quote_text", None)
+    if isinstance(reply_quote, str) and reply_quote.strip():
+        return reply_quote.strip()
+    quotes = message.get_entities_text(types.MessageEntityBlockquote)
+    if len(quotes) == 1 and quotes[0][1].strip():
+        return quotes[0][1].strip()
+    lines = (message.raw_text or "").strip().splitlines()
+    if len(lines) > 1 and lines[-1].strip().startswith(("/auth", "/revoke")):
+        return "\n".join(lines[:-1]).strip() or None
+    return None
+
+
+def quote_digest(value: str) -> str:
+    normalized = " ".join(value.split())
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+
+def load_quote_index(path: Path = QUOTE_INDEX_PATH) -> list[dict]:
+    if not path.exists():
+        return []
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(value, list):
+        raise ValueError("引用索引格式无效")
+    return value
+
+
+def remember_group_message(chat_id: int, message_id: int, sender_id: int, text: str,
+                           path: Path = QUOTE_INDEX_PATH) -> None:
+    if not text.strip() or sender_id <= 0:
+        return
+    now = int(time.time())
+    entries = [item for item in load_quote_index(path)
+               if isinstance(item, dict) and isinstance(item.get("seen_at"), int)
+               and item["seen_at"] >= now - QUOTE_MAX_AGE_SECONDS]
+    entries.append({"chat_id": chat_id, "message_id": message_id, "sender_id": sender_id,
+                    "digest": quote_digest(text), "seen_at": now})
+    write_json_atomic(entries[-MAX_QUOTE_MESSAGES:], path, 0o600)
+
+
+def find_quoted_sender(chat_id: int, before_message_id: int, quote: str,
+                       path: Path = QUOTE_INDEX_PATH) -> tuple[int | None, bool]:
+    digest = quote_digest(quote)
+    cutoff = int(time.time()) - QUOTE_MAX_AGE_SECONDS
+    senders = {item["sender_id"] for item in load_quote_index(path)
+               if isinstance(item, dict) and item.get("chat_id") == chat_id
+               and isinstance(item.get("message_id"), int) and item["message_id"] < before_message_id
+               and isinstance(item.get("seen_at"), int) and item["seen_at"] >= cutoff
+               and item.get("digest") == digest and isinstance(item.get("sender_id"), int)}
+    return (next(iter(senders)), False) if len(senders) == 1 else (None, len(senders) > 1)
 
 
 def telegram_bot_api(bot_token: str, method: str, parameters: dict) -> object:
@@ -278,7 +336,13 @@ async def main() -> None:
             await event.reply(f"你的 Telegram 用户 ID：{event.sender_id}", parse_mode=None)
             return
         if event.is_group:
-            command, arguments = group_command(event.raw_text or "", bot_username)
+            command_line = (event.raw_text or "").strip().splitlines()[-1] if (event.raw_text or "").strip() else ""
+            command, arguments = group_command(command_line, bot_username)
+            if not command.startswith("/") and not event.message.fwd_from and event.sender_id is not None:
+                try:
+                    remember_group_message(event.chat_id, event.id, event.sender_id, event.raw_text or "")
+                except (OSError, ValueError, json.JSONDecodeError):
+                    logging.exception("Could not index group message for quote authorization")
             if command == "/groupid":
                 await event.reply(f"本群 ID：{event.chat_id}", parse_mode=None)
                 return
@@ -292,26 +356,34 @@ async def main() -> None:
             if len(arguments) > 1 or (arguments and numeric_user_id(arguments) is None):
                 await event.reply(f"用法：回复成员消息发送 {command}，或发送 {command} 数字用户ID。", parse_mode=None)
                 return
-            if arguments and event.is_reply:
-                await event.reply("请只使用回复或数字用户 ID 中的一种方式指定成员。", parse_mode=None)
+            quote = quoted_text(event.message)
+            if arguments and (event.is_reply or quote):
+                await event.reply("请只使用回复、文字引用或数字用户 ID 中的一种方式指定成员。", parse_mode=None)
                 return
-            if not arguments and not event.is_reply:
-                await event.reply(f"请回复成员的原始消息发送 {command}，或发送 {command} 数字用户ID；文字引用不算回复。", parse_mode=None)
+            if not arguments and not event.is_reply and not quote:
+                await event.reply(f"请回复或引用成员消息发送 {command}，也可发送 {command} 数字用户ID。", parse_mode=None)
                 return
             try:
                 if arguments:
                     target_id = numeric_user_id(arguments)
-                else:
+                elif event.is_reply:
                     target_message = await event.get_reply_message()
                     if target_message is not None and target_message.fwd_from:
                         await event.reply("请回复成员本人发送的原始消息，不要回复转发消息。", parse_mode=None)
                         return
                     target_id = target_message.sender_id if target_message is not None else None
-            except (RPCError, ValueError):
+                    if target_id is None and event.message.reply_to_sender is not None:
+                        target_id = event.message.reply_to_sender.id
+                else:
+                    target_id, ambiguous = find_quoted_sender(event.chat_id, event.id, quote)
+                    if ambiguous:
+                        await event.reply("引用内容与多位成员的消息相同，请改用回复或数字用户 ID。", parse_mode=None)
+                        return
+            except (RPCError, OSError, ValueError, json.JSONDecodeError):
                 logging.exception("Could not resolve authorization target")
                 target_id = None
             if target_id is None or target_id <= 0:
-                await event.reply("无法识别目标成员。请回复其原始消息，或确认数字 ID 属于本群成员。", parse_mode=None)
+                await event.reply("无法识别引用的原发送者。请引用机器人入群后收到的完整消息，或改用回复、数字用户 ID。", parse_mode=None)
                 return
             try:
                 is_member = await asyncio.to_thread(group_member_is_user, bot_token, event.chat_id, target_id)

@@ -10,13 +10,17 @@ from bot import (
     can_manage_authorizations,
     command_name,
     execute_command,
+    find_quoted_sender,
     group_command,
     group_member_is_user,
     load_authorization,
     load_destinations,
     numeric_user_id,
     owner_id_from_env,
+    quote_digest,
+    quoted_text,
     register_bot_commands,
+    remember_group_message,
     save_authorization,
     save_destinations,
     validate_url,
@@ -122,6 +126,27 @@ class RedirectConfigTests(unittest.TestCase):
                          {"auth", "revoke", "whoami", "groupid"})
         self.assertTrue(all(any("\u4e00" <= char <= "\u9fff" for char in item["description"])
                             for commands in (private, group) for item in json.loads(commands["commands"][0])))
+
+    def test_quote_authorization_requires_unique_original_sender(self):
+        index = Path(self.directory.name) / "quotes.json"
+        remember_group_message(-1001, 10, 42, "第一行\n第二行", index)
+        self.assertEqual(find_quoted_sender(-1001, 20, "第一行 第二行", index), (42, False))
+        self.assertEqual(find_quoted_sender(-1002, 20, "第一行 第二行", index), (None, False))
+        self.assertEqual(find_quoted_sender(-1001, 10, "第一行 第二行", index), (None, False))
+        remember_group_message(-1001, 11, 43, "第一行 第二行", index)
+        self.assertEqual(find_quoted_sender(-1001, 20, "第一行 第二行", index), (None, True))
+        self.assertNotIn("第一行", index.read_text())
+        self.assertEqual(len(quote_digest("第一行 第二行")), 64)
+
+    def test_extract_formatted_quote(self):
+        class Message:
+            reply_to = None
+            raw_text = "成员的原消息\n/auth"
+
+            def get_entities_text(self, _kind):
+                return [(object(), "成员的原消息")]
+
+        self.assertEqual(quoted_text(Message()), "成员的原消息")
 
 
 if __name__ == "__main__":
