@@ -1,9 +1,9 @@
 # random 站点部署
 
-1. 将 `hlqtcf.com` 的 A/AAAA 记录指向部署主机，并确保公网 80、443 端口能到达这台主机。
-2. 在本目录运行 `docker compose up -d`，启动静态站点。
+1. 如需通过 `hlqtcf.com` 访问，将域名的 A 记录指向部署主机，并确保公网 80 端口可达；也可直接使用主机的 HTTP 地址访问。
+2. 在本目录运行 `docker compose up -d`；Podman 主机运行 `podman-compose up -d --force-recreate web`。
 
-Caddy 首次启动时会为 `hlqtcf.com` 自动申请证书，之后自动续期。证书和私钥保存在 `caddy_data` 卷中；不要删除该卷。这个 Compose 与仓库根目录的五站点 Compose 独立。
+站点由 Nginx 在 HTTP 80 端口提供，不申请 TLS 证书。`/destinations.json` 禁止缓存；Nginx 会按任意 Host 提供此站点。这个 Compose 与仓库根目录的五站点 Compose 独立。
 
 ## Telegram 管理机器人
 
