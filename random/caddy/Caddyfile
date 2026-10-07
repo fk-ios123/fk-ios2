@@ -1,6 +1,6 @@
 hlqtcf.com {
 	handle /destinations.json {
-		root * /srv/data
+		root * /config-data
 		header Cache-Control "no-store"
 		file_server
 	}

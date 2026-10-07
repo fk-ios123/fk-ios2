@@ -10,18 +10,19 @@ services:
     volumes:
       - ./caddy:/etc/caddy:ro,z
       - ./index.html:/srv/index.html:ro,z
-      - ./data:/srv/data:ro,z
+      - ./data:/config-data:ro,z
       - caddy_data:/data
       - caddy_config:/config
 
   bot:
     build: ./bot
     restart: unless-stopped
+    profiles: [bot]
     environment:
-      TELEGRAM_API_ID: ${TELEGRAM_API_ID:?Set TELEGRAM_API_ID in random/.env}
-      TELEGRAM_API_HASH: ${TELEGRAM_API_HASH:?Set TELEGRAM_API_HASH in random/.env}
-      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:?Set TELEGRAM_BOT_TOKEN in random/.env}
-      TELEGRAM_ADMIN_IDS: ${TELEGRAM_ADMIN_IDS:?Set TELEGRAM_ADMIN_IDS in random/.env}
+      TELEGRAM_API_ID: ${TELEGRAM_API_ID:-}
+      TELEGRAM_API_HASH: ${TELEGRAM_API_HASH:-}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_OWNER_ID: ${TELEGRAM_OWNER_ID:-7330051588}
     volumes:
       - ./data:/data:z
       - bot_session:/state
