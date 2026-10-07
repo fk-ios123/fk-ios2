@@ -21,7 +21,6 @@ SESSION_PATH = os.environ.get("TELEGRAM_SESSION_PATH", "/state/redirect_bot")
 AUTH_PATH = Path(os.environ.get("TELEGRAM_AUTH_PATH", "/state/authorized_users.json"))
 QUOTE_INDEX_PATH = Path(os.environ.get("TELEGRAM_QUOTE_INDEX_PATH", "/state/quote_index.json"))
 MAX_DESTINATIONS = 20
-MAX_URL_LENGTH = 180
 MAX_QUOTE_MESSAGES = 500
 QUOTE_MAX_AGE_SECONDS = 7 * 24 * 60 * 60
 PRIVATE_COMMANDS = [
@@ -37,7 +36,7 @@ GROUP_COMMANDS = [
     {"command": "auth", "description": "创建者授权：回复成员消息或填写数字 ID"},
     {"command": "revoke", "description": "创建者撤销授权：回复消息或填写数字 ID"},
     {"command": "list", "description": "查看当前跳转地址"},
-    {"command": "add", "description": "添加跳转地址：/add HTTPS地址"},
+    {"command": "add", "description": "添加跳转地址：/add HTTP(S)地址"},
     {"command": "remove", "description": "按序号删除跳转地址：/remove 1"},
     {"command": "set", "description": "替换全部地址：/set 地址1 地址2"},
     {"command": "whoami", "description": "查看自己的 Telegram 用户 ID"},
@@ -199,23 +198,15 @@ def can_manage_destinations(
 
 
 def validate_url(value: str) -> str:
-    if not isinstance(value, str) or not value or len(value) > MAX_URL_LENGTH or any(char.isspace() for char in value):
-        raise ValueError("地址不能为空、含空格，或超过 180 个字符")
+    if not isinstance(value, str) or not value or any(char.isspace() or ord(char) < 32 or ord(char) == 127 for char in value):
+        raise ValueError("请输入不含空格或控制字符的 HTTP 或 HTTPS 地址")
     try:
         parsed = urlsplit(value)
-        port = parsed.port
+        parsed.port
     except ValueError as error:
         raise ValueError("地址格式无效") from error
-    if (
-        parsed.scheme.lower() != "https"
-        or not parsed.hostname
-        or parsed.username is not None
-        or parsed.password is not None
-        or (port is not None and port != 443)
-    ):
-        raise ValueError("仅允许不含账号信息的 HTTPS 地址")
-    if any(ord(char) < 32 or ord(char) == 127 for char in value):
-        raise ValueError("地址包含控制字符")
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.hostname:
+        raise ValueError("请输入完整的 HTTP 或 HTTPS 地址")
     return value
 
 

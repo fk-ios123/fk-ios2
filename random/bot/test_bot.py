@@ -50,7 +50,7 @@ class RedirectConfigTests(unittest.TestCase):
         for command in (
             "/add javascript:alert(1)",
             "/set https://new.example https://new.example",
-            "/set http://new.example",
+            "/set https://new.example:invalid",
         ):
             with self.assertRaises(ValueError):
                 execute_command(command, self.path)
@@ -78,8 +78,13 @@ class RedirectConfigTests(unittest.TestCase):
         self.assertEqual(load_authorization(auth_path), (-100456, {222}))
         with self.assertRaises(ValueError):
             save_authorization(-100999, {222}, auth_path)
-        with self.assertRaises(ValueError):
-            validate_url("https://user:password@example.com")
+        self.assertEqual(validate_url("https://user:password@example.com"),
+                         "https://user:password@example.com")
+
+    def test_http_and_custom_https_port_are_accepted(self):
+        urls = ["http://plain.example/path", "https://secure.example:1008/d/item"]
+        execute_command("/set " + " ".join(urls), self.path)
+        self.assertEqual(load_destinations(self.path), urls)
 
     def test_group_authorization_target_and_recipient(self):
         self.assertEqual(group_command("/auth@fk_ios_bot 42", "fk_ios_bot"), ("/auth", ["42"]))

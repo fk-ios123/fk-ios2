@@ -6,13 +6,13 @@ const port = Number(process.env.PORT || 80);
 const configPath = process.env.DESTINATIONS_PATH || '/data/destinations.json';
 
 function validDestination(value) {
-  if (typeof value !== 'string' || !value || value.length > 180 || /\s|[\x00-\x1f\x7f]/.test(value)) {
+  if (typeof value !== 'string' || !value || /\s|[\x00-\x1f\x7f]/.test(value)) {
     return false;
   }
   try {
     const url = new URL(value);
-    return value.startsWith('https://') && url.protocol === 'https:' && Boolean(url.hostname)
-      && !url.username && !url.password && (!url.port || url.port === '443');
+    return /^https?:\/\//i.test(value) && (url.protocol === 'http:' || url.protocol === 'https:')
+      && Boolean(url.hostname);
   } catch {
     return false;
   }
@@ -50,6 +50,10 @@ const server = http.createServer(async (request, response) => {
   }
 });
 
-server.listen(port, '0.0.0.0', () => {
-  console.log(`Redirect server listening on port ${port}`);
-});
+if (require.main === module) {
+  server.listen(port, '0.0.0.0', () => {
+    console.log(`Redirect server listening on port ${port}`);
+  });
+}
+
+module.exports = { validDestination };
