@@ -36,9 +36,14 @@ PRIVATE_COMMANDS = [
 GROUP_COMMANDS = [
     {"command": "auth", "description": "创建者授权：回复成员消息或填写数字 ID"},
     {"command": "revoke", "description": "创建者撤销授权：回复消息或填写数字 ID"},
+    {"command": "list", "description": "查看当前跳转地址"},
+    {"command": "add", "description": "添加跳转地址：/add HTTPS地址"},
+    {"command": "remove", "description": "按序号删除跳转地址：/remove 1"},
+    {"command": "set", "description": "替换全部地址：/set 地址1 地址2"},
     {"command": "whoami", "description": "查看自己的 Telegram 用户 ID"},
     {"command": "groupid", "description": "查看当前群组 ID"},
 ]
+DESTINATION_COMMANDS = frozenset({"/list", "/add", "/remove", "/set"})
 
 HELP = (
     "跳转目标管理：\n"
@@ -179,6 +184,17 @@ def can_manage_authorizations(
         and owner_id is not None
         and sender_id == owner_id
         and (bound_group_id is None or chat_id == bound_group_id)
+    )
+
+
+def can_manage_destinations(
+    chat_id: int | None, sender_id: int | None, bound_group_id: int | None,
+    authorized: set[int], owner_id: int | None,
+) -> bool:
+    return (
+        chat_id is not None and chat_id == bound_group_id
+        and sender_id is not None and sender_id > 0
+        and ((owner_id is not None and sender_id == owner_id) or sender_id in authorized)
     )
 
 
@@ -345,6 +361,22 @@ async def main() -> None:
                     logging.exception("Could not index group message for quote authorization")
             if command == "/groupid":
                 await event.reply(f"本群 ID：{event.chat_id}", parse_mode=None)
+                return
+            if command in DESTINATION_COMMANDS:
+                try:
+                    async with write_lock:
+                        bound_group_id, authorized = load_authorization()
+                        if not can_manage_destinations(
+                            event.chat_id, event.sender_id, bound_group_id, authorized, owner_id
+                        ):
+                            return
+                        reply = execute_command(command_line)
+                except ValueError as error:
+                    reply = f"配置未修改：{error}"
+                except (OSError, json.JSONDecodeError):
+                    logging.exception("Could not manage group redirect configuration")
+                    reply = "配置读写失败，请查看机器人日志。"
+                await event.reply(reply, parse_mode=None)
                 return
             if command not in ("/auth", "/revoke"):
                 return

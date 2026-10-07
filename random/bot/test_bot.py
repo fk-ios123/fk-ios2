@@ -8,6 +8,7 @@ from urllib.parse import parse_qs
 
 from bot import (
     can_manage_authorizations,
+    can_manage_destinations,
     command_name,
     execute_command,
     find_quoted_sender,
@@ -123,7 +124,7 @@ class RedirectConfigTests(unittest.TestCase):
         self.assertEqual({item["command"] for item in json.loads(private["commands"][0])},
                          {"start", "list", "add", "remove", "set", "whoami", "help"})
         self.assertEqual({item["command"] for item in json.loads(group["commands"][0])},
-                         {"auth", "revoke", "whoami", "groupid"})
+                         {"auth", "revoke", "list", "add", "remove", "set", "whoami", "groupid"})
         self.assertTrue(all(any("\u4e00" <= char <= "\u9fff" for char in item["description"])
                             for commands in (private, group) for item in json.loads(commands["commands"][0])))
 
@@ -147,6 +148,14 @@ class RedirectConfigTests(unittest.TestCase):
                 return [(object(), "成员的原消息")]
 
         self.assertEqual(quoted_text(Message()), "成员的原消息")
+
+    def test_group_destination_commands_require_bound_group_and_authorization(self):
+        self.assertTrue(can_manage_destinations(-1001, 42, -1001, {43}, 42))
+        self.assertTrue(can_manage_destinations(-1001, 43, -1001, {43}, 42))
+        self.assertFalse(can_manage_destinations(-1002, 43, -1001, {43}, 42))
+        self.assertFalse(can_manage_destinations(-1001, 44, -1001, {43}, 42))
+        self.assertFalse(can_manage_destinations(-1001, None, -1001, {43}, None))
+        self.assertFalse(can_manage_destinations(-1001, 42, None, {43}, 42))
 
 
 if __name__ == "__main__":
