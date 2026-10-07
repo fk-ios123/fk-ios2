@@ -1,13 +1,13 @@
-# random 站点部署
+# random 跳转服务部署
 
 1. 如需通过 `hlqtcf.com` 访问，将域名的 A 记录指向部署主机，并确保公网 80 端口可达；也可直接使用主机的 HTTP 地址访问。
 2. 在本目录运行 `docker compose up -d`；Podman 主机运行 `podman-compose up -d --force-recreate web`。
 
-站点由 Nginx 在 HTTP 80 端口提供，不申请 TLS 证书。`/destinations.json` 禁止缓存；Nginx 会按任意 Host 提供此站点。这个 Compose 与仓库根目录的五站点 Compose 独立。
+Node 服务在 HTTP 80 端口直接返回 302 跳转，不提供网页，也不申请 TLS 证书。任意 Host 均可访问；`/healthz` 用于健康检查。这个 Compose 与仓库根目录的五站点 Compose 独立。
 
 ## Telegram 管理机器人
 
-页面每次打开都会读取 `data/destinations.json`，从中随机选择一个 HTTPS 地址跳转。初始目标是 `https://qq.com` 和 `https://baidu.com`。机器人更新该文件后，网页无需重建或重启。
+每次访问 `/` 都会读取 `data/destinations.json`，随机选择一个 HTTPS 地址并直接返回 HTTP 302。初始目标是 `https://qq.com` 和 `https://baidu.com`。机器人更新该文件后，服务无需重建或重启。
 
 1. 从 Telegram 的 BotFather 获取机器人 token，从 `my.telegram.org` 获取 API ID 和 API hash。将 `.env.example` 复制为 `.env`，仅在服务器上填入这三项；不要把 `.env`、token、API hash 或会话文件提交到仓库。`TELEGRAM_OWNER_ID` 已在 Compose 中配置；如果要更换创建者，可在 `.env` 中设置此项覆盖默认值。普通 BotFather token 不能提供创建者 ID。
 2. 运行 `docker compose --profile bot up -d --build`；Podman 主机使用 `podman-compose --profile bot up -d --build`。然后将机器人加入用于授权的群组。
@@ -16,4 +16,4 @@
 
 机器人启动时会注册中文命令菜单：私聊输入 `/` 可看到地址管理命令，群聊输入 `/` 可看到授权、地址管理与查询命令。命令菜单只提供提示，执行时仍按创建者 ID 和授权名单校验权限。
 
-绑定群组、授权名单、最近 500 条群消息的文字摘要和 Telegram 会话保存在 `bot_session` 卷中；摘要保留最多 7 天，不保存消息正文。站点只读取目标 JSON，不会提供机器人凭据或授权名单。
+绑定群组、授权名单、最近 500 条群消息的文字摘要和 Telegram 会话保存在 `bot_session` 卷中；摘要保留最多 7 天，不保存消息正文。跳转服务只读取目标 JSON，不会提供机器人凭据、授权名单或 JSON 文件。
