@@ -1,15 +1,22 @@
 import json
 import tempfile
 import unittest
+from io import BytesIO
 from pathlib import Path
+from unittest.mock import patch
+from urllib.parse import parse_qs
 
 from bot import (
     can_manage_authorizations,
     command_name,
     execute_command,
+    group_command,
+    group_member_is_user,
     load_authorization,
     load_destinations,
+    numeric_user_id,
     owner_id_from_env,
+    register_bot_commands,
     save_authorization,
     save_destinations,
     validate_url,
@@ -68,6 +75,53 @@ class RedirectConfigTests(unittest.TestCase):
             save_authorization(-100999, {222}, auth_path)
         with self.assertRaises(ValueError):
             validate_url("https://user:password@example.com")
+
+    def test_group_authorization_target_and_recipient(self):
+        self.assertEqual(group_command("/auth@fk_ios_bot 42", "fk_ios_bot"), ("/auth", ["42"]))
+        self.assertEqual(group_command("/auth@other_bot 42", "fk_ios_bot"), ("", []))
+        self.assertEqual(group_command("/auth", "fk_ios_bot"), ("/auth", []))
+        self.assertEqual(numeric_user_id(["42"]), 42)
+        for arguments in (["0"], ["@someone"], ["42", "43"], []):
+            self.assertIsNone(numeric_user_id(arguments))
+
+    def test_group_member_lookup_rejects_nonmembers_and_bots(self):
+        class Response(BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_):
+                self.close()
+
+        for status, is_bot, expected in (
+            ("member", False, True),
+            ("left", False, False),
+            ("member", True, False),
+        ):
+            result = {"ok": True, "result": {"status": status, "user": {"id": 42, "is_bot": is_bot}}}
+            with patch("bot.urlopen", return_value=Response(json.dumps(result).encode())) as urlopen:
+                self.assertEqual(group_member_is_user("test-token", -100123, 42), expected)
+                self.assertEqual(urlopen.call_args.args[0].data, b"chat_id=-100123&user_id=42")
+
+    def test_command_menu_has_chinese_private_and_group_descriptions(self):
+        class Response(BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_):
+                self.close()
+
+        with patch("bot.urlopen", side_effect=lambda *_args, **_kwargs: Response(b'{"ok":true,"result":true}')) as urlopen:
+            register_bot_commands("test-token")
+        self.assertEqual(urlopen.call_count, 2)
+        private, group = [parse_qs(call.args[0].data.decode()) for call in urlopen.call_args_list]
+        self.assertEqual(json.loads(private["scope"][0]), {"type": "all_private_chats"})
+        self.assertEqual(json.loads(group["scope"][0]), {"type": "all_group_chats"})
+        self.assertEqual({item["command"] for item in json.loads(private["commands"][0])},
+                         {"start", "list", "add", "remove", "set", "whoami", "help"})
+        self.assertEqual({item["command"] for item in json.loads(group["commands"][0])},
+                         {"auth", "revoke", "whoami", "groupid"})
+        self.assertTrue(all(any("\u4e00" <= char <= "\u9fff" for char in item["description"])
+                            for commands in (private, group) for item in json.loads(commands["commands"][0])))
 
 
 if __name__ == "__main__":

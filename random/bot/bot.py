@@ -6,6 +6,8 @@ import logging
 import os
 import tempfile
 from pathlib import Path
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 from urllib.parse import urlsplit
 
 from telethon import TelegramClient, events, types
@@ -17,6 +19,21 @@ SESSION_PATH = os.environ.get("TELEGRAM_SESSION_PATH", "/state/redirect_bot")
 AUTH_PATH = Path(os.environ.get("TELEGRAM_AUTH_PATH", "/state/authorized_users.json"))
 MAX_DESTINATIONS = 20
 MAX_URL_LENGTH = 180
+PRIVATE_COMMANDS = [
+    {"command": "start", "description": "查看机器人使用说明"},
+    {"command": "list", "description": "查看当前跳转地址"},
+    {"command": "add", "description": "添加地址：/add https://example.com"},
+    {"command": "remove", "description": "按序号删除地址：/remove 1"},
+    {"command": "set", "description": "替换全部地址：/set 地址1 地址2"},
+    {"command": "whoami", "description": "查看自己的 Telegram 用户 ID"},
+    {"command": "help", "description": "查看全部使用说明"},
+]
+GROUP_COMMANDS = [
+    {"command": "auth", "description": "创建者授权：回复成员消息或填写数字 ID"},
+    {"command": "revoke", "description": "创建者撤销授权：回复消息或填写数字 ID"},
+    {"command": "whoami", "description": "查看自己的 Telegram 用户 ID"},
+    {"command": "groupid", "description": "查看当前群组 ID"},
+]
 
 HELP = (
     "跳转目标管理：\n"
@@ -25,7 +42,7 @@ HELP = (
     "/remove 1 按序号删除目标\n"
     "/set https://a.example https://b.example 替换全部目标\n"
     "/help 查看命令\n"
-    "授权由机器人创建者在指定群组回复成员消息后发送 /auth。"
+    "授权由机器人创建者在群中回复成员消息发送 /auth，或发送 /auth 数字用户ID。"
 )
 
 
@@ -40,6 +57,60 @@ def owner_id_from_env(value: str) -> int | None:
 
 def command_name(message: str) -> str:
     return message.strip().partition(" ")[0].split("@", 1)[0].lower()
+
+
+def group_command(message: str, bot_username: str) -> tuple[str, list[str]]:
+    parts = message.strip().split()
+    if not parts:
+        return "", []
+    raw = parts[0]
+    command, separator, recipient = raw.partition("@")
+    if separator and recipient.lower() != bot_username.lower():
+        return "", []
+    return command.lower(), parts[1:]
+
+
+def numeric_user_id(arguments: list[str]) -> int | None:
+    if len(arguments) != 1 or not arguments[0].isdecimal():
+        return None
+    user_id = int(arguments[0])
+    return user_id if user_id > 0 else None
+
+
+def telegram_bot_api(bot_token: str, method: str, parameters: dict) -> object:
+    payload = urlencode(parameters).encode("utf-8")
+    request = Request(f"https://api.telegram.org/bot{bot_token}/{method}", data=payload)
+    with urlopen(request, timeout=10) as response:
+        result = json.load(response)
+    if not isinstance(result, dict) or result.get("ok") is not True:
+        raise ValueError(f"Telegram {method} failed")
+    return result.get("result")
+
+
+def register_bot_commands(bot_token: str) -> None:
+    for scope, commands in (
+        ("all_private_chats", PRIVATE_COMMANDS),
+        ("all_group_chats", GROUP_COMMANDS),
+    ):
+        success = telegram_bot_api(bot_token, "setMyCommands", {
+            "commands": json.dumps(commands, ensure_ascii=False),
+            "scope": json.dumps({"type": scope}),
+        })
+        if success is not True:
+            raise ValueError(f"Telegram setMyCommands failed for {scope}")
+
+
+def group_member_is_user(bot_token: str, chat_id: int, user_id: int) -> bool:
+    member = telegram_bot_api(bot_token, "getChatMember", {"chat_id": chat_id, "user_id": user_id})
+    if not isinstance(member, dict) or not isinstance(member.get("user"), dict):
+        raise ValueError("Telegram member lookup failed")
+    user = member["user"]
+    if user.get("id") != user_id or user.get("is_bot") is True:
+        return False
+    status = member.get("status")
+    return status in ("creator", "administrator", "member") or (
+        status == "restricted" and member.get("is_member") is True
+    )
 
 
 def can_manage_authorizations(
@@ -198,6 +269,8 @@ async def main() -> None:
     client = TelegramClient(SESSION_PATH, api_id, api_hash)
     write_lock = asyncio.Lock()
 
+    bot_username = ""
+
     @client.on(events.NewMessage(incoming=True))
     async def on_message(event) -> None:
         command = command_name(event.raw_text or "")
@@ -205,6 +278,7 @@ async def main() -> None:
             await event.reply(f"你的 Telegram 用户 ID：{event.sender_id}", parse_mode=None)
             return
         if event.is_group:
+            command, arguments = group_command(event.raw_text or "", bot_username)
             if command == "/groupid":
                 await event.reply(f"本群 ID：{event.chat_id}", parse_mode=None)
                 return
@@ -215,20 +289,38 @@ async def main() -> None:
                 return
             if event.sender_id != owner_id:
                 return
-            if not event.is_reply:
-                await event.reply(f"请回复目标成员的消息发送 {command}。", parse_mode=None)
+            if len(arguments) > 1 or (arguments and numeric_user_id(arguments) is None):
+                await event.reply(f"用法：回复成员消息发送 {command}，或发送 {command} 数字用户ID。", parse_mode=None)
+                return
+            if arguments and event.is_reply:
+                await event.reply("请只使用回复或数字用户 ID 中的一种方式指定成员。", parse_mode=None)
+                return
+            if not arguments and not event.is_reply:
+                await event.reply(f"请回复成员的原始消息发送 {command}，或发送 {command} 数字用户ID；文字引用不算回复。", parse_mode=None)
                 return
             try:
-                target_message = await event.get_reply_message()
-                target = await target_message.get_sender() if target_message is not None else None
-            except RPCError:
-                logging.exception("Could not resolve replied-to message")
-                target = None
-            if target is None:
-                await event.reply("无法读取被回复的消息，请重新回复该成员的消息。", parse_mode=None)
+                if arguments:
+                    target_id = numeric_user_id(arguments)
+                else:
+                    target_message = await event.get_reply_message()
+                    if target_message is not None and target_message.fwd_from:
+                        await event.reply("请回复成员本人发送的原始消息，不要回复转发消息。", parse_mode=None)
+                        return
+                    target_id = target_message.sender_id if target_message is not None else None
+            except (RPCError, ValueError):
+                logging.exception("Could not resolve authorization target")
+                target_id = None
+            if target_id is None or target_id <= 0:
+                await event.reply("无法识别目标成员。请回复其原始消息，或确认数字 ID 属于本群成员。", parse_mode=None)
                 return
-            if not isinstance(target, types.User) or target.bot:
-                await event.reply("只能授权或撤销真实用户账号。", parse_mode=None)
+            try:
+                is_member = await asyncio.to_thread(group_member_is_user, bot_token, event.chat_id, target_id)
+            except (OSError, ValueError, json.JSONDecodeError):
+                logging.warning("Could not verify target membership in group %s", event.chat_id)
+                await event.reply("无法核验成员身份；请确认机器人是本群管理员后重试。", parse_mode=None)
+                return
+            if not is_member:
+                await event.reply("只能授权本群真实成员账号。", parse_mode=None)
                 return
             try:
                 async with write_lock:
@@ -240,13 +332,13 @@ async def main() -> None:
                     else:
                         group_id = bound_group_id if bound_group_id is not None else event.chat_id
                         if command == "/auth":
-                            authorized.add(target.id)
+                            authorized.add(target_id)
                             action = "已授权"
                         else:
-                            authorized.discard(target.id)
+                            authorized.discard(target_id)
                             action = "已撤销"
                         save_authorization(group_id, authorized)
-                        reply = f"{action}用户 {target.id}。"
+                        reply = f"{action}用户 {target_id}。"
                 await event.reply(reply, parse_mode=None)
             except (OSError, ValueError, json.JSONDecodeError):
                 logging.exception("Could not update authorized users")
@@ -276,6 +368,11 @@ async def main() -> None:
         await event.reply(reply, parse_mode=None)
 
     await client.start(bot_token=bot_token)
+    me = await client.get_me()
+    if not isinstance(me, types.User) or not me.bot or not me.username:
+        raise ValueError("Cannot verify bot username")
+    bot_username = me.username
+    await asyncio.to_thread(register_bot_commands, bot_token)
     logging.info("Redirect configuration bot started")
     await client.run_until_disconnected()
 
