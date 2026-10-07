@@ -1,1 +1,4 @@
 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
+
+
+https://aaa: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@github.com/fk-ios123/fk-ios2.git
