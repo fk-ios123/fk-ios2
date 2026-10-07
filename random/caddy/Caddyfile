@@ -1,0 +1,12 @@
+hlqtcf.com {
+	handle /destinations.json {
+		root * /srv/data
+		header Cache-Control "no-store"
+		file_server
+	}
+
+	handle {
+		root * /srv
+		file_server
+	}
+}

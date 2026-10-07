@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面跳转</title>
+</head>
+
+<body>
+    <p id="status">正在跳转…</p>
+    <script>
+        (async () => {
+            const status = document.getElementById('status');
+            try {
+                const response = await fetch('/destinations.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('配置请求失败');
+
+                const config = await response.json();
+                const destinations = Array.isArray(config.destinations)
+                    ? config.destinations.filter((value) => {
+                        try { return new URL(value).protocol === 'https:'; }
+                        catch { return false; }
+                    })
+                    : [];
+                if (destinations.length === 0) throw new Error('没有可用的跳转目标');
+
+                const destination = destinations[Math.floor(Math.random() * destinations.length)];
+                window.location.replace(destination);
+            } catch (error) {
+                status.textContent = '暂时无法跳转，请稍后重试。';
+                console.error('Redirect configuration failed:', error);
+            }
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+name: fk-ios-random
+
+services:
+  web:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy:/etc/caddy:ro,z
+      - ./index.html:/srv/index.html:ro,z
+      - ./data:/srv/data:ro,z
+      - caddy_data:/data
+      - caddy_config:/config
+
+  bot:
+    build: ./bot
+    restart: unless-stopped
+    environment:
+      TELEGRAM_API_ID: ${TELEGRAM_API_ID:?Set TELEGRAM_API_ID in random/.env}
+      TELEGRAM_API_HASH: ${TELEGRAM_API_HASH:?Set TELEGRAM_API_HASH in random/.env}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:?Set TELEGRAM_BOT_TOKEN in random/.env}
+      TELEGRAM_ADMIN_IDS: ${TELEGRAM_ADMIN_IDS:?Set TELEGRAM_ADMIN_IDS in random/.env}
+    volumes:
+      - ./data:/data:z
+      - bot_session:/state
+
+volumes:
+  caddy_data:
+  caddy_config:
+  bot_session:
