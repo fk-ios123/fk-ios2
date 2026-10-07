@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Nhật ký khai quật",
+    "description": "De-Extinct: Jurassic Dinosaurs — game chiến thuật 4X xây căn cứ trên hòn đảo nghiên cứu thất lạc. Nhật ký, bản vẽ và dữ kiện từ cửa hàng."
+  },
+  "a11y": {
+    "skip": "Tới nội dung",
+    "lang": "Ngôn ngữ"
+  },
+  "brand": {
+    "sub": "Nhật ký khai quật"
+  },
+  "head": {
+    "note": "Điểm 07 · đang mở"
+  },
+  "hero": {
+    "kicker": "Nhật ký khai quật · Điểm 07",
+    "h": "Đào hòn đảo. Rồi điều hành nó.",
+    "lede": "Game chiến thuật 4X xây căn cứ trên hòn đảo nghiên cứu thất lạc. Miễn phí trên App Store.",
+    "cta": "Mở trên App Store",
+    "note": "Mở App Store trong tab mới"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "điểm trên App Store",
+    "species": "100+",
+    "speciesLabel": "loài khủng long",
+    "price": "Miễn phí",
+    "priceLabel": "có mua trong ứng dụng"
+  },
+  "plate": {
+    "s01": "Một vụ thoát chuồng đang diễn ra — ghi nhận thường gặp nhất ở điểm này.",
+    "s02": "Giao chiến ngoài thực địa và thử thách Colosseum đầu tiên.",
+    "s03": "Ấp và nuôi tới trọng lượng chiến đấu.",
+    "s04": "Đội hình: chuyên gia, kỵ thủ và nâng cấp của họ.",
+    "s05": "Nhà sản xuất nuôi căn cứ.",
+    "s06": "Góc nhìn đẳng cự của công viên đang xây dở.",
+    "s07": "Khai quật và nhà trưng bày nuôi nó."
+  },
+  "depth": {
+    "l00": "Mặt đất",
+    "l01": "Khai quật",
+    "l02": "Hệ thống",
+    "l03": "Hồ sơ",
+    "l04": "Câu hỏi"
+  },
+  "premise": {
+    "kicker": "Lớp 00 — Mặt đất",
+    "h": "Hòn đảo ngừng trả lời.",
+    "p1": "Ark Gene Group đưa các loài tuyệt chủng trở lại trên một hòn đảo xa, và thế giới đã dõi theo một thời gian. Rồi tín hiệu đứt.",
+    "p2": "Bạn đổ bộ với tư cách chỉ huy kỳ cựu, mang theo một đội nhỏ và căn cứ dở dang. Từ đây, nhật ký là do bạn viết."
+  },
+  "dig": {
+    "kicker": "Lớp 01 — Khai quật",
+    "h": "Bảy bản vẽ từ điểm khai quật.",
+    "lede": "Ảnh chụp từ cửa hàng theo thứ tự. Gộp lại, chúng bao quát gần hết những gì bạn sẽ xử lý trong tuần đầu."
+  },
+  "systems": {
+    "kicker": "Lớp 02 — Hệ thống",
+    "h": "Bốn hệ thống, một quyền chỉ huy.",
+    "lede": "Khủng long hút mắt. Bên dưới là chiến thuật: xây, bố trí, thăm dò, nghiên cứu — lặp đi lặp lại."
+  },
+  "sys1": {
+    "h": "Dựng lại tổ hợp",
+    "p": "Nơi trú ẩn, phòng thí nghiệm và phòng thủ. Nâng cấp căn cứ là thứ mở khoá mọi thứ khác."
+  },
+  "sys2": {
+    "h": "Chiêu mộ đội ngũ",
+    "p": "Nhà khoa học, lính đánh thuê và huấn luyện viên. Một số về sau thành Dinorider."
+  },
+  "sys3": {
+    "h": "Làm việc trên đảo",
+    "p": "Băng qua các vùng sinh thái lấy tài nguyên, xử lý sự kiện và khống chế những gì đã sổng ra."
+  },
+  "sys4": {
+    "h": "Nghiên cứu sinh thái",
+    "p": "Ấp và huấn luyện hơn 100 loài. Đội hình là chiến thuật, không phải kệ trưng cúp."
+  },
+  "record": {
+    "kicker": "Lớp 03 — Hồ sơ",
+    "h": "Trang cửa hàng thực sự ghi gì.",
+    "lede": "Lấy thẳng từ mục App Store, để sau khi tải không có gì bất ngờ."
+  },
+  "rec1": {
+    "k": "Giá",
+    "v": "Tải miễn phí, có mua trong ứng dụng không bắt buộc."
+  },
+  "rec2": {
+    "k": "Xếp hạng tuổi",
+    "v": "Mục Hoa Kỳ ghi 12+; có ghi chú bạo lực, vũ khí và chủ đề người lớn."
+  },
+  "rec3": {
+    "k": "Dung lượng cài",
+    "v": "Khoảng 1,3 GB và cần iOS 13 trở lên."
+  },
+  "rec4": {
+    "k": "Thể loại",
+    "v": "Chiến thuật và mô phỏng là chính, kèm yếu tố xã hội và liên minh."
+  },
+  "faq": {
+    "kicker": "Lớp 04 — Câu hỏi",
+    "h": "Trước khi tải."
+  },
+  "q1": {
+    "q": "Có thật sự miễn phí?",
+    "a": "Có. App Store ghi là tải miễn phí kèm mua trong ứng dụng không bắt buộc. Không có tường phí trước khi cài."
+  },
+  "q2": {
+    "q": "Chỉ là game khủng long thôi à?",
+    "a": "Không. Khủng long là bối cảnh, còn lõi là chiến thuật 4X — xây căn cứ, nghiên cứu, phát triển đội và tranh đua liên minh. Hãy tính tới đồng hồ chờ."
+  },
+  "q3": {
+    "q": "Một phiên kéo dài bao lâu?",
+    "a": "Ghé ngắn là đủ — thu hoạch, xếp một nâng cấp, phái đội đi. Phiên dài dành cho sự kiện, khai quật và liên minh."
+  },
+  "q4": {
+    "q": "Có bắt buộc chơi cùng người khác?",
+    "a": "Chơi một mình vẫn đi khá xa, nhưng liên minh gánh phần lớn giai đoạn cuối và gần như toàn bộ sự kiện theo mùa."
+  },
+  "q5": {
+    "q": "Chạy trên thiết bị nào?",
+    "a": "Mục cửa hàng yêu cầu iOS 13.0 trở lên. Kiểm tra yêu cầu hiện hành trên trang App Store trước khi cài."
+  },
+  "final": {
+    "kicker": "Nền đá",
+    "h": "Điểm khai quật vẫn mở.",
+    "p": "Kiểm tra giá, xếp hạng và yêu cầu thiết bị trên mục chính thức trước khi tải.",
+    "cta": "Mở trên App Store",
+    "note": "Mở App Store trong tab mới"
+  },
+  "foot": {
+    "disclaimer": "Đây là trang quảng cáo độc lập, không phải website chính thức của thương hiệu. Để có thông tin sản phẩm chính xác và mua hàng, vui lòng truy cập website chính thức.",
+    "legal": "Tên game, hình ảnh và nhãn hiệu thuộc về chủ sở hữu tương ứng. Ảnh chụp lấy từ mục App Store chính thức và có thể không phản ánh mọi thiết bị."
+  }
+}

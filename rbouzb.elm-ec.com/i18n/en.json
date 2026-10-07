@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Wolf Game: Wild Animal Wars — Pack Command",
+    "description": "Wolf Game: Wild Animal Wars is a real-time strategy game about leading a wolf pack, holding your den and taking the wild map. Free on the App Store."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "lang": "Language"
+  },
+  "gate": {
+    "kicker": "PACK COMMAND · SECTOR 07",
+    "title": "The territory is open. Call the pack.",
+    "body": "A real-time strategy game about leading a wolf pack and holding the wild. Free on the App Store.",
+    "enter": "Enter the territory",
+    "note": "Free to download · In-app purchases"
+  },
+  "cover": {
+    "label": "Reading the territory…"
+  },
+  "brand": {
+    "sub": "Pack command"
+  },
+  "head": {
+    "note": "Sector 07 · active"
+  },
+  "hero": {
+    "kicker": "TERRITORY COMMAND · SECTOR 07",
+    "h": "Hold the den.\nTake the territory.",
+    "lede": "A real-time strategy game about leading a wolf pack, defending your den and fighting for the wild map. Free to download on the App Store.",
+    "cta": "Open on the App Store",
+    "note": "Opens the App Store in a new tab"
+  },
+  "chip": {
+    "rating": "4.7",
+    "ratingLabel": "App Store rating",
+    "ratings": "16,640",
+    "ratingsLabel": "ratings on the US listing",
+    "price": "Free",
+    "priceLabel": "with in-app purchases"
+  },
+  "sector": {
+    "01": "SECTOR 01 — RECON",
+    "02": "SECTOR 02 — PACK",
+    "03": "SECTOR 03 — THE LOOP",
+    "04": "SECTOR 04 — THE RECORD",
+    "05": "SECTOR 05 — QUERIES"
+  },
+  "plates": {
+    "h": "Four frames from the wild.",
+    "lede": "Store screenshots in order. Between them they cover the map, the den and the fight."
+  },
+  "plate": {
+    "s01": "The world map: one shared board of regions, dens and resource nodes.",
+    "s02": "Your den: the compound your pack has to hold.",
+    "s03": "The pack roster: each wolf with its own level and upgrades.",
+    "s04": "Live combat: two packs engaged, commands at the bottom."
+  },
+  "pack": {
+    "h": "Four breeds, one pack.",
+    "lede": "The listing names four wolf types you build a pack from. Each one is a slot in the same strategy, not a cosmetic pick.",
+    "caption": "Wolf breeds",
+    "thCode": "Code",
+    "thBreed": "Breed",
+    "thRole": "Role",
+    "r1": "Timber Wolf",
+    "r1d": "The backbone of a working pack.",
+    "r2": "Gray Wolf",
+    "r2d": "The all-rounder you build around early.",
+    "r3": "Arctic Wolf",
+    "r3d": "A specialist for rougher ground.",
+    "r4": "Black Wolf",
+    "r4d": "The one you keep back until it matters."
+  },
+  "loop": {
+    "h": "Six orders, one territory.",
+    "lede": "Straight from the platform's own feature list: the jobs you actually do, in the order the game hands them to you."
+  },
+  "o1": { "h": "Assemble the pack", "p": "Gather wolves across the four breeds and build a pack that fits how you play." },
+  "o2": { "h": "Lead them live", "p": "Real-time control: defend the den, push out, and read the terrain before you commit." },
+  "o3": { "h": "Join an alliance", "p": "Team up, expand territory together, and take PVP fights against other packs." },
+  "o4": { "h": "Scout the wild", "p": "Send scouts, spot border invasions, follow prey trails and dodge hunters." },
+  "o5": { "h": "Build a kingdom", "p": "Win the fights, take ground, and grow the pack into something that holds it." },
+  "o6": { "h": "Play one map", "p": "Every action happens on a single shared world map, with no separate battle screen." },
+  "record": {
+    "h": "What the listing actually says.",
+    "lede": "Straight from the App Store entry, so nothing here surprises you after the download."
+  },
+  "rec1": { "k": "Price", "v": "Free to download. The listing notes in-app purchases, including a monthly subscription." },
+  "rec2": { "k": "Genre", "v": "Roleplaying and strategy, built around alliances and cross-server play." },
+  "rec3": { "k": "Install size", "v": "Around 2.5 GB, and it needs iOS 15.0 or later." },
+  "rec4": { "k": "Connection", "v": "Online only — the listing states a network connection is required to play." },
+  "faq": {
+    "h": "Before you download."
+  },
+  "q1": { "q": "Is it really free?", "a": "Yes — free to download. The listing says it offers in-app purchases for some items and functions, and it names a monthly subscription, so expect optional paid extras rather than a paywall on the install." },
+  "q2": { "q": "What kind of game is it?", "a": "A real-time strategy game themed on wolves. You assemble a pack, defend your den, explore a shared world map and fight other packs, with alliances carrying the co-operative side." },
+  "q3": { "q": "Do I have to play with other people?", "a": "Alliances, PVP and cross-server play are central to the listing's description, so the game is built for other players to be present. Treat it as an online multiplayer strategy game." },
+  "q4": { "q": "Can I play offline?", "a": "No. The listing states a network connection is required to play." },
+  "q5": { "q": "Which devices does it run on?", "a": "The listing asks for iOS 15.0 or later. Check the App Store page for the current requirement before you install." },
+  "final": {
+    "kicker": "SECTOR CLOSED",
+    "h": "The territory is still open.",
+    "p": "Check the official listing for the current price, rating and device requirements before you download.",
+    "cta": "Open on the App Store",
+    "note": "Opens the App Store in a new tab"
+  },
+  "foot": {
+    "disclaimer": "This is an independent advertising page, not the official brand website. For accurate product information and purchases, please visit the official website.",
+    "legal": "Game names, artwork and trademarks belong to their respective owners. Screenshots are from the official App Store listing and may not reflect every device."
+  }
+}

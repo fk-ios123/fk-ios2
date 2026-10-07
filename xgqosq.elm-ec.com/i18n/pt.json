@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Códice do sítio",
+    "description": "De-Extinct: Jurassic Dinosaurs — um jogo de estratégia 4X com construção de base numa ilha de pesquisa perdida. Um catálogo de sistemas, espécies e instalações."
+  },
+  "a11y": {
+    "skip": "Ir para o conteúdo",
+    "lang": "Idioma"
+  },
+  "brand": {
+    "sub": "Códice do sítio"
+  },
+  "head": {
+    "note": "Seis entradas · indexadas"
+  },
+  "hero": {
+    "kicker": "Códice do sítio · 100+ espécies",
+    "h": "A ilha, peça por peça.",
+    "lede": "Um jogo de estratégia 4X com construção de base numa ilha de pesquisa perdida. Este é o catálogo: o que constróis, o que chocas e o que foge.",
+    "cta": "Abrir no App Store",
+    "note": "Abre o App Store numa nova aba"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "avaliação no App Store",
+    "species": "100+",
+    "speciesLabel": "espécies de dinossauros",
+    "price": "Grátis",
+    "priceLabel": "com compras no app"
+  },
+  "plate": {
+    "s01": "A prancha com que a loja abre — uma fuga, a meio da investida."
+  },
+  "idx": {
+    "kicker": "Índice",
+    "h": "Seis entradas, três fases.",
+    "lede": "Todas as pranchas da ficha, arquivadas e etiquetadas. Filtra pela fase do jogo a que cada uma pertence."
+  },
+  "flt": {
+    "label": "Filtrar entradas",
+    "all": "Tudo",
+    "build": "Construir",
+    "grow": "Criar",
+    "fight": "Combater"
+  },
+  "e1": {
+    "g": "Combater",
+    "t": "O Coliseu",
+    "note": "Onde as esquadras se provam. Primeiro o combate em campo, depois a arena, depois as classificações."
+  },
+  "e2": {
+    "g": "Criar",
+    "t": "A incubadora",
+    "note": "Onde o plantel começa. Choca uma espécie e leva-a ao peso que a torna útil."
+  },
+  "e3": {
+    "g": "Criar",
+    "t": "O plantel",
+    "note": "Especialistas, cavaleiros e as suas melhorias. Recrutas que vieram pela ciência e ficaram pela linha da frente."
+  },
+  "e4": {
+    "g": "Construir",
+    "t": "Produção",
+    "note": "Os edifícios que abastecem todo o resto. Pouco vistosos e estruturais."
+  },
+  "e5": {
+    "g": "Construir",
+    "t": "O parque",
+    "note": "Abrigos, laboratórios e defesas, vistos de cima. Melhorar a base desbloqueia o resto."
+  },
+  "e6": {
+    "g": "Construir",
+    "t": "Escavação",
+    "note": "Fósseis, o pavilhão de exposições e a receita que paga a reconstrução."
+  },
+  "named": {
+    "kicker": "Fauna",
+    "h": "Espécies nomeadas na ficha.",
+    "lede": "Citadas na descrição do App Store ou visíveis nas suas capturas. O plantel completo passa de 100."
+  },
+  "sp": {
+    "theropod": "Terópode",
+    "herbivore": "Herbívoro"
+  },
+  "dossier": {
+    "kicker": "Processo",
+    "h": "A ficha, transcrita.",
+    "lede": "Retirada da ficha do App Store, para que nada te surpreenda depois da transferência."
+  },
+  "d1": {
+    "k": "Preço",
+    "v": "Transferência gratuita, com compras opcionais no app."
+  },
+  "d2": {
+    "k": "Classificação etária",
+    "v": "Classificado 12+ na ficha dos EUA; refere violência, armas e temas adultos."
+  },
+  "d3": {
+    "k": "Tamanho da instalação",
+    "v": "Cerca de 1,3 GB, e requer iOS 13 ou posterior."
+  },
+  "d4": {
+    "k": "Género",
+    "v": "Estratégia e simulação em primeiro lugar, com jogo social e de alianças."
+  },
+  "faq": {
+    "kicker": "Perguntas",
+    "h": "Ler antes de instalar."
+  },
+  "q1": {
+    "q": "É mesmo grátis?",
+    "a": "Sim. O App Store lista-o como transferência gratuita com compras opcionais no app. Não há barreira de pagamento antes da instalação."
+  },
+  "q2": {
+    "q": "É só um jogo de dinossauros?",
+    "a": "Não. Os dinossauros são o cenário; o ciclo é estratégia 4X — base, investigação, crescimento de esquadrões e competição de alianças. Conta com temporizadores."
+  },
+  "q3": {
+    "q": "Quanto dura uma sessão?",
+    "a": "Visitas curtas funcionam bem — recolher, lançar uma melhoria, enviar um esquadrão. Sessões longas vão para eventos, escavação e alianças."
+  },
+  "q4": {
+    "q": "Tenho de jogar com outras pessoas?",
+    "a": "Sozinho chegas longe, mas as alianças sustentam boa parte do jogo avançado e quase todos os eventos sazonais."
+  },
+  "q5": {
+    "q": "Em que dispositivos funciona?",
+    "a": "A ficha pede iOS 13.0 ou posterior. Confirma o requisito atual na página do App Store antes de instalar."
+  },
+  "final": {
+    "kicker": "Fim do índice",
+    "h": "O catálogo continua aberto.",
+    "p": "Confirma na ficha oficial o preço, a classificação e os requisitos atuais antes de transferir.",
+    "cta": "Abrir no App Store",
+    "note": "Abre o App Store numa nova aba"
+  },
+  "foot": {
+    "disclaimer": "Esta é uma página publicitária independente, não o site oficial da marca. Para informação exata sobre o produto e para compras, visita o site oficial.",
+    "legal": "Nomes de jogos, imagens e marcas pertencem aos respetivos proprietários. As capturas vêm da ficha oficial do App Store e podem não refletir todos os dispositivos."
+  }
+}

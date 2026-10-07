@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Registro de excavación",
+    "description": "De-Extinct: Jurassic Dinosaurs — un juego de estrategia 4X con construcción de base en una isla de investigación perdida. Registro, láminas y datos de la ficha."
+  },
+  "a11y": {
+    "skip": "Ir al contenido",
+    "lang": "Idioma"
+  },
+  "brand": {
+    "sub": "Registro de excavación"
+  },
+  "head": {
+    "note": "Sitio 07 · abierto"
+  },
+  "hero": {
+    "kicker": "Registro de excavación · Sitio 07",
+    "h": "Excava la isla. Luego dirígela.",
+    "lede": "Un juego de estrategia 4X con construcción de base en una isla de investigación perdida. Gratis en el App Store.",
+    "cta": "Abrir en el App Store",
+    "note": "Abre el App Store en una pestaña nueva"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "valoración en el App Store",
+    "species": "100+",
+    "speciesLabel": "especies de dinosaurios",
+    "price": "Gratis",
+    "priceLabel": "con compras dentro de la app"
+  },
+  "plate": {
+    "s01": "Una fuga en curso: la entrada más frecuente del registro.",
+    "s02": "Combate de campo y el primer reto del Coliseo.",
+    "s03": "Eclosión y crianza hasta el peso de combate.",
+    "s04": "La plantilla: expertos, jinetes y sus mejoras.",
+    "s05": "Edificios de producción que abastecen la base.",
+    "s06": "Vista isométrica de un parque a medio reconstruir.",
+    "s07": "Excavación y la sala de exposiciones que la financia."
+  },
+  "depth": {
+    "l00": "Superficie",
+    "l01": "La excavación",
+    "l02": "Sistemas",
+    "l03": "El expediente",
+    "l04": "Preguntas"
+  },
+  "premise": {
+    "kicker": "Capa 00 — Superficie",
+    "h": "Una isla que dejó de responder.",
+    "p1": "Ark Gene Group trajo de vuelta especies extintas a una isla remota, y durante un tiempo el mundo miró. Después se cortaron las transmisiones.",
+    "p2": "Llegas como comandante veterano con un equipo pequeño y una base a medias. Todo lo que sigue en el registro lo escribes tú."
+  },
+  "dig": {
+    "kicker": "Capa 01 — La excavación",
+    "h": "Siete láminas del sitio.",
+    "lede": "Capturas de la tienda en orden. Entre todas cubren casi todo lo que llevarás en la primera semana."
+  },
+  "systems": {
+    "kicker": "Capa 02 — Sistemas",
+    "h": "Cuatro sistemas, un mando.",
+    "lede": "Los dinosaurios se llevan la atención. Debajo, el bucle es estrategia: construir, dotar, explorar e investigar, una y otra vez."
+  },
+  "sys1": {
+    "h": "Reconstruir el complejo",
+    "p": "Refugios, laboratorios y defensas. Mejorar la base desbloquea todo lo demás."
+  },
+  "sys2": {
+    "h": "Reclutar al equipo",
+    "p": "Científicos, mercenarios y entrenadores. Algunos acaban siendo Dinoriders."
+  },
+  "sys3": {
+    "h": "Trabajar la isla",
+    "p": "Recorre biomas por recursos, resuelve eventos y contiene lo que ya anda suelto."
+  },
+  "sys4": {
+    "h": "Estudiar la ecología",
+    "p": "Eclosiona y entrena más de 100 especies. Una plantilla es estrategia, no una vitrina."
+  },
+  "record": {
+    "kicker": "Capa 03 — El expediente",
+    "h": "Lo que dice realmente la ficha.",
+    "lede": "Directo de la ficha del App Store, para que nada te sorprenda tras la descarga."
+  },
+  "rec1": {
+    "k": "Precio",
+    "v": "Descarga gratuita, con compras dentro de la app opcionales."
+  },
+  "rec2": {
+    "k": "Clasificación por edad",
+    "v": "Clasificado 12+ en la ficha de EE. UU.; indica violencia, armas y temas maduros."
+  },
+  "rec3": {
+    "k": "Tamaño de instalación",
+    "v": "Unos 1,3 GB, y requiere iOS 13 o posterior."
+  },
+  "rec4": {
+    "k": "Género",
+    "v": "Estrategia y simulación ante todo, con juego social y de alianzas."
+  },
+  "faq": {
+    "kicker": "Capa 04 — Preguntas",
+    "h": "Antes de descargar."
+  },
+  "q1": {
+    "q": "¿Es realmente gratis?",
+    "a": "Sí. El App Store lo lista como descarga gratuita con compras opcionales dentro de la app. No hay muro de pago antes de instalar."
+  },
+  "q2": {
+    "q": "¿Es solo un juego de dinosaurios?",
+    "a": "No. Los dinosaurios son el escenario, pero el bucle es estrategia 4X: base, investigación, crecimiento de escuadrones y competencia de alianzas. Cuenta con temporizadores."
+  },
+  "q3": {
+    "q": "¿Cuánto dura una sesión?",
+    "a": "Las visitas cortas funcionan: recoger, lanzar una mejora, enviar un escuadrón. Las sesiones largas van a eventos, excavación y alianzas."
+  },
+  "q4": {
+    "q": "¿Tengo que jugar con otra gente?",
+    "a": "En solitario llegarás lejos, pero las alianzas sostienen buena parte del juego tardío y casi todos los eventos de temporada."
+  },
+  "q5": {
+    "q": "¿En qué dispositivos funciona?",
+    "a": "La ficha pide iOS 13.0 o posterior. Comprueba el requisito actual en la página del App Store antes de instalar."
+  },
+  "final": {
+    "kicker": "Roca madre",
+    "h": "El sitio sigue abierto.",
+    "p": "Consulta la ficha oficial para ver el precio, la clasificación y los requisitos actuales antes de descargar.",
+    "cta": "Abrir en el App Store",
+    "note": "Abre el App Store en una pestaña nueva"
+  },
+  "foot": {
+    "disclaimer": "Esta es una página publicitaria independiente, no el sitio web oficial de la marca. Para información exacta del producto y para comprar, visita el sitio web oficial.",
+    "legal": "Los nombres de juegos, gráficos y marcas pertenecen a sus respectivos propietarios. Las capturas provienen de la ficha oficial del App Store y pueden no reflejar todos los dispositivos."
+  }
+}

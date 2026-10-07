@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Registro de escavação",
+    "description": "De-Extinct: Jurassic Dinosaurs — um jogo de estratégia 4X com construção de base numa ilha de pesquisa perdida. Registro, pranchas e dados da ficha."
+  },
+  "a11y": {
+    "skip": "Ir para o conteúdo",
+    "lang": "Idioma"
+  },
+  "brand": {
+    "sub": "Registro de escavação"
+  },
+  "head": {
+    "note": "Sítio 07 · aberto"
+  },
+  "hero": {
+    "kicker": "Registro de escavação · Sítio 07",
+    "h": "Escave a ilha. Depois comande-a.",
+    "lede": "Um jogo de estratégia 4X com construção de base numa ilha de pesquisa perdida. Grátis no App Store.",
+    "cta": "Abrir no App Store",
+    "note": "Abre o App Store numa nova aba"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "avaliação no App Store",
+    "species": "100+",
+    "speciesLabel": "espécies de dinossauros",
+    "price": "Grátis",
+    "priceLabel": "com compras no app"
+  },
+  "plate": {
+    "s01": "Uma fuga em curso — o registo mais frequente do sítio.",
+    "s02": "Combate em campo e o primeiro desafio do Coliseu.",
+    "s03": "Chocar e criar até ao peso de combate.",
+    "s04": "O plantel: especialistas, cavaleiros e as suas melhorias.",
+    "s05": "Edifícios de produção que abastecem a base.",
+    "s06": "Vista isométrica de um parque a meio da reconstrução.",
+    "s07": "Escavação e o pavilhão de exposições que a paga."
+  },
+  "depth": {
+    "l00": "Superfície",
+    "l01": "A escavação",
+    "l02": "Sistemas",
+    "l03": "O processo",
+    "l04": "Perguntas"
+  },
+  "premise": {
+    "kicker": "Camada 00 — Superfície",
+    "h": "Uma ilha que deixou de responder.",
+    "p1": "O Ark Gene Group trouxe espécies extintas de volta para uma ilha remota, e durante um tempo o mundo assistiu. Depois as transmissões pararam.",
+    "p2": "Chegas como comandante veterano com uma equipa pequena e uma base por acabar. Tudo o que se segue no registo é escrito por ti."
+  },
+  "dig": {
+    "kicker": "Camada 01 — A escavação",
+    "h": "Sete pranchas do sítio.",
+    "lede": "Capturas da loja por ordem. Juntas cobrem quase tudo o que vais tratar na primeira semana."
+  },
+  "systems": {
+    "kicker": "Camada 02 — Sistemas",
+    "h": "Quatro sistemas, um comando.",
+    "lede": "Os dinossauros chamam a atenção. Por baixo, o ciclo é estratégia: construir, guarnecer, explorar e investigar, vezes sem conta."
+  },
+  "sys1": {
+    "h": "Reconstruir o complexo",
+    "p": "Abrigos, laboratórios e defesas. Melhorar a base é o que desbloqueia tudo o resto."
+  },
+  "sys2": {
+    "h": "Recrutar a equipa",
+    "p": "Cientistas, mercenários e treinadores. Alguns tornam-se Dinoriders."
+  },
+  "sys3": {
+    "h": "Trabalhar a ilha",
+    "p": "Atravessa biomas por recursos, resolve eventos e contém o que já anda solto."
+  },
+  "sys4": {
+    "h": "Estudar a ecologia",
+    "p": "Choca e treina mais de 100 espécies. Um plantel é estratégia, não uma prateleira de troféus."
+  },
+  "record": {
+    "kicker": "Camada 03 — O processo",
+    "h": "O que a ficha diz de facto.",
+    "lede": "Diretamente da ficha do App Store, para que nada te surpreenda depois da transferência."
+  },
+  "rec1": {
+    "k": "Preço",
+    "v": "Transferência gratuita, com compras opcionais no app."
+  },
+  "rec2": {
+    "k": "Classificação etária",
+    "v": "Classificado 12+ na ficha dos EUA; refere violência, armas e temas adultos."
+  },
+  "rec3": {
+    "k": "Tamanho da instalação",
+    "v": "Cerca de 1,3 GB, e requer iOS 13 ou posterior."
+  },
+  "rec4": {
+    "k": "Género",
+    "v": "Estratégia e simulação em primeiro lugar, com jogo social e de alianças."
+  },
+  "faq": {
+    "kicker": "Camada 04 — Perguntas",
+    "h": "Antes de transferir."
+  },
+  "q1": {
+    "q": "É mesmo grátis?",
+    "a": "Sim. O App Store lista-o como transferência gratuita com compras opcionais no app. Não há barreira de pagamento antes da instalação."
+  },
+  "q2": {
+    "q": "É só um jogo de dinossauros?",
+    "a": "Não. Os dinossauros são o cenário, mas o ciclo é estratégia 4X — base, investigação, crescimento de esquadrões e competição de alianças. Conta com temporizadores."
+  },
+  "q3": {
+    "q": "Quanto dura uma sessão?",
+    "a": "Visitas curtas funcionam bem — recolher, lançar uma melhoria, enviar um esquadrão. Sessões longas vão para eventos, escavação e alianças."
+  },
+  "q4": {
+    "q": "Tenho de jogar com outras pessoas?",
+    "a": "Sozinho chegas longe, mas as alianças sustentam boa parte do jogo avançado e quase todos os eventos sazonais."
+  },
+  "q5": {
+    "q": "Em que dispositivos funciona?",
+    "a": "A ficha pede iOS 13.0 ou posterior. Confirma o requisito atual na página do App Store antes de instalar."
+  },
+  "final": {
+    "kicker": "Rocha-mãe",
+    "h": "O sítio continua aberto.",
+    "p": "Confirma na ficha oficial o preço, a classificação e os requisitos atuais antes de transferir.",
+    "cta": "Abrir no App Store",
+    "note": "Abre o App Store numa nova aba"
+  },
+  "foot": {
+    "disclaimer": "Esta é uma página publicitária independente, não o site oficial da marca. Para informação exata sobre o produto e para compras, visita o site oficial.",
+    "legal": "Nomes de jogos, imagens e marcas pertencem aos respetivos proprietários. As capturas vêm da ficha oficial do App Store e podem não refletir todos os dispositivos."
+  }
+}

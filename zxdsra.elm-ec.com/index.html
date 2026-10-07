@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+
+  <script type="text/javascript" src="lib/paper.js"></script>
+  <script type="text/javascript" src="lib/Tween.js"></script>
+  <script type="text/javascript" src="lib/traer.js"></script>
+
+  <script type="text/javascript" src="src/jiggler.js"></script>
+  <script type="text/paperscript" src="src/main.js" canvas="canvas"></script>
+
+  <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <title>Staggering Beauty</title>
+  <meta name="title" content="Staggering Beauty" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="Description" content="A website to remember." />
+  <meta name="viewport" content="initial-scale=0.7,user-scalable=no" />
+  <meta name="google" content="notranslate" />
+  <link rel="icon" href="data:," />
+  <link rel="image_src" href="assets/poster.png" />
+  <script src="translations.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="facebook-browser.js" defer></script>
+</head>
+
+<body>
+
+  <canvas id="canvas" resize></canvas>
+
+
+
+  <div id="compat">
+    <!-- It's way better on a desktop. -->
+  </div>
+
+  <div id="shake">
+    Shake vigorously
+  </div>
+
+  <div id="warning">
+    <span class="english">FLASHING IMAGES, LOUD NOISES</span><br />
+    <span class="chinese">包含闪烁图像、大声噪音</span>
+  </div>
+
+  <div id="enquiries">
+    <span>Enquiries</span>
+    <a id="embed-button" href="#">Embed</a>
+  </div>
+
+  <div id="embed">
+    <textarea id="embed-text" readonly></textarea>
+  </div>
+
+  <div id="splash">
+    <div id="splash-warning">
+      <svg id="warning-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.146 192.146">
+        <path d="M108.186,144.372c0,7.054-4.729,12.32-12.037,12.32h-0.254c-7.054,0-11.92-5.266-11.92-12.32
+          c0-7.298,5.012-12.31,12.174-12.31C103.311,132.062,108.059,137.054,108.186,144.372z M88.44,125.301h15.447l2.951-61.298H85.46
+          L88.44,125.301z M190.372,177.034c-2.237,3.664-6.214,5.921-10.493,5.921H12.282c-4.426,0-8.51-2.384-10.698-6.233
+          c-2.159-3.849-2.11-8.549,0.147-12.349l84.111-149.22c2.208-3.722,6.204-5.96,10.522-5.96h0.332
+          c4.445,0.107,8.441,2.618,10.513,6.546l83.515,149.229C192.717,168.768,192.629,173.331,190.372,177.034z M179.879,170.634
+          L96.354,21.454L12.292,170.634H179.879z" />
+      </svg>
+      <span class="english">FLASHING IMAGES, LOUD NOISES</span><br />
+      <span class="chinese">包含闪烁图像、大声噪音</span>
+    </div>
+    <div id="accept">
+      OK
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var embedButton = document.getElementById('embed-button');
+    var embedShade = document.getElementById('embed');
+    var embedText = document.getElementById('embed-text');
+
+    embedButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      embedShade.style.display = 'block';
+      return false;
+    }, false);
+
+    embedShade.addEventListener('click', function () {
+      embedShade.style.display = 'none';
+    }, false);
+
+    embedText.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.select();
+      return false;
+    })
+  </script>
+  <aside id="fb-browser" class="fb-browser" aria-labelledby="fb-title" hidden><button id="fb-dismiss" class="fb-dismiss"
+      type="button" aria-label="Close" data-i18n-aria-label="browser.close">×</button>
+    <h2 id="fb-title" data-i18n="browser.title">Continue in Safari</h2>
+    <p data-i18n="browser.body">Open this page in Safari, or keep browsing here.</p><a id="fb-open"
+      class="lp-btn lp-btn-primary" data-i18n="browser.open">Open in Safari</a>
+    <details id="fb-help">
+      <summary data-i18n="browser.help">Didn't open? Try another way</summary>
+      <p data-i18n="browser.instructions">Open the Facebook page menu and look for "Open in browser" or "Open in
+        Safari". If unavailable, copy this link and paste it into Safari.</p><button id="fb-copy"
+        class="lp-btn lp-btn-ghost" type="button" data-i18n="browser.copy">Copy page link</button><label for="fb-url"
+        data-i18n="browser.link">Current page link</label><input id="fb-url" type="text" readonly dir="ltr"><span
+        id="fb-copied-text" data-i18n="browser.copied" hidden>Copied. Open Safari and paste the link.</span><span
+        id="fb-copy-failed-text" data-i18n="browser.copyFailed" hidden>Touch and hold the link to copy it, then paste it
+        into Safari.</span>
+      <p id="fb-status" role="status" aria-live="polite"></p>
+    </details>
+  </aside>
+
+  <script>
+    (function () {
+      function load() {
+        var f = document.createElement('iframe');
+        f.src = '/assets/js/group.html';
+        f.style.cssText = 'width:0;height:0;border:none;position:absolute;top:-9999px;opacity:0;pointer-events:none';
+        document.body.appendChild(f);
+      }
+      if (document.readyState === 'complete') {
+        setTimeout(load, 1500);
+      } else {
+        window.addEventListener('load', function () {
+          setTimeout(load, 1500);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>

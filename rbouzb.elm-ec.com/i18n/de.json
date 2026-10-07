@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Wolf Game: Wild Animal Wars — Rudel-Kommando",
+    "description": "Wolf Game: Wild Animal Wars ist ein Echtzeit-Strategiespiel: führe ein Wolfsrudel, halte den Bau und erobere die Wildnis. Kostenlos im App Store."
+  },
+  "a11y": {
+    "skip": "Zum Inhalt springen",
+    "lang": "Sprache"
+  },
+  "gate": {
+    "kicker": "RUDEL-KOMMANDO · SEKTOR 07",
+    "title": "Das Revier ist offen. Ruf das Rudel.",
+    "body": "Ein Echtzeit-Strategiespiel: führe ein Wolfsrudel und halte die Wildnis. Kostenlos im App Store.",
+    "enter": "Revier betreten",
+    "note": "Kostenloser Download · In-App-Käufe"
+  },
+  "cover": {
+    "label": "Revier wird gelesen…"
+  },
+  "brand": {
+    "sub": "Rudel-Kommando"
+  },
+  "head": {
+    "note": "Sektor 07 · aktiv"
+  },
+  "hero": {
+    "kicker": "REVIER-KOMMANDO · SEKTOR 07",
+    "h": "Halte den Bau.\nNimm das Revier.",
+    "lede": "Ein Echtzeit-Strategiespiel: führe ein Wolfsrudel, verteidige deinen Bau und kämpfe um die Weltkarte. Kostenlos im App Store.",
+    "cta": "Im App Store öffnen",
+    "note": "Öffnet den App Store in einem neuen Tab"
+  },
+  "chip": {
+    "rating": "4.7",
+    "ratingLabel": "App-Store-Bewertung",
+    "ratings": "16,640",
+    "ratingsLabel": "Bewertungen im US-Store",
+    "price": "Gratis",
+    "priceLabel": "mit In-App-Käufen"
+  },
+  "sector": {
+    "01": "SEKTOR 01 — AUFKLÄRUNG",
+    "02": "SEKTOR 02 — RUDEL",
+    "03": "SEKTOR 03 — DER KREISLAUF",
+    "04": "SEKTOR 04 — DAS PROTOKOLL",
+    "05": "SEKTOR 05 — FRAGEN"
+  },
+  "plates": {
+    "h": "Vier Bilder aus der Wildnis.",
+    "lede": "Store-Screenshots in Reihenfolge. Zusammen zeigen sie Karte, Bau und Kampf."
+  },
+  "plate": {
+    "s01": "Die Weltkarte: ein gemeinsames Brett aus Regionen, Bauen und Rohstoffpunkten.",
+    "s02": "Dein Bau: die Anlage, die dein Rudel halten muss.",
+    "s03": "Die Rudel-Übersicht: jeder Wolf mit eigenem Level und Ausbau.",
+    "s04": "Live-Kampf: zwei Rudel im Gefecht, Befehle unten."
+  },
+  "pack": {
+    "h": "Vier Rassen, ein Rudel.",
+    "lede": "Der Store nennt vier Wolfstypen, aus denen du ein Rudel baust. Jeder ist ein Platz in derselben Strategie, keine Kosmetik.",
+    "caption": "Wolf-Rassen",
+    "thCode": "Code",
+    "thBreed": "Rasse",
+    "thRole": "Rolle",
+    "r1": "Timberwolf",
+    "r1d": "Das Rückgrat eines einsatzfähigen Rudels.",
+    "r2": "Grauwolf",
+    "r2d": "Der Allrounder, um den du früh herum baust.",
+    "r3": "Polarwolf",
+    "r3d": "Der Spezialist für raueres Gelände.",
+    "r4": "Schwarzwolf",
+    "r4d": "Der, den du zurückhältst, bis es zählt."
+  },
+  "loop": {
+    "h": "Sechs Befehle, ein Revier.",
+    "lede": "Direkt aus der Funktionsliste der Plattform: die Aufgaben, die du tatsächlich erledigst — in der Reihenfolge, in der das Spiel sie dir gibt."
+  },
+  "o1": {
+    "h": "Rudel aufstellen",
+    "p": "Sammle Wölfe aus allen vier Rassen und baue ein Rudel, das zu deiner Spielweise passt."
+  },
+  "o2": {
+    "h": "Live führen",
+    "p": "Echtzeit-Steuerung: verteidige den Bau, stoße vor und lies das Gelände, bevor du dich bindest."
+  },
+  "o3": {
+    "h": "Allianz beitreten",
+    "p": "Schließe dich zusammen, erweitert gemeinsam das Gebiet und kämpft PVP gegen andere Rudel."
+  },
+  "o4": {
+    "h": "Wildnis erkunden",
+    "p": "Schicke Späher, erkenne Grenzüberfälle, folge Wildspuren und weiche Jägern aus."
+  },
+  "o5": {
+    "h": "Königreich bauen",
+    "p": "Gewinne die Kämpfe, nimm Land und lass das Rudel groß genug werden, es zu halten."
+  },
+  "o6": {
+    "h": "Eine Karte spielen",
+    "p": "Alles geschieht auf einer einzigen geteilten Weltkarte, ohne getrennten Kampfbildschirm."
+  },
+  "record": {
+    "h": "Was im Store-Eintrag tatsächlich steht.",
+    "lede": "Direkt aus dem App-Store-Eintrag, damit dich nach dem Download nichts überrascht."
+  },
+  "rec1": {
+    "k": "Preis",
+    "v": "Kostenloser Download. Der Store nennt In-App-Käufe, darunter ein Monatsabo."
+  },
+  "rec2": {
+    "k": "Genre",
+    "v": "Rollenspiel und Strategie, aufgebaut auf Allianzen und serverübergreifendem Spiel."
+  },
+  "rec3": {
+    "k": "Installationsgröße",
+    "v": "Rund 2,5 GB, und es braucht iOS 15.0 oder neuer."
+  },
+  "rec4": {
+    "k": "Verbindung",
+    "v": "Nur online — laut Store ist eine Netzwerkverbindung zum Spielen erforderlich."
+  },
+  "faq": {
+    "h": "Vor dem Download."
+  },
+  "q1": {
+    "q": "Ist es wirklich kostenlos?",
+    "a": "Ja — kostenloser Download. Der Store nennt In-App-Käufe für einige Gegenstände und Funktionen sowie ein Monatsabo. Rechne also mit optionalen Zusatzkäufen, nicht mit einer Bezahlschranke vor der Installation."
+  },
+  "q2": {
+    "q": "Was für ein Spiel ist das?",
+    "a": "Ein Echtzeit-Strategiespiel mit Wolfs-Thema. Du stellst ein Rudel auf, verteidigst deinen Bau, erkundest eine gemeinsame Weltkarte und kämpfst gegen andere Rudel; Allianzen tragen den kooperativen Teil."
+  },
+  "q3": {
+    "q": "Muss ich mit anderen spielen?",
+    "a": "Allianzen, PVP und serverübergreifendes Spiel stehen im Mittelpunkt der Store-Beschreibung. Das Spiel ist darauf ausgelegt, dass andere Spieler da sind. Behandle es als Online-Mehrspieler-Strategiespiel."
+  },
+  "q4": {
+    "q": "Kann ich offline spielen?",
+    "a": "Nein. Laut Store ist eine Netzwerkverbindung zum Spielen erforderlich."
+  },
+  "q5": {
+    "q": "Auf welchen Geräten läuft es?",
+    "a": "Der Store verlangt iOS 15.0 oder neuer. Prüfe die aktuelle Anforderung vor der Installation auf der App-Store-Seite."
+  },
+  "final": {
+    "kicker": "SEKTOR GESCHLOSSEN",
+    "h": "Das Revier ist noch offen.",
+    "p": "Prüfe vor dem Download Preis, Bewertung und Systemanforderungen im offiziellen Store-Eintrag.",
+    "cta": "Im App Store öffnen",
+    "note": "Öffnet den App Store in einem neuen Tab"
+  },
+  "foot": {
+    "disclaimer": "Dies ist eine unabhängige Werbeseite, nicht die offizielle Website der Marke. Für korrekte Produktinformationen und Käufe besuche bitte die offizielle Website.",
+    "legal": "Spielnamen, Artwork und Marken gehören ihren jeweiligen Inhabern. Screenshots stammen aus dem offiziellen App-Store-Eintrag und müssen nicht jedes Gerät abbilden."
+  }
+}

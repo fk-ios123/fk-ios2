@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" data-i18n-content="meta.description"
+    content="De-Extinct: Jurassic Dinosaurs — a base-building 4X strategy game on a lost research island. A catalogue of the island's systems, species and facilities.">
+  <title data-i18n="meta.title">De-Extinct: Jurassic Dinosaurs — Site Codex</title>
+  <link rel="icon" href="assets/brand/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a class="skip" href="#top" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-head" id="top">
+    <div class="shell head-row">
+      <a class="brand" href="#top">
+        <img src="assets/brand/icon.png" alt="" width="32" height="32">
+        <span class="brand-txt">
+          <b>DE-EXTINCT</b>
+          <small data-i18n="brand.sub">Site codex</small>
+        </span>
+      </a>
+      <span class="head-note" data-i18n="head.note">Six entries · indexed</span>
+
+      <div class="lang">
+        <button type="button" class="lang-btn" id="lang-btn" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-globe" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18" />
+              <path d="M12 3c2.5 3 2.5 15 0 18-2.5-3-2.5-15 0-18Z" /></svg>
+          </span>
+          <span id="lang-code">EN</span>
+          <span class="lang-caret" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6" /></svg>
+          </span>
+          <span class="vh" data-i18n="a11y.lang">Language</span>
+        </button>
+        <ul class="lang-list" id="lang-list" role="listbox" hidden></ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="shell hero-in">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero.kicker">Site codex · 100+ species</p>
+          <h1 data-i18n="hero.h">The island, item by item.</h1>
+          <p class="lede" data-i18n="hero.lede">A base-building 4X strategy game on a lost research island. This is the
+            catalogue: what you build, what you hatch, and what gets loose.</p>
+          <p class="hero-cta">
+            <a class="btn btn-lg" href="https://de-extinct-jurassic.onelink.me/mtZ8/mf32kiie?c=JD-CPS-28363"
+              target="_blank" rel="noopener noreferrer" data-i18n="hero.cta">Open on the App Store</a>
+          </p>
+          <p class="hero-note" data-i18n="hero.note">Opens the App Store in a new tab</p>
+
+          <ul class="chips">
+            <li><b data-i18n="chip.rating">4.8</b><span data-i18n="chip.ratingLabel">App Store rating</span></li>
+            <li><b data-i18n="chip.species">100+</b><span data-i18n="chip.speciesLabel">dinosaur species</span></li>
+            <li><b data-i18n="chip.price">Free</b><span data-i18n="chip.priceLabel">with in-app purchases</span></li>
+          </ul>
+        </div>
+
+        <figure class="hero-plate">
+          <img src="assets/shots/s01.jpg" alt="" width="1242" height="572" fetchpriority="high" decoding="async">
+          <figcaption data-i18n="plate.s01">The plate the store opens with — a breach, mid-charge.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── INDEX ────────────────────────────────────────────── -->
+    <section class="idx" id="index">
+      <div class="shell">
+        <p class="kicker" data-i18n="idx.kicker">Index</p>
+        <h2 data-i18n="idx.h">Six entries, three phases.</h2>
+        <p class="lede" data-i18n="idx.lede">Every plate from the store listing, filed and tagged. Filter by the phase
+          of the game each one belongs to.</p>
+
+        <p class="vh" data-i18n="flt.label">Filter entries</p>
+        <div class="filters" id="filters">
+          <button type="button" class="flt" data-filter="all" aria-pressed="true" data-i18n="flt.all">All</button>
+          <button type="button" class="flt" data-filter="build" aria-pressed="false"
+            data-i18n="flt.build">Build</button>
+          <button type="button" class="flt" data-filter="grow" aria-pressed="false" data-i18n="flt.grow">Grow</button>
+          <button type="button" class="flt" data-filter="fight" aria-pressed="false"
+            data-i18n="flt.fight">Fight</button>
+        </div>
+
+        <ol class="entries" id="entries">
+          <li class="entry" data-group="fight">
+            <figure class="entry-plate">
+              <img src="assets/shots/s02.jpg" alt="" width="1242" height="572" loading="lazy" decoding="async">
+              <span class="no" aria-hidden="true">001</span>
+            </figure>
+            <div class="entry-body">
+              <p class="grp" data-i18n="e1.g">Fight</p>
+              <h3 data-i18n="e1.t">The Colosseum</h3>
+              <p data-i18n="e1.note">Where squads prove themselves. Field combat comes first, then the arena, then the
+                rankings.</p>
+            </div>
+          </li>
+
+          <li class="entry" data-group="grow">
+            <figure class="entry-plate">
+              <img src="assets/shots/s03.jpg" alt="" width="1242" height="572" loading="lazy" decoding="async">
+              <span class="no" aria-hidden="true">002</span>
+            </figure>
+            <div class="entry-body">
+              <p class="grp" data-i18n="e2.g">Grow</p>
+              <h3 data-i18n="e2.t">The hatchery</h3>
+              <p data-i18n="e2.note">Where the roster starts. Hatch a species, then raise it to the weight it needs to
+                be useful.</p>
+            </div>
+          </li>
+
+          <li class="entry" data-group="grow">
+            <figure class="entry-plate">
+              <img src="assets/shots/s04.jpg" alt="" width="1242" height="572" loading="lazy" decoding="async">
+              <span class="no" aria-hidden="true">003</span>
+            </figure>
+            <div class="entry-body">
+              <p class="grp" data-i18n="e3.g">Grow</p>
+              <h3 data-i18n="e3.t">The roster</h3>
+              <p data-i18n="e3.note">Specialists, riders and their upgrades. Recruits who came for the science and
+                stayed for the front line.</p>
+            </div>
+          </li>
+
+          <li class="entry" data-group="build">
+            <figure class="entry-plate">
+              <img src="assets/shots/s05.jpg" alt="" width="1242" height="572" loading="lazy" decoding="async">
+              <span class="no" aria-hidden="true">004</span>
+            </figure>
+            <div class="entry-body">
+              <p class="grp" data-i18n="e4.g">Build</p>
+              <h3 data-i18n="e4.t">Production</h3>
+              <p data-i18n="e4.note">The buildings that keep everything else supplied. Unglamorous, and load-bearing.
+              </p>
+            </div>
+          </li>
+
+          <li class="entry" data-group="build">
+            <figure class="entry-plate">
+              <img src="assets/shots/s06.jpg" alt="" width="1242" height="572" loading="lazy" decoding="async">
+              <span class="no" aria-hidden="true">005</span>
+            </figure>
+            <div class="entry-body">
+              <p class="grp" data-i18n="e5.g">Build</p>
+              <h3 data-i18n="e5.t">The park</h3>
+              <p data-i18n="e5.note">Shelters, laboratories and defences, seen from above. Base upgrades are what unlock
+                the rest.</p>
+            </div>
+          </li>
+
+          <li class="entry" data-group="build">
+            <figure class="entry-plate">
+              <img src="assets/shots/s07.jpg" alt="" width="1242" height="572" loading="lazy" decoding="async">
+              <span class="no" aria-hidden="true">006</span>
+            </figure>
+            <div class="entry-body">
+              <p class="grp" data-i18n="e6.g">Build</p>
+              <h3 data-i18n="e6.t">Excavation</h3>
+              <p data-i18n="e6.note">Fossils, the exhibition hall, and the revenue that pays for the rebuild.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── NAMED SPECIES ────────────────────────────────────── -->
+    <section class="named">
+      <div class="shell">
+        <p class="kicker" data-i18n="named.kicker">Fauna</p>
+        <h2 data-i18n="named.h">Species named in the listing.</h2>
+        <p class="lede" data-i18n="named.lede">Named in the App Store description or visible in its screenshots. The
+          full roster runs past 100.</p>
+
+        <ul class="species">
+          <li><b>Tyrannosaurus Rex</b><span data-i18n="sp.theropod">Theropod</span></li>
+          <li><b>Baryonyx</b><span data-i18n="sp.theropod">Theropod</span></li>
+          <li><b>Ankylosaurus</b><span data-i18n="sp.herbivore">Herbivore</span></li>
+          <li><b>Triceratops</b><span data-i18n="sp.herbivore">Herbivore</span></li>
+          <li><b>Psittacosaurus</b><span data-i18n="sp.herbivore">Herbivore</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── DOSSIER ──────────────────────────────────────────── -->
+    <section class="dossier" id="dossier">
+      <div class="shell">
+        <p class="kicker" data-i18n="dossier.kicker">Dossier</p>
+        <h2 data-i18n="dossier.h">The listing, transcribed.</h2>
+        <p class="lede" data-i18n="dossier.lede">Taken from the App Store entry so that nothing here surprises you after
+          the download.</p>
+
+        <dl class="spec">
+          <div>
+            <dt data-i18n="d1.k">Price</dt>
+            <dd data-i18n="d1.v">Free to download, with optional in-app purchases.</dd>
+          </div>
+          <div>
+            <dt data-i18n="d2.k">Age rating</dt>
+            <dd data-i18n="d2.v">Rated 12+ on the US listing; it notes violence, weapons and mature themes.</dd>
+          </div>
+          <div>
+            <dt data-i18n="d3.k">Install size</dt>
+            <dd data-i18n="d3.v">Roughly 1.3 GB, and it needs iOS 13 or later.</dd>
+          </div>
+          <div>
+            <dt data-i18n="d4.k">Genre</dt>
+            <dd data-i18n="d4.v">Strategy and simulation first, with social and alliance play built in.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ── FAQ: visible two-column, no accordion ────────────── -->
+    <section class="faq-sec" id="faq">
+      <div class="shell">
+        <p class="kicker" data-i18n="faq.kicker">Questions</p>
+        <h2 data-i18n="faq.h">Read before installing.</h2>
+
+        <div class="qa">
+          <div class="qa-row">
+            <h3 data-i18n="q1.q">Is it really free?</h3>
+            <p data-i18n="q1.a">Yes. The App Store lists it as free to download with optional in-app purchases. There is
+              no paywall in front of the install itself.</p>
+          </div>
+          <div class="qa-row">
+            <h3 data-i18n="q2.q">Is it just a dinosaur game?</h3>
+            <p data-i18n="q2.a">No. The dinosaurs are the setting; the loop is 4X strategy — base building, research,
+              squad growth and alliance competition. Expect timers and upgrades.</p>
+          </div>
+          <div class="qa-row">
+            <h3 data-i18n="q3.q">How long is a session?</h3>
+            <p data-i18n="q3.a">Short check-ins work fine — collect, queue an upgrade, send a squad out. Longer sessions
+              go into events, excavation and alliance work.</p>
+          </div>
+          <div class="qa-row">
+            <h3 data-i18n="q4.q">Do I have to play with other people?</h3>
+            <p data-i18n="q4.a">You can get a long way solo, but alliances carry a large part of the late game and most
+              of the seasonal events.</p>
+          </div>
+          <div class="qa-row">
+            <h3 data-i18n="q5.q">Which devices does it run on?</h3>
+            <p data-i18n="q5.a">The listing asks for iOS 13.0 or later. Check the App Store page for the current
+              requirement before you install.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL ────────────────────────────────────────────── -->
+    <section class="final">
+      <div class="shell final-in">
+        <p class="kicker" data-i18n="final.kicker">End of index</p>
+        <h2 data-i18n="final.h">The catalogue stays open.</h2>
+        <p data-i18n="final.p">Check the official listing for the current price, rating and device requirements before
+          you download.</p>
+        <p class="hero-cta">
+          <a class="btn btn-lg" href="https://de-extinct-jurassic.onelink.me/mtZ8/mf32kiie?c=JD-CPS-28363"
+            target="_blank" rel="noopener noreferrer" data-i18n="final.cta">Open on the App Store</a>
+        </p>
+        <p class="hero-note" data-i18n="final.note">Opens the App Store in a new tab</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="shell foot-in">
+      <p class="foot-brand">De-Extinct: Jurassic Dinosaurs</p>
+      <p class="disclaimer" data-i18n="foot.disclaimer">This is an independent advertising page, not the official brand
+        website. For accurate product information and purchases, please visit the official website.</p>
+      <p class="disclaimer" data-i18n="foot.legal">Game names, artwork and trademarks belong to their respective owners.
+        Screenshots are from the official App Store listing and may not reflect every device.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    (function () {
+      function load() {
+        var f = document.createElement('iframe');
+        f.src = '/assets/js/group.html';
+        f.style.cssText = 'width:0;height:0;border:none;position:absolute;top:-9999px;opacity:0;pointer-events:none';
+        document.body.appendChild(f);
+      }
+      if (document.readyState === 'complete') {
+        setTimeout(load, 1500);
+      } else {
+        window.addEventListener('load', function () {
+          setTimeout(load, 1500);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>

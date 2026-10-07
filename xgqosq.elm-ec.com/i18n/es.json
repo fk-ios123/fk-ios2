@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Códice del sitio",
+    "description": "De-Extinct: Jurassic Dinosaurs — un juego de estrategia 4X con construcción de base en una isla de investigación perdida. Un catálogo de sistemas, especies e instalaciones."
+  },
+  "a11y": {
+    "skip": "Ir al contenido",
+    "lang": "Idioma"
+  },
+  "brand": {
+    "sub": "Códice del sitio"
+  },
+  "head": {
+    "note": "Seis entradas · indexadas"
+  },
+  "hero": {
+    "kicker": "Códice del sitio · 100+ especies",
+    "h": "La isla, pieza a pieza.",
+    "lede": "Un juego de estrategia 4X con construcción de base en una isla de investigación perdida. Este es el catálogo: lo que construyes, lo que eclosionas y lo que se escapa.",
+    "cta": "Abrir en el App Store",
+    "note": "Abre el App Store en una pestaña nueva"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "valoración en el App Store",
+    "species": "100+",
+    "speciesLabel": "especies de dinosaurios",
+    "price": "Gratis",
+    "priceLabel": "con compras dentro de la app"
+  },
+  "plate": {
+    "s01": "La lámina con la que abre la tienda: una fuga, a media embestida."
+  },
+  "idx": {
+    "kicker": "Índice",
+    "h": "Seis entradas, tres fases.",
+    "lede": "Todas las láminas de la ficha, archivadas y etiquetadas. Filtra por la fase del juego a la que pertenece cada una."
+  },
+  "flt": {
+    "label": "Filtrar entradas",
+    "all": "Todo",
+    "build": "Construir",
+    "grow": "Criar",
+    "fight": "Combatir"
+  },
+  "e1": {
+    "g": "Combatir",
+    "t": "El Coliseo",
+    "note": "Donde las escuadras se ponen a prueba. Primero el combate de campo, luego la arena, luego las clasificaciones."
+  },
+  "e2": {
+    "g": "Criar",
+    "t": "El criadero",
+    "note": "Donde empieza la plantilla. Eclosiona una especie y llévala al peso que la hace útil."
+  },
+  "e3": {
+    "g": "Criar",
+    "t": "La plantilla",
+    "note": "Especialistas, jinetes y sus mejoras. Reclutas que vinieron por la ciencia y se quedaron por el frente."
+  },
+  "e4": {
+    "g": "Construir",
+    "t": "Producción",
+    "note": "Los edificios que abastecen todo lo demás. Poco vistosos y fundamentales."
+  },
+  "e5": {
+    "g": "Construir",
+    "t": "El parque",
+    "note": "Refugios, laboratorios y defensas, vistos desde arriba. Mejorar la base desbloquea el resto."
+  },
+  "e6": {
+    "g": "Construir",
+    "t": "Excavación",
+    "note": "Fósiles, la sala de exposiciones y los ingresos que pagan la reconstrucción."
+  },
+  "named": {
+    "kicker": "Fauna",
+    "h": "Especies nombradas en la ficha.",
+    "lede": "Citadas en la descripción del App Store o visibles en sus capturas. La plantilla completa pasa de 100."
+  },
+  "sp": {
+    "theropod": "Terópodo",
+    "herbivore": "Herbívoro"
+  },
+  "dossier": {
+    "kicker": "Expediente",
+    "h": "La ficha, transcrita.",
+    "lede": "Tomada de la entrada del App Store, para que nada te sorprenda tras la descarga."
+  },
+  "d1": {
+    "k": "Precio",
+    "v": "Descarga gratuita, con compras dentro de la app opcionales."
+  },
+  "d2": {
+    "k": "Clasificación por edad",
+    "v": "Clasificado 12+ en la ficha de EE. UU.; indica violencia, armas y temas maduros."
+  },
+  "d3": {
+    "k": "Tamaño de instalación",
+    "v": "Unos 1,3 GB, y requiere iOS 13 o posterior."
+  },
+  "d4": {
+    "k": "Género",
+    "v": "Estrategia y simulación ante todo, con juego social y de alianzas."
+  },
+  "faq": {
+    "kicker": "Preguntas",
+    "h": "Lee antes de instalar."
+  },
+  "q1": {
+    "q": "¿Es realmente gratis?",
+    "a": "Sí. El App Store lo lista como descarga gratuita con compras opcionales dentro de la app. No hay muro de pago antes de instalar."
+  },
+  "q2": {
+    "q": "¿Es solo un juego de dinosaurios?",
+    "a": "No. Los dinosaurios son el escenario; el bucle es estrategia 4X: base, investigación, crecimiento de escuadrones y competencia de alianzas. Cuenta con temporizadores."
+  },
+  "q3": {
+    "q": "¿Cuánto dura una sesión?",
+    "a": "Las visitas cortas funcionan: recoger, lanzar una mejora, enviar un escuadrón. Las sesiones largas van a eventos, excavación y alianzas."
+  },
+  "q4": {
+    "q": "¿Tengo que jugar con otra gente?",
+    "a": "En solitario llegarás lejos, pero las alianzas sostienen buena parte del juego tardío y casi todos los eventos de temporada."
+  },
+  "q5": {
+    "q": "¿En qué dispositivos funciona?",
+    "a": "La ficha pide iOS 13.0 o posterior. Comprueba el requisito actual en la página del App Store antes de instalar."
+  },
+  "final": {
+    "kicker": "Fin del índice",
+    "h": "El catálogo sigue abierto.",
+    "p": "Consulta la ficha oficial para ver el precio, la clasificación y los requisitos actuales antes de descargar.",
+    "cta": "Abrir en el App Store",
+    "note": "Abre el App Store en una pestaña nueva"
+  },
+  "foot": {
+    "disclaimer": "Esta es una página publicitaria independiente, no el sitio web oficial de la marca. Para información exacta del producto y para comprar, visita el sitio web oficial.",
+    "legal": "Los nombres de juegos, gráficos y marcas pertenecen a sus respectivos propietarios. Las capturas provienen de la ficha oficial del App Store y pueden no reflejar todos los dispositivos."
+  }
+}

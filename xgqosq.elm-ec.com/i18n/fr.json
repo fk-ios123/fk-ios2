@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Codex du site",
+    "description": "De-Extinct: Jurassic Dinosaurs — un jeu de stratégie 4X de construction de base sur une île de recherche perdue. Un catalogue des systèmes, espèces et installations."
+  },
+  "a11y": {
+    "skip": "Aller au contenu",
+    "lang": "Langue"
+  },
+  "brand": {
+    "sub": "Codex du site"
+  },
+  "head": {
+    "note": "Six entrées · indexées"
+  },
+  "hero": {
+    "kicker": "Codex du site · 100+ espèces",
+    "h": "L'île, pièce par pièce.",
+    "lede": "Un jeu de stratégie 4X avec construction de base sur une île de recherche perdue. Voici le catalogue : ce que tu construis, ce que tu fais éclore et ce qui s'échappe.",
+    "cta": "Ouvrir sur l'App Store",
+    "note": "Ouvre l'App Store dans un nouvel onglet"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "note App Store",
+    "species": "100+",
+    "speciesLabel": "espèces de dinosaures",
+    "price": "Gratuit",
+    "priceLabel": "avec achats intégrés"
+  },
+  "plate": {
+    "s01": "La planche d'ouverture du store — une évasion, en pleine charge."
+  },
+  "idx": {
+    "kicker": "Index",
+    "h": "Six entrées, trois phases.",
+    "lede": "Chaque planche de la fiche, classée et étiquetée. Filtre selon la phase de jeu à laquelle elle appartient."
+  },
+  "flt": {
+    "label": "Filtrer les entrées",
+    "all": "Tout",
+    "build": "Construire",
+    "grow": "Élever",
+    "fight": "Combattre"
+  },
+  "e1": {
+    "g": "Combattre",
+    "t": "Le Colisée",
+    "note": "Là où les escouades font leurs preuves. Le combat de terrain d'abord, puis l'arène, puis les classements."
+  },
+  "e2": {
+    "g": "Élever",
+    "t": "La couveuse",
+    "note": "Là où commence l'effectif. Fais éclore une espèce, puis amène-la au poids qui la rend utile."
+  },
+  "e3": {
+    "g": "Élever",
+    "t": "L'effectif",
+    "note": "Spécialistes, cavaliers et leurs améliorations. Des recrues venues pour la science, restées pour le front."
+  },
+  "e4": {
+    "g": "Construire",
+    "t": "Production",
+    "note": "Les bâtiments qui approvisionnent tout le reste. Peu spectaculaires, et porteurs."
+  },
+  "e5": {
+    "g": "Construire",
+    "t": "Le parc",
+    "note": "Abris, laboratoires et défenses, vus d'en haut. Améliorer la base débloque le reste."
+  },
+  "e6": {
+    "g": "Construire",
+    "t": "Fouilles",
+    "note": "Fossiles, hall d'exposition et les revenus qui financent la reconstruction."
+  },
+  "named": {
+    "kicker": "Faune",
+    "h": "Espèces nommées dans la fiche.",
+    "lede": "Citées dans la description App Store ou visibles sur ses captures. L'effectif complet dépasse les 100."
+  },
+  "sp": {
+    "theropod": "Théropode",
+    "herbivore": "Herbivore"
+  },
+  "dossier": {
+    "kicker": "Dossier",
+    "h": "La fiche, recopiée.",
+    "lede": "Reprise de la fiche App Store, pour que rien ne te surprenne après le téléchargement."
+  },
+  "d1": {
+    "k": "Prix",
+    "v": "Téléchargement gratuit, avec achats intégrés facultatifs."
+  },
+  "d2": {
+    "k": "Classification",
+    "v": "Classé 12+ sur la fiche américaine ; signale violence, armes et thèmes matures."
+  },
+  "d3": {
+    "k": "Taille d'installation",
+    "v": "Environ 1,3 Go, et il faut iOS 13 ou plus récent."
+  },
+  "d4": {
+    "k": "Genre",
+    "v": "Stratégie et simulation avant tout, avec du social et des alliances."
+  },
+  "faq": {
+    "kicker": "Questions",
+    "h": "À lire avant d'installer."
+  },
+  "q1": {
+    "q": "Est-ce vraiment gratuit ?",
+    "a": "Oui. L'App Store le liste comme gratuit, avec des achats intégrés facultatifs. Aucun mur payant devant l'installation."
+  },
+  "q2": {
+    "q": "C'est juste un jeu de dinosaures ?",
+    "a": "Non. Les dinosaures sont le décor ; la boucle est de la stratégie 4X — base, recherche, montée en puissance et compétition d'alliances. Attends-toi à des minuteries."
+  },
+  "q3": {
+    "q": "Combien de temps dure une session ?",
+    "a": "De courtes visites suffisent — récolter, lancer une amélioration, envoyer une escouade. Les sessions plus longues vont dans les événements et les fouilles."
+  },
+  "q4": {
+    "q": "Faut-il jouer avec d'autres ?",
+    "a": "Tu peux aller loin en solo, mais les alliances portent une grande partie de la fin de partie et la plupart des événements saisonniers."
+  },
+  "q5": {
+    "q": "Sur quels appareils ça tourne ?",
+    "a": "La fiche demande iOS 13.0 ou plus récent. Vérifie l'exigence en cours sur la page App Store avant d'installer."
+  },
+  "final": {
+    "kicker": "Fin de l'index",
+    "h": "Le catalogue reste ouvert.",
+    "p": "Vérifie prix, classification et compatibilité sur la fiche officielle avant de télécharger.",
+    "cta": "Ouvrir sur l'App Store",
+    "note": "Ouvre l'App Store dans un nouvel onglet"
+  },
+  "foot": {
+    "disclaimer": "Ceci est une page publicitaire indépendante, et non le site officiel de la marque. Pour des informations exactes et pour acheter, veuillez consulter le site officiel.",
+    "legal": "Noms de jeux, visuels et marques appartiennent à leurs propriétaires respectifs. Les captures proviennent de la fiche App Store officielle et peuvent ne pas refléter tous les appareils."
+  }
+}

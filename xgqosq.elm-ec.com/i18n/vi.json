@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Mục lục khu vực",
+    "description": "De-Extinct: Jurassic Dinosaurs — game chiến thuật 4X xây căn cứ trên hòn đảo nghiên cứu thất lạc. Mục lục hệ thống, loài và công trình."
+  },
+  "a11y": {
+    "skip": "Tới nội dung",
+    "lang": "Ngôn ngữ"
+  },
+  "brand": {
+    "sub": "Mục lục khu vực"
+  },
+  "head": {
+    "note": "Sáu mục · đã lập chỉ mục"
+  },
+  "hero": {
+    "kicker": "Mục lục khu vực · 100+ loài",
+    "h": "Hòn đảo, từng mục một.",
+    "lede": "Game chiến thuật 4X xây căn cứ trên hòn đảo nghiên cứu thất lạc. Đây là mục lục: bạn xây gì, ấp gì, và thứ gì sổng ra.",
+    "cta": "Mở trên App Store",
+    "note": "Mở App Store trong tab mới"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "điểm trên App Store",
+    "species": "100+",
+    "speciesLabel": "loài khủng long",
+    "price": "Miễn phí",
+    "priceLabel": "có mua trong ứng dụng"
+  },
+  "plate": {
+    "s01": "Tấm ảnh cửa hàng mở đầu — một vụ thoát chuồng, giữa lúc lao tới."
+  },
+  "idx": {
+    "kicker": "Chỉ mục",
+    "h": "Sáu mục, ba giai đoạn.",
+    "lede": "Mọi tấm ảnh từ cửa hàng, đã xếp và gắn thẻ. Lọc theo giai đoạn trò chơi mà mỗi tấm thuộc về."
+  },
+  "flt": {
+    "label": "Lọc mục",
+    "all": "Tất cả",
+    "build": "Xây",
+    "grow": "Nuôi",
+    "fight": "Đánh"
+  },
+  "e1": {
+    "g": "Đánh",
+    "t": "Đấu trường",
+    "note": "Nơi các đội chứng tỏ mình. Giao chiến ngoài thực địa trước, rồi tới đấu trường, rồi bảng xếp hạng."
+  },
+  "e2": {
+    "g": "Nuôi",
+    "t": "Lò ấp",
+    "note": "Nơi đội hình bắt đầu. Ấp một loài rồi nuôi tới trọng lượng đủ để hữu dụng."
+  },
+  "e3": {
+    "g": "Nuôi",
+    "t": "Đội hình",
+    "note": "Chuyên gia, kỵ thủ và nâng cấp. Những người đến vì khoa học và ở lại vì tiền tuyến."
+  },
+  "e4": {
+    "g": "Xây",
+    "t": "Sản xuất",
+    "note": "Những công trình nuôi mọi thứ còn lại. Không hào nhoáng, nhưng chịu lực."
+  },
+  "e5": {
+    "g": "Xây",
+    "t": "Công viên",
+    "note": "Nơi trú ẩn, phòng thí nghiệm và phòng thủ, nhìn từ trên cao. Nâng cấp căn cứ mở khoá phần còn lại."
+  },
+  "e6": {
+    "g": "Xây",
+    "t": "Khai quật",
+    "note": "Hoá thạch, nhà trưng bày và nguồn thu nuôi cuộc tái thiết."
+  },
+  "named": {
+    "kicker": "Hệ động vật",
+    "h": "Các loài được nêu tên trong mục cửa hàng.",
+    "lede": "Được nêu trong phần mô tả App Store hoặc thấy được trên ảnh chụp. Đội hình đầy đủ vượt quá 100."
+  },
+  "sp": {
+    "theropod": "Khủng long chân thú",
+    "herbivore": "Ăn thực vật"
+  },
+  "dossier": {
+    "kicker": "Hồ sơ",
+    "h": "Mục cửa hàng, chép nguyên văn.",
+    "lede": "Lấy từ mục App Store, để sau khi tải không có gì bất ngờ."
+  },
+  "d1": {
+    "k": "Giá",
+    "v": "Tải miễn phí, có mua trong ứng dụng không bắt buộc."
+  },
+  "d2": {
+    "k": "Xếp hạng tuổi",
+    "v": "Mục Hoa Kỳ ghi 12+; có ghi chú bạo lực, vũ khí và chủ đề người lớn."
+  },
+  "d3": {
+    "k": "Dung lượng cài",
+    "v": "Khoảng 1,3 GB và cần iOS 13 trở lên."
+  },
+  "d4": {
+    "k": "Thể loại",
+    "v": "Chiến thuật và mô phỏng là chính, kèm yếu tố xã hội và liên minh."
+  },
+  "faq": {
+    "kicker": "Câu hỏi",
+    "h": "Đọc trước khi cài."
+  },
+  "q1": {
+    "q": "Có thật sự miễn phí?",
+    "a": "Có. App Store ghi là tải miễn phí kèm mua trong ứng dụng không bắt buộc. Không có tường phí trước khi cài."
+  },
+  "q2": {
+    "q": "Chỉ là game khủng long thôi à?",
+    "a": "Không. Khủng long là bối cảnh; lõi là chiến thuật 4X — xây căn cứ, nghiên cứu, phát triển đội và tranh đua liên minh. Hãy tính tới đồng hồ chờ."
+  },
+  "q3": {
+    "q": "Một phiên kéo dài bao lâu?",
+    "a": "Ghé ngắn là đủ — thu hoạch, xếp một nâng cấp, phái đội đi. Phiên dài dành cho sự kiện, khai quật và liên minh."
+  },
+  "q4": {
+    "q": "Có bắt buộc chơi cùng người khác?",
+    "a": "Chơi một mình vẫn đi khá xa, nhưng liên minh gánh phần lớn giai đoạn cuối và gần như toàn bộ sự kiện theo mùa."
+  },
+  "q5": {
+    "q": "Chạy trên thiết bị nào?",
+    "a": "Mục cửa hàng yêu cầu iOS 13.0 trở lên. Kiểm tra yêu cầu hiện hành trên trang App Store trước khi cài."
+  },
+  "final": {
+    "kicker": "Hết chỉ mục",
+    "h": "Mục lục vẫn mở.",
+    "p": "Kiểm tra giá, xếp hạng và yêu cầu thiết bị trên mục chính thức trước khi tải.",
+    "cta": "Mở trên App Store",
+    "note": "Mở App Store trong tab mới"
+  },
+  "foot": {
+    "disclaimer": "Đây là trang quảng cáo độc lập, không phải website chính thức của thương hiệu. Để có thông tin sản phẩm chính xác và mua hàng, vui lòng truy cập website chính thức.",
+    "legal": "Tên game, hình ảnh và nhãn hiệu thuộc về chủ sở hữu tương ứng. Ảnh chụp lấy từ mục App Store chính thức và có thể không phản ánh mọi thiết bị."
+  }
+}

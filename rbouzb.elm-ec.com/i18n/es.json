@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Wolf Game: Wild Animal Wars — Mando de manada",
+    "description": "Wolf Game: Wild Animal Wars es un juego de estrategia en tiempo real: lidera una manada, defiende tu guarida y conquista el mapa salvaje. Gratis en el App Store."
+  },
+  "a11y": {
+    "skip": "Ir al contenido",
+    "lang": "Idioma"
+  },
+  "gate": {
+    "kicker": "MANDO DE MANADA · SECTOR 07",
+    "title": "El territorio está abierto. Llama a la manada.",
+    "body": "Un juego de estrategia en tiempo real: lidera una manada y domina lo salvaje. Gratis en el App Store.",
+    "enter": "Entrar al territorio",
+    "note": "Descarga gratis · Compras integradas"
+  },
+  "cover": {
+    "label": "Leyendo el territorio…"
+  },
+  "brand": {
+    "sub": "Mando de manada"
+  },
+  "head": {
+    "note": "Sector 07 · activo"
+  },
+  "hero": {
+    "kicker": "MANDO DEL TERRITORIO · SECTOR 07",
+    "h": "Defiende la guarida.\nToma el territorio.",
+    "lede": "Un juego de estrategia en tiempo real: lidera una manada, defiende tu guarida y lucha por el mapa salvaje. Gratis en el App Store.",
+    "cta": "Abrir en el App Store",
+    "note": "Abre el App Store en una pestaña nueva"
+  },
+  "chip": {
+    "rating": "4.7",
+    "ratingLabel": "Valoración en el App Store",
+    "ratings": "16,640",
+    "ratingsLabel": "valoraciones en la ficha de EE. UU.",
+    "price": "Gratis",
+    "priceLabel": "con compras integradas"
+  },
+  "sector": {
+    "01": "SECTOR 01 — RECONOCIMIENTO",
+    "02": "SECTOR 02 — MANADA",
+    "03": "SECTOR 03 — EL BUCLE",
+    "04": "SECTOR 04 — EL REGISTRO",
+    "05": "SECTOR 05 — PREGUNTAS"
+  },
+  "plates": {
+    "h": "Cuatro tomas de lo salvaje.",
+    "lede": "Capturas de la tienda en orden. Entre todas cubren el mapa, la guarida y el combate."
+  },
+  "plate": {
+    "s01": "El mapa del mundo: un tablero compartido de regiones, guaridas y recursos.",
+    "s02": "Tu guarida: el recinto que tu manada tiene que defender.",
+    "s03": "La plantilla de la manada: cada lobo con su nivel y mejoras.",
+    "s04": "Combate en vivo: dos manadas enfrentadas, órdenes abajo."
+  },
+  "pack": {
+    "h": "Cuatro razas, una manada.",
+    "lede": "La ficha nombra cuatro tipos de lobo con los que formar manada. Cada uno es una pieza de la misma estrategia, no una elección estética.",
+    "caption": "Razas de lobo",
+    "thCode": "Código",
+    "thBreed": "Raza",
+    "thRole": "Rol",
+    "r1": "Lobo de madera",
+    "r1d": "La columna vertebral de una manada operativa.",
+    "r2": "Lobo gris",
+    "r2d": "El todoterreno sobre el que construyes al principio.",
+    "r3": "Lobo ártico",
+    "r3d": "El especialista para terreno más duro.",
+    "r4": "Lobo negro",
+    "r4d": "El que reservas hasta que de verdad importa."
+  },
+  "loop": {
+    "h": "Seis órdenes, un territorio.",
+    "lede": "Directo de la lista de funciones de la plataforma: las tareas que de verdad haces, en el orden en que el juego te las da."
+  },
+  "o1": {
+    "h": "Formar la manada",
+    "p": "Reúne lobos de las cuatro razas y monta una manada que encaje con tu forma de jugar."
+  },
+  "o2": {
+    "h": "Liderar en vivo",
+    "p": "Control en tiempo real: defiende la guarida, avanza y lee el terreno antes de comprometerte."
+  },
+  "o3": {
+    "h": "Unirte a una alianza",
+    "p": "Aliados, territorio en común y combates JcJ contra otras manadas."
+  },
+  "o4": {
+    "h": "Explorar lo salvaje",
+    "p": "Envía exploradores, detecta invasiones de frontera, sigue rastros de presas y esquiva a los cazadores."
+  },
+  "o5": {
+    "h": "Construir un reino",
+    "p": "Gana los combates, toma terreno y haz crecer la manada hasta que lo sostenga."
+  },
+  "o6": {
+    "h": "Jugar en un solo mapa",
+    "p": "Todo ocurre en un único mapa del mundo compartido, sin pantalla de combate aparte."
+  },
+  "record": {
+    "h": "Lo que dice realmente la ficha.",
+    "lede": "Directo de la ficha del App Store, para que nada te sorprenda tras la descarga."
+  },
+  "rec1": {
+    "k": "Precio",
+    "v": "Descarga gratis. La ficha indica compras integradas, incluida una suscripción mensual."
+  },
+  "rec2": {
+    "k": "Género",
+    "v": "Rol y estrategia, construido sobre alianzas y juego entre servidores."
+  },
+  "rec3": {
+    "k": "Tamaño de instalación",
+    "v": "Unos 2,5 GB, y requiere iOS 15.0 o posterior."
+  },
+  "rec4": {
+    "k": "Conexión",
+    "v": "Solo en línea: la ficha indica que se necesita conexión de red para jugar."
+  },
+  "faq": {
+    "h": "Antes de descargar."
+  },
+  "q1": {
+    "q": "¿Es realmente gratis?",
+    "a": "Sí: descarga gratis. La ficha indica compras integradas para algunos objetos y funciones, y menciona una suscripción mensual. Espera extras de pago opcionales, no un muro de pago antes de instalar."
+  },
+  "q2": {
+    "q": "¿Qué tipo de juego es?",
+    "a": "Un juego de estrategia en tiempo real con temática de lobos. Montas una manada, defiendes tu guarida, exploras un mapa del mundo compartido y luchas contra otras manadas, con las alianzas cubriendo la parte cooperativa."
+  },
+  "q3": {
+    "q": "¿Tengo que jugar con otras personas?",
+    "a": "Las alianzas, el JcJ y el juego entre servidores son centrales en la descripción de la ficha, así que el juego está pensado para que haya otros jugadores. Trátalo como un juego de estrategia multijugador en línea."
+  },
+  "q4": {
+    "q": "¿Puedo jugar sin conexión?",
+    "a": "No. La ficha indica que se necesita conexión de red para jugar."
+  },
+  "q5": {
+    "q": "¿En qué dispositivos funciona?",
+    "a": "La ficha pide iOS 15.0 o posterior. Comprueba el requisito actual en la página del App Store antes de instalar."
+  },
+  "final": {
+    "kicker": "SECTOR CERRADO",
+    "h": "El territorio sigue abierto.",
+    "p": "Comprueba el precio, la valoración y los requisitos actuales en la ficha oficial antes de descargar.",
+    "cta": "Abrir en el App Store",
+    "note": "Abre el App Store en una pestaña nueva"
+  },
+  "foot": {
+    "disclaimer": "Esta es una página publicitaria independiente, no la web oficial de la marca. Para información precisa y compras, visita la web oficial.",
+    "legal": "Los nombres de juegos, ilustraciones y marcas pertenecen a sus respectivos propietarios. Las capturas proceden de la ficha oficial del App Store y pueden no reflejar todos los dispositivos."
+  }
+}

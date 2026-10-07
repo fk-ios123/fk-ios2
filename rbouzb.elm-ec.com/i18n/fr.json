@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Wolf Game: Wild Animal Wars — Commandement de meute",
+    "description": "Wolf Game: Wild Animal Wars est un jeu de stratégie en temps réel : menez une meute, tenez votre tanière et conquérez la carte sauvage. Gratuit sur l'App Store."
+  },
+  "a11y": {
+    "skip": "Aller au contenu",
+    "lang": "Langue"
+  },
+  "gate": {
+    "kicker": "COMMANDEMENT DE MEUTE · SECTEUR 07",
+    "title": "Le territoire est ouvert. Appelez la meute.",
+    "body": "Un jeu de stratégie en temps réel : menez une meute et tenez le milieu sauvage. Gratuit sur l'App Store.",
+    "enter": "Entrer sur le territoire",
+    "note": "Téléchargement gratuit · Achats intégrés"
+  },
+  "cover": {
+    "label": "Lecture du territoire…"
+  },
+  "brand": {
+    "sub": "Commandement de meute"
+  },
+  "head": {
+    "note": "Secteur 07 · actif"
+  },
+  "hero": {
+    "kicker": "COMMANDEMENT DU TERRITOIRE · SECTEUR 07",
+    "h": "Tenez la tanière.\nPrenez le territoire.",
+    "lede": "Un jeu de stratégie en temps réel : menez une meute, défendez votre tanière et battez-vous pour la carte sauvage. Gratuit sur l'App Store.",
+    "cta": "Ouvrir sur l'App Store",
+    "note": "Ouvre l'App Store dans un nouvel onglet"
+  },
+  "chip": {
+    "rating": "4.7",
+    "ratingLabel": "Note sur l'App Store",
+    "ratings": "16,640",
+    "ratingsLabel": "notes sur la fiche US",
+    "price": "Gratuit",
+    "priceLabel": "avec achats intégrés"
+  },
+  "sector": {
+    "01": "SECTEUR 01 — RECONNAISSANCE",
+    "02": "SECTEUR 02 — MEUTE",
+    "03": "SECTEUR 03 — LA BOUCLE",
+    "04": "SECTEUR 04 — LE REGISTRE",
+    "05": "SECTEUR 05 — QUESTIONS"
+  },
+  "plates": {
+    "h": "Quatre vues du milieu sauvage.",
+    "lede": "Captures du store dans l'ordre. Ensemble, elles couvrent la carte, la tanière et le combat."
+  },
+  "plate": {
+    "s01": "La carte du monde : un plateau partagé de régions, de tanières et de ressources.",
+    "s02": "Votre tanière : l'enceinte que votre meute doit tenir.",
+    "s03": "L'effectif de la meute : chaque loup avec son niveau et ses améliorations.",
+    "s04": "Combat en direct : deux meutes aux prises, commandes en bas."
+  },
+  "pack": {
+    "h": "Quatre races, une meute.",
+    "lede": "La fiche nomme quatre types de loups avec lesquels composer une meute. Chacun est un rôle dans la même stratégie, pas un choix cosmétique.",
+    "caption": "Races de loups",
+    "thCode": "Code",
+    "thBreed": "Race",
+    "thRole": "Rôle",
+    "r1": "Loup gris d'Amérique",
+    "r1d": "La colonne vertébrale d'une meute opérationnelle.",
+    "r2": "Loup gris",
+    "r2d": "Le polyvalent autour duquel vous construisez tôt.",
+    "r3": "Loup arctique",
+    "r3d": "Le spécialiste des terrains plus rudes.",
+    "r4": "Loup noir",
+    "r4d": "Celui que vous gardez en réserve jusqu'au moment décisif."
+  },
+  "loop": {
+    "h": "Six ordres, un territoire.",
+    "lede": "Tout droit tiré de la liste de fonctionnalités de la plateforme : les tâches que vous accomplissez réellement, dans l'ordre où le jeu vous les donne."
+  },
+  "o1": {
+    "h": "Former la meute",
+    "p": "Rassemblez des loups des quatre races et composez une meute qui correspond à votre façon de jouer."
+  },
+  "o2": {
+    "h": "Mener en direct",
+    "p": "Contrôle en temps réel : défendez la tanière, poussez dehors et lisez le terrain avant de vous engager."
+  },
+  "o3": {
+    "h": "Rejoindre une alliance",
+    "p": "Unissez-vous, étendez le territoire ensemble et menez des combats JcJ contre d'autres meutes."
+  },
+  "o4": {
+    "h": "Explorer le milieu sauvage",
+    "p": "Envoyez des éclaireurs, repérez les invasions de frontière, suivez les traces de proies et évitez les chasseurs."
+  },
+  "o5": {
+    "h": "Bâtir un royaume",
+    "p": "Gagnez les combats, prenez du terrain et faites grandir la meute jusqu'à ce qu'elle le tienne."
+  },
+  "o6": {
+    "h": "Une seule carte",
+    "p": "Tout se passe sur une seule carte du monde partagée, sans écran de combat séparé."
+  },
+  "record": {
+    "h": "Ce que dit réellement la fiche.",
+    "lede": "Tout droit tiré de la fiche App Store, pour que rien ne vous surprenne après le téléchargement."
+  },
+  "rec1": {
+    "k": "Prix",
+    "v": "Téléchargement gratuit. La fiche mentionne des achats intégrés, dont un abonnement mensuel."
+  },
+  "rec2": {
+    "k": "Genre",
+    "v": "Jeu de rôle et stratégie, bâti autour des alliances et du jeu inter-serveurs."
+  },
+  "rec3": {
+    "k": "Taille d'installation",
+    "v": "Environ 2,5 Go, et il faut iOS 15.0 ou ultérieur."
+  },
+  "rec4": {
+    "k": "Connexion",
+    "v": "En ligne uniquement — la fiche indique qu'une connexion réseau est nécessaire pour jouer."
+  },
+  "faq": {
+    "h": "Avant de télécharger."
+  },
+  "q1": {
+    "q": "Est-ce vraiment gratuit ?",
+    "a": "Oui — téléchargement gratuit. La fiche indique des achats intégrés pour certains objets et fonctions, et mentionne un abonnement mensuel. Attendez-vous donc à des extras payants optionnels plutôt qu'à un péage avant l'installation."
+  },
+  "q2": {
+    "q": "Quel genre de jeu est-ce ?",
+    "a": "Un jeu de stratégie en temps réel sur le thème des loups. Vous montez une meute, défendez votre tanière, explorez une carte du monde partagée et combattez d'autres meutes, les alliances portant la part coopérative."
+  },
+  "q3": {
+    "q": "Dois-je jouer avec d'autres ?",
+    "a": "Les alliances, le JcJ et le jeu inter-serveurs sont au cœur de la description de la fiche : le jeu est conçu pour que d'autres joueurs soient présents. Considérez-le comme un jeu de stratégie multijoueur en ligne."
+  },
+  "q4": {
+    "q": "Puis-je jouer hors ligne ?",
+    "a": "Non. La fiche indique qu'une connexion réseau est nécessaire pour jouer."
+  },
+  "q5": {
+    "q": "Sur quels appareils tourne-t-il ?",
+    "a": "La fiche demande iOS 15.0 ou ultérieur. Vérifiez la prérequis actuel sur la page App Store avant d'installer."
+  },
+  "final": {
+    "kicker": "SECTEUR FERMÉ",
+    "h": "Le territoire est toujours ouvert.",
+    "p": "Vérifiez le prix, la note et les prérequis actuels sur la fiche officielle avant de télécharger.",
+    "cta": "Ouvrir sur l'App Store",
+    "note": "Ouvre l'App Store dans un nouvel onglet"
+  },
+  "foot": {
+    "disclaimer": "Ceci est une page publicitaire indépendante, et non le site officiel de la marque. Pour des informations exactes et tout achat, veuillez consulter le site officiel.",
+    "legal": "Noms de jeux, illustrations et marques appartiennent à leurs propriétaires respectifs. Les captures proviennent de la fiche App Store officielle et peuvent ne pas refléter tous les appareils."
+  }
+}

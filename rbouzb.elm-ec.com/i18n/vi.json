@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Wolf Game: Wild Animal Wars — Chỉ huy bầy sói",
+    "description": "Wolf Game: Wild Animal Wars là game chiến thuật thời gian thực: dẫn bầy sói, giữ hang và chiếm bản đồ hoang dã. Miễn phí trên App Store."
+  },
+  "a11y": {
+    "skip": "Tới nội dung",
+    "lang": "Ngôn ngữ"
+  },
+  "gate": {
+    "kicker": "CHỈ HUY BẦY · KHU 07",
+    "title": "Lãnh thổ đã mở. Gọi bầy.",
+    "body": "Game chiến thuật thời gian thực: dẫn bầy sói và làm chủ vùng hoang. Miễn phí trên App Store.",
+    "enter": "Vào lãnh thổ",
+    "note": "Tải miễn phí · Có mua trong ứng dụng"
+  },
+  "cover": {
+    "label": "Đang đọc lãnh thổ…"
+  },
+  "brand": {
+    "sub": "Chỉ huy bầy"
+  },
+  "head": {
+    "note": "Khu 07 · hoạt động"
+  },
+  "hero": {
+    "kicker": "CHỈ HUY LÃNH THỔ · KHU 07",
+    "h": "Giữ hang.\nChiếm lãnh thổ.",
+    "lede": "Game chiến thuật thời gian thực: dẫn bầy sói, bảo vệ hang và tranh bản đồ hoang dã. Miễn phí trên App Store.",
+    "cta": "Mở trên App Store",
+    "note": "Mở App Store trong tab mới"
+  },
+  "chip": {
+    "rating": "4.7",
+    "ratingLabel": "Điểm trên App Store",
+    "ratings": "16,640",
+    "ratingsLabel": "lượt đánh giá trên cửa hàng Mỹ",
+    "price": "Miễn phí",
+    "priceLabel": "có mua trong ứng dụng"
+  },
+  "sector": {
+    "01": "KHU 01 — TRINH SÁT",
+    "02": "KHU 02 — BẦY",
+    "03": "KHU 03 — VÒNG LẶP",
+    "04": "KHU 04 — HỒ SƠ",
+    "05": "KHU 05 — HỎI ĐÁP"
+  },
+  "plates": {
+    "h": "Bốn khung hình từ vùng hoang.",
+    "lede": "Ảnh chụp từ cửa hàng theo thứ tự. Gộp lại chúng bao quát bản đồ, hang và trận chiến."
+  },
+  "plate": {
+    "s01": "Bản đồ thế giới: một bàn chung gồm vùng, hang và điểm tài nguyên.",
+    "s02": "Hang của bạn: căn cứ mà bầy phải giữ.",
+    "s03": "Danh sách bầy: mỗi sói có cấp và nâng cấp riêng.",
+    "s04": "Giao chiến trực tiếp: hai bầy đối đầu, lệnh ở dưới."
+  },
+  "pack": {
+    "h": "Bốn giống, một bầy.",
+    "lede": "Cửa hàng nêu bốn loại sói để lập bầy. Mỗi loại là một ô trong cùng chiến thuật, không phải lựa chọn ngoại hình.",
+    "caption": "Giống sói",
+    "thCode": "Mã",
+    "thBreed": "Giống",
+    "thRole": "Vai trò",
+    "r1": "Sói xám Bắc Mỹ",
+    "r1d": "Xương sống của một bầy vận hành được.",
+    "r2": "Sói xám",
+    "r2d": "Con đa dụng để xây quanh từ sớm.",
+    "r3": "Sói Bắc Cực",
+    "r3d": "Chuyên gia cho địa hình khắc nghiệt.",
+    "r4": "Sói đen",
+    "r4d": "Con để dành tới lúc thật sự cần."
+  },
+  "loop": {
+    "h": "Sáu lệnh, một lãnh thổ.",
+    "lede": "Lấy thẳng từ danh sách tính năng của nền tảng: những việc bạn thật sự làm, theo thứ tự game đưa ra."
+  },
+  "o1": {
+    "h": "Lập bầy",
+    "p": "Tập hợp sói thuộc bốn giống và dựng một bầy hợp với cách bạn chơi."
+  },
+  "o2": {
+    "h": "Chỉ huy trực tiếp",
+    "p": "Điều khiển thời gian thực: giữ hang, đẩy ra ngoài và đọc địa hình trước khi dấn thân."
+  },
+  "o3": {
+    "h": "Vào liên minh",
+    "p": "Kết nhóm, cùng mở rộng lãnh thổ và đánh PVP với bầy khác."
+  },
+  "o4": {
+    "h": "Trinh sát vùng hoang",
+    "p": "Phái trinh sát, phát hiện xâm nhập biên giới, theo dấu con mồi và né thợ săn."
+  },
+  "o5": {
+    "h": "Dựng vương quốc",
+    "p": "Thắng các trận, chiếm đất và nuôi bầy đủ mạnh để giữ nó."
+  },
+  "o6": {
+    "h": "Một bản đồ duy nhất",
+    "p": "Mọi hành động diễn ra trên một bản đồ thế giới chung, không có màn hình giao chiến riêng."
+  },
+  "record": {
+    "h": "Trang cửa hàng thực sự ghi gì.",
+    "lede": "Lấy thẳng từ trang App Store, để không có gì làm bạn bất ngờ sau khi tải."
+  },
+  "rec1": {
+    "k": "Giá",
+    "v": "Tải miễn phí. Trang ghi có mua trong ứng dụng, gồm cả gói đăng ký hàng tháng."
+  },
+  "rec2": {
+    "k": "Thể loại",
+    "v": "Nhập vai và chiến thuật, xây quanh liên minh và chơi xuyên máy chủ."
+  },
+  "rec3": {
+    "k": "Dung lượng cài",
+    "v": "Khoảng 2,5 GB và cần iOS 15.0 trở lên."
+  },
+  "rec4": {
+    "k": "Kết nối",
+    "v": "Chỉ trực tuyến — trang ghi cần kết nối mạng để chơi."
+  },
+  "faq": {
+    "h": "Trước khi tải."
+  },
+  "q1": {
+    "q": "Có thật miễn phí không?",
+    "a": "Có — tải miễn phí. Trang ghi có mua trong ứng dụng cho một số vật phẩm và tính năng, cùng gói đăng ký hàng tháng. Hãy coi đó là phần trả thêm tùy chọn, không phải rào cản trả tiền trước khi cài."
+  },
+  "q2": {
+    "q": "Đây là game gì?",
+    "a": "Game chiến thuật thời gian thực lấy đề tài sói. Bạn lập bầy, giữ hang, khám phá bản đồ thế giới chung và đánh với bầy khác; liên minh gánh phần hợp tác."
+  },
+  "q3": {
+    "q": "Có bắt buộc chơi cùng người khác?",
+    "a": "Liên minh, PVP và chơi xuyên máy chủ là trọng tâm trong mô tả của cửa hàng, nên game được thiết kế để có người chơi khác. Hãy coi đây là game chiến thuật nhiều người chơi trực tuyến."
+  },
+  "q4": {
+    "q": "Chơi offline được không?",
+    "a": "Không. Trang ghi cần kết nối mạng để chơi."
+  },
+  "q5": {
+    "q": "Chạy trên thiết bị nào?",
+    "a": "Trang yêu cầu iOS 15.0 trở lên. Kiểm tra yêu cầu hiện tại trên trang App Store trước khi cài."
+  },
+  "final": {
+    "kicker": "ĐÓNG KHU",
+    "h": "Lãnh thổ vẫn còn mở.",
+    "p": "Kiểm tra giá, điểm và yêu cầu hiện tại trên trang chính thức trước khi tải.",
+    "cta": "Mở trên App Store",
+    "note": "Mở App Store trong tab mới"
+  },
+  "foot": {
+    "disclaimer": "Đây là trang quảng cáo độc lập, không phải website chính thức của thương hiệu. Để có thông tin chính xác và mua hàng, vui lòng truy cập website chính thức.",
+    "legal": "Tên game, hình ảnh và nhãn hiệu thuộc về chủ sở hữu tương ứng. Ảnh chụp lấy từ trang App Store chính thức và có thể không phản ánh mọi thiết bị."
+  }
+}

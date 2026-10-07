@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Excavation Log",
+    "description": "De-Extinct: Jurassic Dinosaurs — a base-building 4X strategy game on a lost research island. Excavation log, plates and listing facts."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "lang": "Language"
+  },
+  "brand": {
+    "sub": "Excavation log"
+  },
+  "head": {
+    "note": "Site 07 · open"
+  },
+  "hero": {
+    "kicker": "Excavation log · Site 07",
+    "h": "Dig the island. Then run it.",
+    "lede": "A base-building 4X strategy game set on a lost research island. Free to download on the App Store.",
+    "cta": "Open on the App Store",
+    "note": "Opens the App Store in a new tab"
+  },
+  "chip": {
+    "rating": "4.8",
+    "ratingLabel": "App Store rating",
+    "species": "100+",
+    "speciesLabel": "dinosaur species",
+    "price": "Free",
+    "priceLabel": "with in-app purchases"
+  },
+  "plate": {
+    "s01": "A containment breach in progress — the most frequent entry in the site log.",
+    "s02": "Field combat and the first Colosseum challenge.",
+    "s03": "Hatching and raising a species to fighting weight.",
+    "s04": "The roster: experts, riders and their upgrades.",
+    "s05": "Production buildings that keep the base supplied.",
+    "s06": "An isometric view of a park part-way through a rebuild.",
+    "s07": "Excavation and the exhibition hall that pays for it."
+  },
+  "depth": {
+    "l00": "Surface",
+    "l01": "The dig",
+    "l02": "Systems",
+    "l03": "The record",
+    "l04": "Questions"
+  },
+  "premise": {
+    "kicker": "Layer 00 — Surface",
+    "h": "An island that stopped answering.",
+    "p1": "The Ark Gene Group brought extinct species back on a remote island, and for a while the world watched. Then the transmissions stopped.",
+    "p2": "You land as a veteran commander with a small team and an unfinished base. Everything on the site log from here is yours to write."
+  },
+  "dig": {
+    "kicker": "Layer 01 — The dig",
+    "h": "Seven plates from the site.",
+    "lede": "Store screenshots in order. Between them they cover most of what you will be running inside the first week."
+  },
+  "systems": {
+    "kicker": "Layer 02 — Systems",
+    "h": "Four systems, one command.",
+    "lede": "The dinosaurs get the attention. The loop underneath them is strategy: build, staff, explore, research — in that order, over and over."
+  },
+  "sys1": {
+    "h": "Rebuild the complex",
+    "p": "Shelters, labs and defences. Upgrading the base is what unlocks everything else."
+  },
+  "sys2": {
+    "h": "Recruit the team",
+    "p": "Scientists, mercenaries and trainers. Some of them go on to become Dinoriders."
+  },
+  "sys3": {
+    "h": "Work the island",
+    "p": "Cross biomes for resources, handle events, and contain what is already loose out there."
+  },
+  "sys4": {
+    "h": "Study the ecology",
+    "p": "Hatch and train 100+ species. A roster is a strategy, not a trophy shelf."
+  },
+  "record": {
+    "kicker": "Layer 03 — The record",
+    "h": "What the listing actually says.",
+    "lede": "Straight from the App Store entry, so nothing here surprises you after the download."
+  },
+  "rec1": {
+    "k": "Price",
+    "v": "Free to download, with optional in-app purchases."
+  },
+  "rec2": {
+    "k": "Age rating",
+    "v": "Rated 12+ on the US listing; it notes violence, weapons and mature themes."
+  },
+  "rec3": {
+    "k": "Install size",
+    "v": "Roughly 1.3 GB, and it needs iOS 13 or later."
+  },
+  "rec4": {
+    "k": "Genre",
+    "v": "Strategy and simulation first, with social and alliance play built in."
+  },
+  "faq": {
+    "kicker": "Layer 04 — Questions",
+    "h": "Before you download."
+  },
+  "q1": {
+    "q": "Is it really free?",
+    "a": "Yes. The App Store lists it as free to download with optional in-app purchases. There is no paywall in front of the install itself."
+  },
+  "q2": {
+    "q": "Is it just a dinosaur game?",
+    "a": "No. The dinosaurs are the setting, but the loop is 4X strategy — base building, research, squad growth and alliance competition. Expect timers and upgrades."
+  },
+  "q3": {
+    "q": "How long is a session?",
+    "a": "Short check-ins work fine — collect, queue an upgrade, send a squad out. Longer sessions go into events, excavation and alliance work."
+  },
+  "q4": {
+    "q": "Do I have to play with other people?",
+    "a": "You can get a long way solo, but alliances carry a large part of the late game and most of the seasonal events."
+  },
+  "q5": {
+    "q": "Which devices does it run on?",
+    "a": "The listing asks for iOS 13.0 or later. Check the App Store page for the current requirement before you install."
+  },
+  "final": {
+    "kicker": "Bedrock",
+    "h": "The site is still open.",
+    "p": "Check the official listing for the current price, rating and device requirements before you download.",
+    "cta": "Open on the App Store",
+    "note": "Opens the App Store in a new tab"
+  },
+  "foot": {
+    "disclaimer": "This is an independent advertising page, not the official brand website. For accurate product information and purchases, please visit the official website.",
+    "legal": "Game names, artwork and trademarks belong to their respective owners. Screenshots are from the official App Store listing and may not reflect every device."
+  }
+}

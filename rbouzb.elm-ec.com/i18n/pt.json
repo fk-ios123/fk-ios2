@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Wolf Game: Wild Animal Wars — Comando de alcateia",
+    "description": "Wolf Game: Wild Animal Wars é um jogo de estratégia em tempo real: lidera uma alcateia, defende o teu covil e conquista o mapa selvagem. Grátis na App Store."
+  },
+  "a11y": {
+    "skip": "Ir para o conteúdo",
+    "lang": "Idioma"
+  },
+  "gate": {
+    "kicker": "COMANDO DE ALCATEIA · SETOR 07",
+    "title": "O território está aberto. Chama a alcateia.",
+    "body": "Um jogo de estratégia em tempo real: lidera uma alcateia e domina o selvagem. Grátis na App Store.",
+    "enter": "Entrar no território",
+    "note": "Download grátis · Compras integradas"
+  },
+  "cover": {
+    "label": "A ler o território…"
+  },
+  "brand": {
+    "sub": "Comando de alcateia"
+  },
+  "head": {
+    "note": "Setor 07 · ativo"
+  },
+  "hero": {
+    "kicker": "COMANDO DO TERRITÓRIO · SETOR 07",
+    "h": "Defende o covil.\nToma o território.",
+    "lede": "Um jogo de estratégia em tempo real: lidera uma alcateia, defende o teu covil e luta pelo mapa selvagem. Grátis na App Store.",
+    "cta": "Abrir na App Store",
+    "note": "Abre a App Store num novo separador"
+  },
+  "chip": {
+    "rating": "4.7",
+    "ratingLabel": "Avaliação na App Store",
+    "ratings": "16,640",
+    "ratingsLabel": "avaliações na ficha dos EUA",
+    "price": "Grátis",
+    "priceLabel": "com compras integradas"
+  },
+  "sector": {
+    "01": "SETOR 01 — RECONHECIMENTO",
+    "02": "SETOR 02 — ALCATEIA",
+    "03": "SETOR 03 — O CICLO",
+    "04": "SETOR 04 — O REGISTO",
+    "05": "SETOR 05 — PERGUNTAS"
+  },
+  "plates": {
+    "h": "Quatro planos do selvagem.",
+    "lede": "Capturas da loja por ordem. Juntas cobrem o mapa, o covil e o combate."
+  },
+  "plate": {
+    "s01": "O mapa do mundo: um tabuleiro partilhado de regiões, covis e recursos.",
+    "s02": "O teu covil: o recinto que a alcateia tem de defender.",
+    "s03": "O plantel da alcateia: cada lobo com o seu nível e melhorias.",
+    "s04": "Combate ao vivo: duas alcateias em confronto, comandos em baixo."
+  },
+  "pack": {
+    "h": "Quatro raças, uma alcateia.",
+    "lede": "A ficha nomeia quatro tipos de lobo com que formar alcateia. Cada um é uma peça da mesma estratégia, não uma escolha estética.",
+    "caption": "Raças de lobo",
+    "thCode": "Código",
+    "thBreed": "Raça",
+    "thRole": "Função",
+    "r1": "Lobo-cinzento",
+    "r1d": "A espinha dorsal de uma alcateia operacional.",
+    "r2": "Lobo comum",
+    "r2d": "O versátil à volta do qual constróis cedo.",
+    "r3": "Lobo-ártico",
+    "r3d": "O especialista para terreno mais duro.",
+    "r4": "Lobo-negro",
+    "r4d": "O que guardas até ao momento que conta."
+  },
+  "loop": {
+    "h": "Seis ordens, um território.",
+    "lede": "Direto da lista de funcionalidades da plataforma: as tarefas que realmente fazes, pela ordem em que o jogo as dá."
+  },
+  "o1": {
+    "h": "Formar a alcateia",
+    "p": "Junta lobos das quatro raças e monta uma alcateia que encaixe na tua forma de jogar."
+  },
+  "o2": {
+    "h": "Liderar ao vivo",
+    "p": "Controlo em tempo real: defende o covil, avança e lê o terreno antes de te comprometeres."
+  },
+  "o3": {
+    "h": "Entrar numa aliança",
+    "p": "Junta-te a outros, expande território em conjunto e trava combates JcJ contra outras alcateias."
+  },
+  "o4": {
+    "h": "Explorar o selvagem",
+    "p": "Envia batedores, deteta invasões de fronteira, segue rastos de presas e evita caçadores."
+  },
+  "o5": {
+    "h": "Construir um reino",
+    "p": "Ganha os combates, toma terreno e faz crescer a alcateia até a segurar."
+  },
+  "o6": {
+    "h": "Jogar num só mapa",
+    "p": "Tudo acontece num único mapa do mundo partilhado, sem ecrã de combate separado."
+  },
+  "record": {
+    "h": "O que a ficha diz realmente.",
+    "lede": "Direto da ficha da App Store, para que nada te surpreenda depois do download."
+  },
+  "rec1": {
+    "k": "Preço",
+    "v": "Download grátis. A ficha indica compras integradas, incluindo uma subscrição mensal."
+  },
+  "rec2": {
+    "k": "Género",
+    "v": "RPG e estratégia, construído sobre alianças e jogo entre servidores."
+  },
+  "rec3": {
+    "k": "Tamanho da instalação",
+    "v": "Cerca de 2,5 GB, e precisa de iOS 15.0 ou superior."
+  },
+  "rec4": {
+    "k": "Ligação",
+    "v": "Só online — a ficha indica que é necessária ligação à rede para jogar."
+  },
+  "faq": {
+    "h": "Antes de descarregar."
+  },
+  "q1": {
+    "q": "É mesmo grátis?",
+    "a": "Sim — download grátis. A ficha indica compras integradas para alguns itens e funções, e menciona uma subscrição mensal. Conta com extras pagos opcionais, não com uma barreira de pagamento antes de instalar."
+  },
+  "q2": {
+    "q": "Que tipo de jogo é?",
+    "a": "Um jogo de estratégia em tempo real com tema de lobos. Montas uma alcateia, defendes o teu covil, exploras um mapa do mundo partilhado e lutas contra outras alcateias, com as alianças a suportar a parte cooperativa."
+  },
+  "q3": {
+    "q": "Tenho de jogar com outras pessoas?",
+    "a": "As alianças, o JcJ e o jogo entre servidores são centrais na descrição da ficha, por isso o jogo está pensado para haver outros jogadores. Trata-o como um jogo de estratégia multijogador online."
+  },
+  "q4": {
+    "q": "Posso jogar offline?",
+    "a": "Não. A ficha indica que é necessária ligação à rede para jogar."
+  },
+  "q5": {
+    "q": "Em que dispositivos funciona?",
+    "a": "A ficha pede iOS 15.0 ou superior. Verifica o requisito atual na página da App Store antes de instalar."
+  },
+  "final": {
+    "kicker": "SETOR FECHADO",
+    "h": "O território continua aberto.",
+    "p": "Verifica o preço, a avaliação e os requisitos atuais na ficha oficial antes de descarregar.",
+    "cta": "Abrir na App Store",
+    "note": "Abre a App Store num novo separador"
+  },
+  "foot": {
+    "disclaimer": "Esta é uma página publicitária independente, não o site oficial da marca. Para informação rigorosa e compras, visita o site oficial.",
+    "legal": "Nomes de jogos, arte e marcas pertencem aos respetivos proprietários. As capturas vêm da ficha oficial da App Store e podem não refletir todos os dispositivos."
+  }
+}

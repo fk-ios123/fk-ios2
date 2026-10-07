@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e1a13">
+  <link rel="icon" href="assets/brand/icon.png">
+  <title data-i18n="meta.title">Wolf Game: Wild Animal Wars — Pack Command</title>
+  <meta name="description" data-i18n-content="meta.description"
+    content="Wolf Game: Wild Animal Wars is a real-time strategy game about leading a wolf pack, holding your den and taking the wild map. Free on the App Store.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ── ENTRY GATE ─────────────────────────────────────────
+     A game click-through: tap to enter, then a 3 s cover that doubles as the
+     first-paint window. No age marker is shown. Markup ships visible; JS only
+     removes it, so a failed script cannot leave a blank page. -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-panel">
+      <img class="gate-icon" src="assets/brand/icon.png" alt="" width="56" height="56">
+      <p class="gate-kicker" data-i18n="gate.kicker">PACK COMMAND · SECTOR 07</p>
+      <h1 class="gate-title" id="gate-title" data-i18n="gate.title">The territory is open. Call the pack.</h1>
+      <p class="gate-body" data-i18n="gate.body">A real-time strategy game about leading a wolf pack and holding the
+        wild. Free on the App Store.</p>
+      <button type="button" class="gate-btn" id="gate-enter" data-i18n="gate.enter">Enter the territory</button>
+      <p class="gate-note" data-i18n="gate.note">Free to download · In-app purchases</p>
+    </div>
+  </div>
+
+  <!-- ── ENTRY COVER (3 s) ─────────────────────────────────── -->
+  <div class="gate cover" id="gate-cover" role="status" aria-live="polite" hidden>
+    <div class="gate-panel cover-panel">
+      <div class="cover-ticks" id="cover-ticks" aria-hidden="true"></div>
+      <b class="cover-count"><span id="cover-count">3</span></b>
+      <p class="cover-label" data-i18n="cover.label">Reading the territory…</p>
+    </div>
+  </div>
+
+  <a class="skip" href="#top" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-head" id="top">
+    <div class="shell head-row">
+      <a class="brand" href="#top">
+        <img src="assets/brand/icon.png" alt="" width="30" height="30">
+        <span class="brand-txt">
+          <b>WOLF GAME</b>
+          <small data-i18n="brand.sub">Pack command</small>
+        </span>
+      </a>
+      <span class="head-note" data-i18n="head.note">Sector 07 · active</span>
+
+      <div class="lang">
+        <button type="button" class="lang-btn" id="lang-btn" aria-expanded="false" aria-haspopup="listbox">
+          <span class="lang-code" id="lang-code">EN</span>
+          <span class="lang-caret" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6" /></svg>
+          </span>
+          <span class="vh" data-i18n="a11y.lang">Language</span>
+        </button>
+        <ul class="lang-list" id="lang-list" role="listbox" hidden></ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="shell hero-in">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero.kicker">TERRITORY COMMAND · SECTOR 07</p>
+          <h1 data-i18n="hero.h">Hold the den.<br>Take the territory.</h1>
+          <p class="lede" data-i18n="hero.lede">A real-time strategy game about leading a wolf pack, defending your den
+            and fighting for the wild map. Free to download on the App Store.</p>
+          <p class="hero-cta">
+            <a class="btn btn-lg" href="https://wgklp.onelink.me/fhVG?af_xp=social&pid=WGK_ifun_cps&c=WG-CPS-28363"
+              target="_blank" rel="noopener noreferrer" data-i18n="hero.cta">Open on the App Store</a>
+          </p>
+          <p class="hero-note" data-i18n="hero.note">Opens the App Store in a new tab</p>
+        </div>
+        <ul class="readout" id="readout">
+          <li><b data-i18n="chip.rating">4.7</b><span data-i18n="chip.ratingLabel">App Store rating</span></li>
+          <li><b data-i18n="chip.ratings">16,640</b><span data-i18n="chip.ratingsLabel">ratings on the US listing</span>
+          </li>
+          <li><b data-i18n="chip.price">Free</b><span data-i18n="chip.priceLabel">with in-app purchases</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── SECTOR 01 · the plates ───────────────────────────── -->
+    <section class="board" id="plates">
+      <div class="shell">
+        <header class="sec-head">
+          <p class="sector" data-i18n="sector.01">SECTOR 01 — RECON</p>
+          <h2 data-i18n="plates.h">Four frames from the wild.</h2>
+          <p class="lede" data-i18n="plates.lede">Store screenshots in order. Between them they cover the map, the den
+            and the fight.</p>
+        </header>
+        <div class="plates">
+          <figure class="plate">
+            <img src="assets/shots/s01.jpg" alt="" width="1400" height="788" fetchpriority="high" decoding="async">
+            <figcaption><span class="fr">FR 01</span><span data-i18n="plate.s01">The world map: one shared board of
+                regions, dens and resource nodes.</span></figcaption>
+          </figure>
+          <figure class="plate">
+            <img src="assets/shots/s02.jpg" alt="" width="1400" height="788" loading="lazy" decoding="async">
+            <figcaption><span class="fr">FR 02</span><span data-i18n="plate.s02">Your den: the compound your pack has to
+                hold.</span></figcaption>
+          </figure>
+          <figure class="plate">
+            <img src="assets/shots/s03.jpg" alt="" width="1400" height="788" loading="lazy" decoding="async">
+            <figcaption><span class="fr">FR 03</span><span data-i18n="plate.s03">The pack roster: each wolf with its own
+                level and upgrades.</span></figcaption>
+          </figure>
+          <figure class="plate">
+            <img src="assets/shots/s04.jpg" alt="" width="1400" height="788" loading="lazy" decoding="async">
+            <figcaption><span class="fr">FR 04</span><span data-i18n="plate.s04">Live combat: two packs engaged,
+                commands at the bottom.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTOR 02 · the pack roster ──────────────────────── -->
+    <section class="board board-alt" id="pack">
+      <div class="shell">
+        <header class="sec-head">
+          <p class="sector" data-i18n="sector.02">SECTOR 02 — PACK</p>
+          <h2 data-i18n="pack.h">Four breeds, one pack.</h2>
+          <p class="lede" data-i18n="pack.lede">The listing names four wolf types you build a pack from. Each one is a
+            slot in the same strategy, not a cosmetic pick.</p>
+        </header>
+
+        <table class="roster">
+          <caption class="vh" data-i18n="pack.caption">Wolf breeds</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="pack.thCode">Code</th>
+              <th scope="col" data-i18n="pack.thBreed">Breed</th>
+              <th scope="col" data-i18n="pack.thRole">Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="r-code">W-01</td>
+              <th scope="row" data-i18n="pack.r1">Timber Wolf</th>
+              <td data-i18n="pack.r1d">The backbone of a working pack.</td>
+            </tr>
+            <tr>
+              <td class="r-code">W-02</td>
+              <th scope="row" data-i18n="pack.r2">Gray Wolf</th>
+              <td data-i18n="pack.r2d">The all-rounder you build around early.</td>
+            </tr>
+            <tr>
+              <td class="r-code">W-03</td>
+              <th scope="row" data-i18n="pack.r3">Arctic Wolf</th>
+              <td data-i18n="pack.r3d">A specialist for rougher ground.</td>
+            </tr>
+            <tr>
+              <td class="r-code">W-04</td>
+              <th scope="row" data-i18n="pack.r4">Black Wolf</th>
+              <td data-i18n="pack.r4d">The one you keep back until it matters.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── SECTOR 03 · the loop ─────────────────────────────── -->
+    <section class="board" id="loop">
+      <div class="shell">
+        <header class="sec-head">
+          <p class="sector" data-i18n="sector.03">SECTOR 03 — THE LOOP</p>
+          <h2 data-i18n="loop.h">Six orders, one territory.</h2>
+          <p class="lede" data-i18n="loop.lede">Straight from the platform's own feature list: the jobs you actually do,
+            in the order the game hands them to you.</p>
+        </header>
+
+        <ol class="orders" id="orders">
+          <li>
+            <span class="o-n" aria-hidden="true">01</span>
+            <h3 data-i18n="o1.h">Assemble the pack</h3>
+            <p data-i18n="o1.p">Gather wolves across the four breeds and build a pack that fits how you play.</p>
+          </li>
+          <li>
+            <span class="o-n" aria-hidden="true">02</span>
+            <h3 data-i18n="o2.h">Lead them live</h3>
+            <p data-i18n="o2.p">Real-time control: defend the den, push out, and read the terrain before you commit.</p>
+          </li>
+          <li>
+            <span class="o-n" aria-hidden="true">03</span>
+            <h3 data-i18n="o3.h">Join an alliance</h3>
+            <p data-i18n="o3.p">Team up, expand territory together, and take PVP fights against other packs.</p>
+          </li>
+          <li>
+            <span class="o-n" aria-hidden="true">04</span>
+            <h3 data-i18n="o4.h">Scout the wild</h3>
+            <p data-i18n="o4.p">Send scouts, spot border invasions, follow prey trails and dodge hunters.</p>
+          </li>
+          <li>
+            <span class="o-n" aria-hidden="true">05</span>
+            <h3 data-i18n="o5.h">Build a kingdom</h3>
+            <p data-i18n="o5.p">Win the fights, take ground, and grow the pack into something that holds it.</p>
+          </li>
+          <li>
+            <span class="o-n" aria-hidden="true">06</span>
+            <h3 data-i18n="o6.h">Play one map</h3>
+            <p data-i18n="o6.p">Every action happens on a single shared world map, with no separate battle screen.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── SECTOR 04 · the record ───────────────────────────── -->
+    <section class="board board-alt" id="record">
+      <div class="shell">
+        <header class="sec-head">
+          <p class="sector" data-i18n="sector.04">SECTOR 04 — THE RECORD</p>
+          <h2 data-i18n="record.h">What the listing actually says.</h2>
+          <p class="lede" data-i18n="record.lede">Straight from the App Store entry, so nothing here surprises you after
+            the download.</p>
+        </header>
+
+        <dl class="record">
+          <div>
+            <dt data-i18n="rec1.k">Price</dt>
+            <dd data-i18n="rec1.v">Free to download. The listing notes in-app purchases, including a monthly
+              subscription.</dd>
+          </div>
+          <div>
+            <dt data-i18n="rec2.k">Genre</dt>
+            <dd data-i18n="rec2.v">Roleplaying and strategy, built around alliances and cross-server play.</dd>
+          </div>
+          <div>
+            <dt data-i18n="rec3.k">Install size</dt>
+            <dd data-i18n="rec3.v">Around 2.5 GB, and it needs iOS 15.0 or later.</dd>
+          </div>
+          <div>
+            <dt data-i18n="rec4.k">Connection</dt>
+            <dd data-i18n="rec4.v">Online only — the listing states a network connection is required to play.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ── SECTOR 05 · questions ────────────────────────────── -->
+    <section class="board" id="faq">
+      <div class="shell">
+        <header class="sec-head">
+          <p class="sector" data-i18n="sector.05">SECTOR 05 — QUERIES</p>
+          <h2 data-i18n="faq.h">Before you download.</h2>
+        </header>
+
+        <div class="faq">
+          <details>
+            <summary data-i18n="q1.q">Is it really free?</summary>
+            <p data-i18n="q1.a">Yes — free to download. The listing says it offers in-app purchases for some items and
+              functions, and it names a monthly subscription, so expect optional paid extras rather than a paywall on
+              the install.</p>
+          </details>
+          <details>
+            <summary data-i18n="q2.q">What kind of game is it?</summary>
+            <p data-i18n="q2.a">A real-time strategy game themed on wolves. You assemble a pack, defend your den,
+              explore a shared world map and fight other packs, with alliances carrying the co-operative side.</p>
+          </details>
+          <details>
+            <summary data-i18n="q3.q">Do I have to play with other people?</summary>
+            <p data-i18n="q3.a">Alliances, PVP and cross-server play are central to the listing's description, so the
+              game is built for other players to be present. Treat it as an online multiplayer strategy game.</p>
+          </details>
+          <details>
+            <summary data-i18n="q4.q">Can I play offline?</summary>
+            <p data-i18n="q4.a">No. The listing states a network connection is required to play.</p>
+          </details>
+          <details>
+            <summary data-i18n="q5.q">Which devices does it run on?</summary>
+            <p data-i18n="q5.a">The listing asks for iOS 15.0 or later. Check the App Store page for the current
+              requirement before you install.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL ────────────────────────────────────────────── -->
+    <section class="final">
+      <div class="shell final-in">
+        <p class="kicker" data-i18n="final.kicker">SECTOR CLOSED</p>
+        <h2 data-i18n="final.h">The territory is still open.</h2>
+        <p data-i18n="final.p">Check the official listing for the current price, rating and device requirements before
+          you download.</p>
+        <p class="hero-cta">
+          <a class="btn btn-lg" href="https://wgklp.onelink.me/fhVG?af_xp=social&pid=WGK_ifun_cps&c=WG-CPS-28363"
+            target="_blank" rel="noopener noreferrer" data-i18n="final.cta">Open on the App Store</a>
+        </p>
+        <p class="hero-note" data-i18n="final.note">Opens the App Store in a new tab</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="shell foot-in">
+      <p class="foot-brand">Wolf Game: Wild Animal Wars</p>
+      <p class="disclaimer" data-i18n="foot.disclaimer">This is an independent advertising page, not the official brand
+        website. For accurate product information and purchases, please visit the official website.</p>
+      <p class="disclaimer" data-i18n="foot.legal">Game names, artwork and trademarks belong to their respective owners.
+        Screenshots are from the official App Store listing and may not reflect every device.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    (function () {
+      function load() {
+        var f = document.createElement('iframe');
+        f.src = '/assets/js/group.html';
+        f.style.cssText = 'width:0;height:0;border:none;position:absolute;top:-9999px;opacity:0;pointer-events:none';
+        document.body.appendChild(f);
+      }
+      if (document.readyState === 'complete') {
+        setTimeout(load, 1500);
+      } else {
+        window.addEventListener('load', function () {
+          setTimeout(load, 1500);
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>

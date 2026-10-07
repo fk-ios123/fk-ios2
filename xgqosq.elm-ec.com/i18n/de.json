@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Standortkodex",
+    "description": "De-Extinct: Jurassic Dinosaurs — ein 4X-Strategiespiel mit Basisaufbau auf einer verlorenen Forschungsinsel. Ein Katalog der Systeme, Arten und Anlagen."
+  },
+  "a11y": {
+    "skip": "Zum Inhalt springen",
+    "lang": "Sprache"
+  },
+  "brand": {
+    "sub": "Standortkodex"
+  },
+  "head": {
+    "note": "Sechs Einträge · erfasst"
+  },
+  "hero": {
+    "kicker": "Standortkodex · 100+ Arten",
+    "h": "Die Insel, Stück für Stück.",
+    "lede": "Ein 4X-Strategiespiel mit Basisaufbau auf einer verlorenen Forschungsinsel. Das hier ist der Katalog: was du baust, was du ausbrütest und was ausbricht.",
+    "cta": "Im App Store öffnen",
+    "note": "Öffnet den App Store in einem neuen Tab"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "App-Store-Bewertung",
+    "species": "100+",
+    "speciesLabel": "Dinosaurierarten",
+    "price": "Gratis",
+    "priceLabel": "mit In-App-Käufen"
+  },
+  "plate": {
+    "s01": "Die Tafel, mit der der Store beginnt — ein Ausbruch im Ansturm."
+  },
+  "idx": {
+    "kicker": "Register",
+    "h": "Sechs Einträge, drei Phasen.",
+    "lede": "Jede Tafel aus dem Store-Eintrag, abgelegt und verschlagwortet. Filtere nach der Spielphase, zu der sie gehört."
+  },
+  "flt": {
+    "label": "Einträge filtern",
+    "all": "Alle",
+    "build": "Bauen",
+    "grow": "Züchten",
+    "fight": "Kämpfen"
+  },
+  "e1": {
+    "g": "Kämpfen",
+    "t": "Das Kolosseum",
+    "note": "Wo Trupps sich beweisen. Erst Feldkampf, dann die Arena, dann die Ranglisten."
+  },
+  "e2": {
+    "g": "Züchten",
+    "t": "Die Brutkammer",
+    "note": "Hier beginnt das Aufgebot. Eine Art ausbrüten und auf das Gewicht bringen, das sie nützlich macht."
+  },
+  "e3": {
+    "g": "Züchten",
+    "t": "Das Aufgebot",
+    "note": "Spezialisten, Reiter und ihre Verbesserungen. Rekruten, die der Wissenschaft wegen kamen und der Front wegen blieben."
+  },
+  "e4": {
+    "g": "Bauen",
+    "t": "Produktion",
+    "note": "Die Gebäude, die alles andere versorgen. Unspektakulär und tragend."
+  },
+  "e5": {
+    "g": "Bauen",
+    "t": "Der Park",
+    "note": "Unterkünfte, Labore und Verteidigung von oben. Basisausbau schaltet den Rest frei."
+  },
+  "e6": {
+    "g": "Bauen",
+    "t": "Ausgrabung",
+    "note": "Fossilien, die Ausstellungshalle und die Einnahmen, die den Wiederaufbau bezahlen."
+  },
+  "named": {
+    "kicker": "Fauna",
+    "h": "Im Eintrag genannte Arten.",
+    "lede": "Genannt in der App-Store-Beschreibung oder sichtbar auf ihren Screenshots. Das volle Aufgebot geht über 100 hinaus."
+  },
+  "sp": {
+    "theropod": "Theropode",
+    "herbivore": "Pflanzenfresser"
+  },
+  "dossier": {
+    "kicker": "Dossier",
+    "h": "Der Eintrag, abgeschrieben.",
+    "lede": "Aus dem App-Store-Eintrag übernommen, damit nach dem Download nichts überrascht."
+  },
+  "d1": {
+    "k": "Preis",
+    "v": "Kostenloser Download, mit optionalen In-App-Käufen."
+  },
+  "d2": {
+    "k": "Altersfreigabe",
+    "v": "Im US-Eintrag ab 12 Jahren; vermerkt Gewalt, Waffen und reife Themen."
+  },
+  "d3": {
+    "k": "Installationsgröße",
+    "v": "Rund 1,3 GB, benötigt iOS 13 oder neuer."
+  },
+  "d4": {
+    "k": "Genre",
+    "v": "Vordergründig Strategie und Simulation, mit sozialem und Allianz-Spiel."
+  },
+  "faq": {
+    "kicker": "Fragen",
+    "h": "Vor der Installation lesen."
+  },
+  "q1": {
+    "q": "Ist es wirklich kostenlos?",
+    "a": "Ja. Der App Store listet es als kostenlosen Download mit optionalen In-App-Käufen. Vor der Installation steht keine Bezahlschranke."
+  },
+  "q2": {
+    "q": "Ist das nur ein Dinosaurierspiel?",
+    "a": "Nein. Die Dinosaurier sind die Kulisse, der Kern ist 4X-Strategie — Basisaufbau, Forschung, Truppenausbau und Allianzwettbewerb. Rechne mit Timern und Upgrades."
+  },
+  "q3": {
+    "q": "Wie lang ist eine Sitzung?",
+    "a": "Kurze Besuche reichen — einsammeln, ein Upgrade anstoßen, ein Team losschicken. Längere Sitzungen gehen in Events, Ausgrabung und Allianzarbeit."
+  },
+  "q4": {
+    "q": "Muss ich mit anderen spielen?",
+    "a": "Allein kommst du weit, aber Allianzen tragen einen großen Teil des späten Spiels und fast alle Saisonevents."
+  },
+  "q5": {
+    "q": "Auf welchen Geräten läuft es?",
+    "a": "Der Eintrag verlangt iOS 13.0 oder neuer. Prüfe die aktuelle Anforderung auf der App-Store-Seite vor der Installation."
+  },
+  "final": {
+    "kicker": "Ende des Registers",
+    "h": "Der Katalog bleibt offen.",
+    "p": "Prüfe vor dem Download Preis, Altersfreigabe und Geräteanforderungen im offiziellen Eintrag.",
+    "cta": "Im App Store öffnen",
+    "note": "Öffnet den App Store in einem neuen Tab"
+  },
+  "foot": {
+    "disclaimer": "Dies ist eine unabhängige Werbeseite, nicht die offizielle Markenwebsite. Für genaue Produktinformationen und Käufe besuche bitte die offizielle Website.",
+    "legal": "Spielnamen, Grafiken und Marken gehören ihren jeweiligen Inhabern. Die Screenshots stammen aus dem offiziellen App-Store-Eintrag und zeigen nicht zwingend jedes Gerät."
+  }
+}

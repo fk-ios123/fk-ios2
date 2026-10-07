@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Ausgrabungsprotokoll",
+    "description": "De-Extinct: Jurassic Dinosaurs — ein 4X-Strategiespiel mit Basisaufbau auf einer verlorenen Forschungsinsel. Protokoll, Tafeln und Angaben aus dem Store."
+  },
+  "a11y": {
+    "skip": "Zum Inhalt springen",
+    "lang": "Sprache"
+  },
+  "brand": {
+    "sub": "Ausgrabungsprotokoll"
+  },
+  "head": {
+    "note": "Fundstelle 07 · offen"
+  },
+  "hero": {
+    "kicker": "Ausgrabungsprotokoll · Fundstelle 07",
+    "h": "Grab die Insel aus. Dann führe sie.",
+    "lede": "Ein 4X-Strategiespiel mit Basisaufbau auf einer verlorenen Forschungsinsel. Kostenlos im App Store.",
+    "cta": "Im App Store öffnen",
+    "note": "Öffnet den App Store in einem neuen Tab"
+  },
+  "chip": {
+    "rating": "4,8",
+    "ratingLabel": "App-Store-Bewertung",
+    "species": "100+",
+    "speciesLabel": "Dinosaurierarten",
+    "price": "Gratis",
+    "priceLabel": "mit In-App-Käufen"
+  },
+  "plate": {
+    "s01": "Ein Ausbruch mitten im Betrieb — der häufigste Eintrag im Protokoll.",
+    "s02": "Kampf im Feld und die erste Kolosseum-Herausforderung.",
+    "s03": "Schlüpfen und Aufziehen bis zum Kampfgewicht.",
+    "s04": "Das Aufgebot: Experten, Reiter und ihre Verbesserungen.",
+    "s05": "Produktionsgebäude, die die Basis versorgen.",
+    "s06": "Isometrische Ansicht eines Parks mitten im Umbau.",
+    "s07": "Ausgrabung und die Ausstellungshalle, die sie bezahlt."
+  },
+  "depth": {
+    "l00": "Oberfläche",
+    "l01": "Die Grabung",
+    "l02": "Systeme",
+    "l03": "Die Akte",
+    "l04": "Fragen"
+  },
+  "premise": {
+    "kicker": "Schicht 00 — Oberfläche",
+    "h": "Eine Insel, die nicht mehr antwortet.",
+    "p1": "Die Ark Gene Group holte ausgestorbene Arten auf eine abgelegene Insel zurück, und eine Zeit lang sah die Welt zu. Dann brachen die Übertragungen ab.",
+    "p2": "Du landest als erfahrener Kommandant mit kleinem Team und unfertiger Basis. Was ab hier im Protokoll steht, schreibst du."
+  },
+  "dig": {
+    "kicker": "Schicht 01 — Die Grabung",
+    "h": "Sieben Tafeln von der Fundstelle.",
+    "lede": "Store-Screenshots in Reihenfolge. Zusammen decken sie das meiste ab, was dich in der ersten Woche erwartet."
+  },
+  "systems": {
+    "kicker": "Schicht 02 — Systeme",
+    "h": "Vier Systeme, ein Kommando.",
+    "lede": "Die Dinosaurier bekommen die Aufmerksamkeit. Darunter läuft Strategie: bauen, besetzen, erkunden, forschen — immer wieder in dieser Reihenfolge."
+  },
+  "sys1": {
+    "h": "Anlage wieder aufbauen",
+    "p": "Unterkünfte, Labore und Verteidigung. Der Ausbau der Basis schaltet alles andere frei."
+  },
+  "sys2": {
+    "h": "Team anwerben",
+    "p": "Wissenschaftler, Söldner und Trainer. Manche werden später Dinorider."
+  },
+  "sys3": {
+    "h": "Die Insel bearbeiten",
+    "p": "Durch Biome ziehen, Ressourcen holen, Ereignisse lösen und eindämmen, was schon frei läuft."
+  },
+  "sys4": {
+    "h": "Ökologie erforschen",
+    "p": "Über 100 Arten ausbrüten und trainieren. Ein Aufgebot ist Strategie, kein Trophäenregal."
+  },
+  "record": {
+    "kicker": "Schicht 03 — Die Akte",
+    "h": "Was im Store-Eintrag wirklich steht.",
+    "lede": "Direkt aus dem App-Store-Eintrag, damit nach dem Download nichts überrascht."
+  },
+  "rec1": {
+    "k": "Preis",
+    "v": "Kostenloser Download, mit optionalen In-App-Käufen."
+  },
+  "rec2": {
+    "k": "Altersfreigabe",
+    "v": "Im US-Eintrag ab 12 Jahren; vermerkt Gewalt, Waffen und reife Themen."
+  },
+  "rec3": {
+    "k": "Installationsgröße",
+    "v": "Rund 1,3 GB, benötigt iOS 13 oder neuer."
+  },
+  "rec4": {
+    "k": "Genre",
+    "v": "Vordergründig Strategie und Simulation, mit sozialem und Allianz-Spiel."
+  },
+  "faq": {
+    "kicker": "Schicht 04 — Fragen",
+    "h": "Bevor du herunterlädst."
+  },
+  "q1": {
+    "q": "Ist es wirklich kostenlos?",
+    "a": "Ja. Der App Store listet es als kostenlosen Download mit optionalen In-App-Käufen. Vor der Installation steht keine Bezahlschranke."
+  },
+  "q2": {
+    "q": "Ist das nur ein Dinosaurierspiel?",
+    "a": "Nein. Die Dinosaurier sind die Kulisse, der Kern ist 4X-Strategie — Basisaufbau, Forschung, Truppenausbau und Allianzwettbewerb. Rechne mit Timern und Upgrades."
+  },
+  "q3": {
+    "q": "Wie lang ist eine Sitzung?",
+    "a": "Kurze Besuche reichen — einsammeln, ein Upgrade anstoßen, ein Team losschicken. Längere Sitzungen gehen in Events, Ausgrabung und Allianzarbeit."
+  },
+  "q4": {
+    "q": "Muss ich mit anderen spielen?",
+    "a": "Allein kommst du weit, aber Allianzen tragen einen großen Teil des späten Spiels und fast alle Saisonevents."
+  },
+  "q5": {
+    "q": "Auf welchen Geräten läuft es?",
+    "a": "Der Eintrag verlangt iOS 13.0 oder neuer. Prüfe die aktuelle Anforderung auf der App-Store-Seite vor der Installation."
+  },
+  "final": {
+    "kicker": "Grundgestein",
+    "h": "Die Fundstelle ist noch offen.",
+    "p": "Prüfe vor dem Download Preis, Altersfreigabe und Geräteanforderungen im offiziellen Eintrag.",
+    "cta": "Im App Store öffnen",
+    "note": "Öffnet den App Store in einem neuen Tab"
+  },
+  "foot": {
+    "disclaimer": "Dies ist eine unabhängige Werbeseite, nicht die offizielle Markenwebsite. Für genaue Produktinformationen und Käufe besuche bitte die offizielle Website.",
+    "legal": "Spielnamen, Grafiken und Marken gehören ihren jeweiligen Inhabern. Die Screenshots stammen aus dem offiziellen App-Store-Eintrag und zeigen nicht zwingend jedes Gerät."
+  }
+}

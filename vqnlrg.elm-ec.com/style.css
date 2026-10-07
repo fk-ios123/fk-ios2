@@ -1,0 +1,294 @@
+/* ============================================================
+   De-Extinct: Jurassic Dinosaurs — EXCAVATION LOG skin
+   Volcanic earth ground, bone-white ink, museum serif headings, and a
+   stratigraphic layout: each section is a numbered layer with a depth
+   marker, so the page reads top-to-bottom as a dig site.
+   Deliberately unlike the military-briefing reference (cold green +
+   amber + condensed sans on flat signal panels).
+   ============================================================ */
+:root{
+  --bg:#12100c;
+  --surface:#1a1712;
+  --elevated:#221d16;
+  --text:#f2ece0;
+  --muted:#a89b85;
+  --border:#2f2820;
+  --accent:#c8a15a;
+  --accent-2:#e0c489;
+  --bone:#f2ece0;
+  --shell:min(1100px,calc(100% - 36px));
+  --radius:3px;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --serif:Georgia,'Iowan Old Style','Times New Roman',serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--font);line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+.shell{width:var(--shell);margin:0 auto}
+.vh{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:.9rem 1.5rem;border:1px solid var(--accent);border-radius:var(--radius);
+  font:inherit;font-weight:700;font-size:.95rem;text-decoration:none;
+  cursor:pointer;background:var(--accent);color:#1a1408;
+  transition:background .14s,color .14s;
+}
+.btn:hover{background:var(--accent-2);border-color:var(--accent-2)}
+.btn:active{transform:translateY(1px)}
+.btn-lg{padding:1rem 1.8rem;font-size:1rem}
+
+/* ---------- header ---------- */
+.site-head{
+  position:sticky;top:0;z-index:60;
+  background:rgba(18,16,12,.9);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.head-row{display:flex;align-items:center;gap:.9rem;height:62px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;min-height:44px}
+.brand img{width:30px;height:30px;border-radius:5px}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-family:var(--serif);font-size:.95rem;letter-spacing:.02em}
+.brand-txt small{
+  color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+}
+.head-note{
+  color:var(--muted);font-family:var(--mono);font-size:.68rem;
+  letter-spacing:.1em;text-transform:uppercase;margin-inline-end:auto;
+}
+
+/* ---------- language switcher ---------- */
+.lang{position:relative}
+.lang-btn{
+  display:inline-flex;align-items:center;gap:.42rem;min-height:40px;
+  border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);
+  padding:.5rem .8rem;font:inherit;font-size:.82rem;font-weight:700;
+  color:var(--text);cursor:pointer;transition:border-color .14s;
+}
+.lang-btn:hover{border-color:var(--accent)}
+.lang-globe{display:inline-flex}
+.lang-globe svg{width:16px;height:16px}
+.lang-caret{display:inline-flex}
+.lang-caret svg{width:11px;height:11px;transition:transform .18s}
+.lang-btn[aria-expanded="true"] .lang-caret svg{transform:rotate(180deg)}
+.lang-list{
+  position:absolute;inset-inline-end:0;top:calc(100% + .5rem);z-index:80;
+  min-width:232px;max-height:70vh;overflow-y:auto;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:0 20px 50px rgba(0,0,0,.6);margin:0;padding:.35rem;list-style:none;
+  animation:langIn .14s ease-out;
+}
+@keyframes langIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.lang-list[hidden]{display:none}
+.lang-list button{
+  display:flex;justify-content:space-between;gap:1rem;width:100%;
+  border:0;background:none;font:inherit;font-size:.9rem;color:var(--text);
+  padding:.62rem .7rem;min-height:44px;border-radius:2px;
+  cursor:pointer;text-align:start;
+}
+.lang-list button:hover,
+.lang-list button[aria-current="true"]{background:rgba(242,236,224,.07)}
+.lang-list button[aria-current="true"]{color:var(--accent)}
+.lang-native{color:var(--muted);font-size:.8rem}
+.lang-list li+li{margin-top:1px}
+
+/* ---------- shared type ---------- */
+.kicker{
+  margin:0 0 .6rem;color:var(--accent);font-family:var(--mono);
+  font-size:.7rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;
+}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.01em}
+.lede{margin:0 0 1.3rem;color:var(--muted);font-size:1rem;max-width:58ch}
+
+/* ---------- hero ---------- */
+.hero{padding:2.6rem 0 3rem;border-bottom:1px solid var(--border)}
+.hero-in{display:grid;gap:2rem}
+@media (min-width:920px){
+  .hero-in{grid-template-columns:minmax(0,1fr) minmax(0,520px);
+           align-items:center;gap:3rem}
+}
+.hero-copy h1{margin:0 0 .9rem;font-size:2.9rem;line-height:1.08}
+.hero-cta{margin:1.4rem 0 .6rem}
+.hero-note{margin:0 0 1.6rem;color:var(--muted);font-size:.78rem}
+
+.chips{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1px;background:var(--border);
+  border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+}
+.chips li{background:var(--surface);padding:.85rem .6rem;text-align:center}
+.chips b{
+  display:block;font-family:var(--serif);font-size:1.35rem;
+  color:var(--accent);line-height:1.1;
+}
+.chips span{display:block;margin-top:.2rem;color:var(--muted);font-size:.7rem;line-height:1.35}
+
+.hero-plate{margin:0}
+.hero-plate img{
+  width:100%;border:1px solid var(--border);border-radius:var(--radius);
+  background:var(--elevated);
+}
+.hero-plate figcaption{
+  margin:.7rem 0 0;color:var(--muted);font-size:.8rem;line-height:1.5;
+  padding-inline-start:.9rem;border-inline-start:2px solid var(--accent);
+}
+
+/* ---------- stratigraphic layers ---------- */
+.layer{padding:3rem 0;border-bottom:1px solid var(--border)}
+.layer-alt{background:var(--surface)}
+.layer-in{display:grid;gap:1.2rem}
+@media (min-width:860px){
+  .layer-in{grid-template-columns:130px minmax(0,1fr);gap:2.4rem}
+}
+/* the depth marker: reads as a core sample beside each layer */
+.depth{
+  margin:0;display:flex;align-items:baseline;gap:.7rem;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+}
+.depth span{color:var(--accent);font-weight:700}
+.depth b{color:var(--muted);font-weight:400}
+@media (min-width:860px){
+  .depth{flex-direction:column;gap:.35rem;position:sticky;top:86px;align-self:start}
+  .depth b{font-size:1.05rem;letter-spacing:0}
+}
+.layer-body h2{margin:0 0 .8rem;font-size:2rem;line-height:1.18;max-width:24ch}
+.layer-body > p{color:var(--muted);max-width:62ch}
+.layer-body > p + p{margin-top:.9rem}
+
+/* ---------- plates (screenshot gallery) ---------- */
+.plates{
+  margin:1.8rem 0 0;display:grid;gap:1.1rem;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+@media (min-width:780px){.plates{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.plate{margin:0}
+/* the store images are 2.17:1; the box matches so nothing is cropped */
+.plate img{
+  width:100%;aspect-ratio:1242/572;object-fit:cover;
+  border:1px solid var(--border);border-radius:var(--radius);background:var(--elevated);
+}
+@media (min-width:780px){
+  .plate-wide{grid-column:span 2}
+}
+.plate figcaption{
+  margin:.55rem 0 0;color:var(--muted);font-size:.78rem;line-height:1.45;
+  display:flex;gap:.5rem;align-items:baseline;
+}
+.cat{
+  flex:0 0 auto;color:var(--accent);font-family:var(--mono);
+  font-size:.66rem;letter-spacing:.1em;
+}
+
+/* ---------- systems ---------- */
+.systems{
+  list-style:none;margin:1.8rem 0 0;padding:0;
+  display:grid;gap:1px;background:var(--border);
+  border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+}
+@media (min-width:700px){.systems{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.systems li{background:var(--surface);padding:1.3rem 1.2rem}
+.sys-n{
+  display:block;font-family:var(--mono);font-size:.72rem;
+  color:var(--accent);letter-spacing:.14em;margin-bottom:.5rem;
+}
+.systems h3{margin:0 0 .45rem;font-size:1.12rem;line-height:1.3}
+.systems p{margin:0;color:var(--muted);font-size:.9rem}
+
+/* ---------- record (definition list) ---------- */
+.record{
+  margin:1.8rem 0 0;display:grid;gap:1px;
+  background:var(--border);border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;
+}
+.record > div{background:var(--surface);padding:1rem 1.2rem}
+@media (min-width:700px){
+  .record > div{display:grid;grid-template-columns:190px minmax(0,1fr);gap:1.4rem;align-items:baseline}
+}
+.record dt{
+  margin:0;color:var(--accent);font-family:var(--mono);
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+}
+.record dd{margin:.35rem 0 0}
+@media (min-width:700px){.record dd{margin:0}}
+.record dd{color:var(--text);font-size:.94rem}
+
+/* ---------- faq ---------- */
+.faq{margin:1.8rem 0 0;display:grid;gap:.6rem}
+.faq details{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:0;
+}
+.faq summary{
+  cursor:pointer;padding:1rem 1.2rem;font-weight:600;font-size:.98rem;
+  list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";flex:0 0 auto;width:9px;height:9px;margin-top:.45rem;
+  border-inline-end:2px solid var(--accent);border-bottom:2px solid var(--accent);
+  transform:rotate(45deg);transition:transform .18s;
+}
+.faq details[open] summary::after{transform:rotate(225deg)}
+.faq details p{
+  margin:0;padding:0 1.2rem 1.1rem;color:var(--muted);font-size:.92rem;
+  max-width:64ch;
+}
+
+/* ---------- final ---------- */
+.final{
+  padding:3.4rem 0;background:var(--elevated);
+  border-bottom:1px solid var(--border);text-align:center;
+}
+.final-in{max-width:640px}
+.final h2{margin:0 0 .8rem;font-size:2.1rem;line-height:1.15}
+.final p{color:var(--muted);margin:0 0 .4rem}
+.final .hero-cta{margin:1.6rem 0 .6rem}
+.final .hero-note{margin:0}
+
+/* ---------- footer ---------- */
+.site-foot{padding:2.2rem 0}
+.foot-in{display:grid;gap:.7rem}
+.foot-brand{margin:0;font-family:var(--serif);font-weight:700;font-size:1.02rem}
+.disclaimer{margin:0;color:var(--muted);font-size:.78rem;max-width:74ch;line-height:1.6}
+
+/* ---------- skip link ---------- */
+.skip{
+  position:absolute;top:0;inset-inline-start:0;z-index:100;
+  background:var(--accent);color:#1a1408;padding:.6rem 1rem;border-radius:0 0 6px 0;
+  width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;
+}
+.skip:focus{width:auto;height:auto;overflow:visible;clip-path:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:760px){
+  .hero-copy h1{font-size:2.15rem}
+  .layer-body h2{font-size:1.6rem}
+  .final h2{font-size:1.65rem}
+  .layer{padding:2.4rem 0}
+  .head-note{display:none}
+}
+@media (max-width:420px){
+  .hero-copy h1{font-size:1.9rem}
+  .plates{grid-template-columns:1fr}
+  .plate-wide{grid-column:auto}
+  .chips b{font-size:1.15rem}
+  .brand-txt small{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+}

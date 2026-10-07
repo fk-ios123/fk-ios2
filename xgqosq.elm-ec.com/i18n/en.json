@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "De-Extinct: Jurassic Dinosaurs — Site Codex",
+    "description": "De-Extinct: Jurassic Dinosaurs — a base-building 4X strategy game on a lost research island. A catalogue of the island's systems, species and facilities."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "lang": "Language"
+  },
+  "brand": {
+    "sub": "Site codex"
+  },
+  "head": {
+    "note": "Six entries · indexed"
+  },
+  "hero": {
+    "kicker": "Site codex · 100+ species",
+    "h": "The island, item by item.",
+    "lede": "A base-building 4X strategy game on a lost research island. This is the catalogue: what you build, what you hatch, and what gets loose.",
+    "cta": "Open on the App Store",
+    "note": "Opens the App Store in a new tab"
+  },
+  "chip": {
+    "rating": "4.8",
+    "ratingLabel": "App Store rating",
+    "species": "100+",
+    "speciesLabel": "dinosaur species",
+    "price": "Free",
+    "priceLabel": "with in-app purchases"
+  },
+  "plate": {
+    "s01": "The plate the store opens with — a breach, mid-charge."
+  },
+  "idx": {
+    "kicker": "Index",
+    "h": "Six entries, three phases.",
+    "lede": "Every plate from the store listing, filed and tagged. Filter by the phase of the game each one belongs to."
+  },
+  "flt": {
+    "label": "Filter entries",
+    "all": "All",
+    "build": "Build",
+    "grow": "Grow",
+    "fight": "Fight"
+  },
+  "e1": {
+    "g": "Fight",
+    "t": "The Colosseum",
+    "note": "Where squads prove themselves. Field combat comes first, then the arena, then the rankings."
+  },
+  "e2": {
+    "g": "Grow",
+    "t": "The hatchery",
+    "note": "Where the roster starts. Hatch a species, then raise it to the weight it needs to be useful."
+  },
+  "e3": {
+    "g": "Grow",
+    "t": "The roster",
+    "note": "Specialists, riders and their upgrades. Recruits who came for the science and stayed for the front line."
+  },
+  "e4": {
+    "g": "Build",
+    "t": "Production",
+    "note": "The buildings that keep everything else supplied. Unglamorous, and load-bearing."
+  },
+  "e5": {
+    "g": "Build",
+    "t": "The park",
+    "note": "Shelters, laboratories and defences, seen from above. Base upgrades are what unlock the rest."
+  },
+  "e6": {
+    "g": "Build",
+    "t": "Excavation",
+    "note": "Fossils, the exhibition hall, and the revenue that pays for the rebuild."
+  },
+  "named": {
+    "kicker": "Fauna",
+    "h": "Species named in the listing.",
+    "lede": "Named in the App Store description or visible in its screenshots. The full roster runs past 100."
+  },
+  "sp": {
+    "theropod": "Theropod",
+    "herbivore": "Herbivore"
+  },
+  "dossier": {
+    "kicker": "Dossier",
+    "h": "The listing, transcribed.",
+    "lede": "Taken from the App Store entry so that nothing here surprises you after the download."
+  },
+  "d1": {
+    "k": "Price",
+    "v": "Free to download, with optional in-app purchases."
+  },
+  "d2": {
+    "k": "Age rating",
+    "v": "Rated 12+ on the US listing; it notes violence, weapons and mature themes."
+  },
+  "d3": {
+    "k": "Install size",
+    "v": "Roughly 1.3 GB, and it needs iOS 13 or later."
+  },
+  "d4": {
+    "k": "Genre",
+    "v": "Strategy and simulation first, with social and alliance play built in."
+  },
+  "faq": {
+    "kicker": "Questions",
+    "h": "Read before installing."
+  },
+  "q1": {
+    "q": "Is it really free?",
+    "a": "Yes. The App Store lists it as free to download with optional in-app purchases. There is no paywall in front of the install itself."
+  },
+  "q2": {
+    "q": "Is it just a dinosaur game?",
+    "a": "No. The dinosaurs are the setting; the loop is 4X strategy — base building, research, squad growth and alliance competition. Expect timers and upgrades."
+  },
+  "q3": {
+    "q": "How long is a session?",
+    "a": "Short check-ins work fine — collect, queue an upgrade, send a squad out. Longer sessions go into events, excavation and alliance work."
+  },
+  "q4": {
+    "q": "Do I have to play with other people?",
+    "a": "You can get a long way solo, but alliances carry a large part of the late game and most of the seasonal events."
+  },
+  "q5": {
+    "q": "Which devices does it run on?",
+    "a": "The listing asks for iOS 13.0 or later. Check the App Store page for the current requirement before you install."
+  },
+  "final": {
+    "kicker": "End of index",
+    "h": "The catalogue stays open.",
+    "p": "Check the official listing for the current price, rating and device requirements before you download.",
+    "cta": "Open on the App Store",
+    "note": "Opens the App Store in a new tab"
+  },
+  "foot": {
+    "disclaimer": "This is an independent advertising page, not the official brand website. For accurate product information and purchases, please visit the official website.",
+    "legal": "Game names, artwork and trademarks belong to their respective owners. Screenshots are from the official App Store listing and may not reflect every device."
+  }
+}
