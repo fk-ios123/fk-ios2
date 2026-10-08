@@ -40,12 +40,12 @@ export default async function DomainPage({ params, searchParams }: {
         <a href={backHref} className="hover:text-[#1e684e]">域名路由</a><span className="text-[#b1c3b3]">/</span><span className="break-all text-[#2d6047]">{domain}</span>
       </nav>
       <header className="mb-8 flex flex-wrap items-end justify-between gap-5">
-        <div><div className="mb-2 text-xs font-bold tracking-[0.18em] text-[#6a957a]">DOMAIN SETTINGS</div><h1 className="break-all font-mono text-3xl font-bold tracking-tight text-[#18352d] sm:text-4xl">{domain}</h1><p className="mt-3 text-sm leading-6 text-[#73877b]">管理此域名的跳转目标。保存后，新请求会立即读取最新配置。</p></div>
+        <div><div className="mb-2 text-xs font-bold tracking-[0.18em] text-[#6a957a]">DOMAIN SETTINGS</div><h1 className="break-all font-mono text-3xl font-bold tracking-tight text-[#18352d] sm:text-4xl">{domain}</h1><p className="mt-3 text-sm leading-6 text-[#73877b]">管理此域名的跳转目标。保存后，Web 缓存会同步更新。</p></div>
         <a href={backHref} className="btn border-[#dce7dd] bg-white px-5 text-[#326448] shadow-none hover:bg-[#f0f7ee]">← 返回域名列表</a>
       </header>
 
       {query.error && <div role="alert" className="alert alert-error mb-6 rounded-xl text-sm">{query.error}</div>}
-      {query.notice && <div role="status" className="alert alert-success mb-6 rounded-xl text-sm">{query.notice === 'created' ? '域名已创建，可继续配置跳转地址' : '跳转地址已保存'}</div>}
+      {query.notice && <div role="status" className="alert alert-success mb-6 rounded-xl text-sm">{query.notice === 'pending' ? '配置已保存到 MongoDB，Web 缓存会在数秒内同步' : query.notice === 'created' ? '域名已创建，可继续配置跳转地址' : '跳转地址已保存并同步到 Web'}</div>}
 
       <div className="mb-6 grid gap-3 sm:grid-cols-3">
         <div className="rounded-2xl border border-[#e4ebe4] bg-white px-6 py-5"><div className="text-xs font-semibold text-[#82958a]">跳转地址</div><div className="mt-2 text-3xl font-bold text-[#18352d]">{site.destinations.length.toString().padStart(2, '0')}<span className="ml-2 text-sm font-medium text-[#91a198]">条</span></div></div>

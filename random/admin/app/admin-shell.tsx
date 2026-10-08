@@ -16,7 +16,7 @@ export default function AdminShell({ children }: { children: ReactNode }) {
           <CreateDomainDialog placement="sidebar" />
         </div>
         <div className="mt-auto hidden border-t border-white/12 pt-6 lg:block">
-          <p className="text-xs leading-6 text-[#a7c0b5]">每个域名独立配置跳转目标。保存后，下次请求即会读取新配置。</p>
+          <p className="text-xs leading-6 text-[#a7c0b5]">每个域名独立配置跳转目标。保存后，Web 缓存会同步更新。</p>
           <form action={logout} className="mt-6"><button type="submit" className="btn btn-ghost w-full justify-start border-white/15 text-[#dcebe1] hover:bg-white/10">退出登录 <span className="ml-auto">↗</span></button></form>
         </div>
         <form action={logout} className="ml-auto lg:hidden"><button type="submit" className="btn btn-ghost btn-sm text-white">退出登录</button></form>

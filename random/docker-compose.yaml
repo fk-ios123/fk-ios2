@@ -1,45 +1,86 @@
 name: fk-ios-random
 
 services:
-  web:
-    image: docker.io/library/node:24-alpine
+  mongo:
+    image: docker.io/library/mongo:8.0
     restart: unless-stopped
+    env_file:
+      - ./mongo.env
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand({ ping: 1 }).ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: ./web
+      network: host
+    restart: unless-stopped
+    depends_on:
+      mongo:
+        condition: service_healthy
     ports:
       - "80:80"
-    working_dir: /app
-    command: ["node", "server.js"]
+    env_file:
+      - ./mongo.env
     environment:
-      DESTINATIONS_DIR: /data/domains
+      CACHE_REFRESH_MS: 5000
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1/healthz').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  migrate:
+    build:
+      context: ./web
+      network: host
+    profiles: [migrate]
+    depends_on:
+      mongo:
+        condition: service_healthy
+    env_file:
+      - ./mongo.env
+    command: ["node", "migrate-json.js", "/legacy/domains"]
     volumes:
-      - ./web/server.js:/app/server.js:ro,z
-      - ./data:/data:ro,z
+      - ./data:/legacy:ro,z
 
   admin:
-    build: ./admin
+    build:
+      context: ./admin
+      network: host
     restart: unless-stopped
     profiles: [admin]
+    depends_on:
+      mongo:
+        condition: service_healthy
+      web:
+        condition: service_healthy
     ports:
       - "127.0.0.1:3000:3000"
     env_file:
       - ./admin.env
+      - ./mongo.env
     environment:
-      DESTINATIONS_DIR: /data/domains
-    volumes:
-      - ./data:/data:z
+      WEB_RELOAD_URL: http://web/__internal/reload
 
-  bot:
-    build: ./bot
-    restart: unless-stopped
-    profiles: [bot]
-    environment:
-      TELEGRAM_API_ID: ${TELEGRAM_API_ID:-2496}
-      TELEGRAM_API_HASH: ${TELEGRAM_API_HASH:-8da85b0d5bfe62527e5b244c209159c3}
-      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-8681575972:AAHM-hvXS1LiJvkQSlF37uPwHKW6eb5Xm9I}
-      TELEGRAM_OWNER_ID: ${TELEGRAM_OWNER_ID:-7330051588}
-      DESTINATIONS_PATH: /data/domains/mm.hlqtcf.com/destinations.json
-    volumes:
-      - ./data:/data:z
-      - bot_session:/state
+  # bot:
+  #   build: ./bot
+  #   restart: unless-stopped
+  #   profiles: [bot]
+  #   environment:
+  #     TELEGRAM_API_ID: ${TELEGRAM_API_ID:-2496}
+  #     TELEGRAM_API_HASH: ${TELEGRAM_API_HASH:-8da85b0d5bfe62527e5b244c209159c3}
+  #     TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-8681575972:AAHM-hvXS1LiJvkQSlF37uPwHKW6eb5Xm9I}
+  #     TELEGRAM_OWNER_ID: ${TELEGRAM_OWNER_ID:-7330051588}
+  #     DESTINATIONS_PATH: /data/domains/mm.hlqtcf.com/destinations.json
+  #   volumes:
+  #     - ./data:/data:z
+  #     - bot_session:/state
 
 volumes:
   bot_session:
+  mongo_data:

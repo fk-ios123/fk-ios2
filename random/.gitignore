@@ -4,5 +4,8 @@ __pycache__/
 data/domains/
 admin.env
 admin-initial-password.txt
+mongo.env
+mongo-data/
 admin/node_modules/
 admin/.next/
+web/node_modules/

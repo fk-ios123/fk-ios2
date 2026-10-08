@@ -1,7 +1,7 @@
 FROM docker.io/library/node:24-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN --mount=type=cache,target=/root/.npm npm ci --fetch-timeout=300000 --fetch-retries=3 --maxsockets=2
 COPY . .
 RUN npm run build
 

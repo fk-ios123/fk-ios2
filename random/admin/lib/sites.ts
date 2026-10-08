@@ -1,9 +1,18 @@
-import { createHash, randomUUID } from 'node:crypto';
-import { mkdir, open, readFile, readdir, rename, rm } from 'node:fs/promises';
-import { join } from 'node:path';
 import { domainToASCII } from 'node:url';
+import { MongoClient, type Collection } from 'mongodb';
 
-const root = process.env.DESTINATIONS_DIR || '/data/domains';
+type SiteDocument = { _id: string; destinations: string[]; version: number };
+let clientPromise: Promise<MongoClient> | undefined;
+
+function collection(): Promise<Collection<SiteDocument>> {
+  const uri = process.env.MONGODB_URI;
+  if (!uri) throw new Error('MONGODB_URI 未配置');
+  clientPromise ??= new MongoClient(uri, { serverSelectionTimeoutMS: 5000 }).connect().catch((error: unknown) => {
+    clientPromise = undefined;
+    throw error;
+  });
+  return clientPromise.then((client) => client.db(process.env.MONGODB_DATABASE || 'random_redirect').collection<SiteDocument>('sites'));
+}
 
 export type Site = { domain: string; destinations: string[]; version: string };
 
@@ -35,61 +44,25 @@ export function parseDestinations(value: unknown): string[] {
   return urls;
 }
 
-function configPath(domain: string): string {
-  return join(root, normalizeDomain(domain), 'destinations.json');
-}
-
 export async function readSite(domain: string): Promise<Site> {
-  const contents = await readFile(configPath(domain), 'utf8');
-  const parsed: unknown = JSON.parse(contents);
-  if (!parsed || typeof parsed !== 'object' || !('destinations' in parsed) ||
-      !Array.isArray(parsed.destinations) || !parsed.destinations.every((value) => typeof value === 'string')) {
-    throw new Error('配置格式错误');
-  }
-  return { domain, destinations: parsed.destinations, version: createHash('sha256').update(contents).digest('hex') };
+  const normalized = normalizeDomain(domain);
+  const site = await (await collection()).findOne({ _id: normalized });
+  if (!site) throw Object.assign(new Error('域名不存在'), { code: 'ENOENT' });
+  return { domain: normalized, destinations: site.destinations, version: String(site.version) };
 }
 
 export async function listSites(): Promise<Site[]> {
-  await mkdir(root, { recursive: true });
-  const entries = await readdir(root, { withFileTypes: true });
-  const domains = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name).sort();
-  const sites: Site[] = [];
-  for (const domain of domains) {
-    try {
-      sites.push(await readSite(domain));
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-    }
-  }
-  return sites;
-}
-
-async function writeAtomic(path: string, document: { destinations: string[] }): Promise<void> {
-  const temporary = `${path}.${randomUUID()}.tmp`;
-  try {
-    const file = await open(temporary, 'wx', 0o644);
-    try {
-      await file.writeFile(JSON.stringify(document, null, 2) + '\n');
-      await file.sync();
-    } finally {
-      await file.close();
-    }
-    await rename(temporary, path);
-  } finally {
-    await rm(temporary, { force: true });
-  }
+  const sites = await (await collection()).find({}, { projection: { _id: 1, destinations: 1, version: 1 } }).sort({ _id: 1 }).toArray();
+  return sites.map((site) => ({ domain: site._id, destinations: site.destinations, version: String(site.version) }));
 }
 
 export async function createSite(domainInput: unknown, destinationsInput: unknown): Promise<string> {
   const domain = normalizeDomain(domainInput);
   const destinations = parseDestinations(destinationsInput);
-  await mkdir(root, { recursive: true });
-  const directory = join(root, domain);
-  await mkdir(directory);
   try {
-    await writeAtomic(configPath(domain), { destinations });
+    await (await collection()).insertOne({ _id: domain, destinations, version: 1 });
   } catch (error) {
-    await rm(directory, { recursive: true, force: true });
+    if ((error as { code?: number }).code === 11000) throw Object.assign(new Error('域名已存在'), { code: 'EEXIST' });
     throw error;
   }
   return domain;
@@ -98,8 +71,24 @@ export async function createSite(domainInput: unknown, destinationsInput: unknow
 export async function updateSite(domainInput: unknown, destinationsInput: unknown, expectedVersion: unknown): Promise<string> {
   const domain = normalizeDomain(domainInput);
   const destinations = parseDestinations(destinationsInput);
-  const current = await readSite(domain);
-  if (current.version !== expectedVersion) throw new Error('配置已被其他人修改，请刷新后重试');
-  await writeAtomic(configPath(domain), { destinations });
+  const version = Number(expectedVersion);
+  if (!Number.isSafeInteger(version) || version < 1) throw new Error('配置版本错误，请刷新后重试');
+  const result = await (await collection()).updateOne({ _id: domain, version }, { $set: { destinations }, $inc: { version: 1 } });
+  if (!result.matchedCount) throw new Error('配置已被其他人修改，请刷新后重试');
   return domain;
+}
+
+export async function notifyWeb(domain: string): Promise<boolean> {
+  const baseUrl = process.env.WEB_RELOAD_URL;
+  const token = process.env.WEB_RELOAD_TOKEN;
+  if (!baseUrl || !token) return false;
+  try {
+    const url = new URL(baseUrl);
+    url.searchParams.set('domain', normalizeDomain(domain));
+    const response = await fetch(url, { method: 'POST', headers: { 'x-reload-token': token }, signal: AbortSignal.timeout(3000) });
+    return response.status === 204;
+  } catch (error) {
+    console.error('Web cache refresh notification failed:', error);
+    return false;
+  }
 }

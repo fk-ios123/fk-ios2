@@ -35,7 +35,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
       </header>
 
       {params.error && <div role="alert" className="alert alert-error mb-6 rounded-xl text-sm">{params.error}</div>}
-      {params.notice && <div role="status" className="alert alert-success mb-6 rounded-xl text-sm">{params.notice === 'created' ? '域名已创建' : '配置已保存'}</div>}
+      {params.notice && <div role="status" className="alert alert-success mb-6 rounded-xl text-sm">{params.notice === 'pending' ? '配置已保存到 MongoDB，Web 缓存将在数秒内同步' : params.notice === 'created' ? '域名已创建' : '配置已保存'}</div>}
 
       <div className="mb-7 grid gap-3 sm:grid-cols-3">
         <div className="rounded-2xl border border-[#e4ebe4] bg-white px-6 py-5 shadow-[0_2px_16px_rgba(24,53,45,0.035)]"><div className="text-xs font-semibold tracking-wider text-[#82958a]">已配置域名</div><div className="mt-2 text-3xl font-bold tracking-tight text-[#18352d]">{sites.length.toString().padStart(2, '0')}<span className="ml-2 text-sm font-medium text-[#91a198]">个</span></div></div>
